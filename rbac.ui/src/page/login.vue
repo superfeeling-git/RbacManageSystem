@@ -26,7 +26,7 @@
              <el-input v-model="ruleForm.ValidateCode"></el-input>
            </el-col>
            <el-col :span="8">
-             <img src="http://localhost:5000/api/Account/ValidateCode">
+             <img :src="ValidateCodeSrc">
            </el-col>          
         </el-form-item>
         <el-form-item>
@@ -42,9 +42,12 @@
 
 <script>
 import axios from 'axios'
+import config from '../utils/config'
+
 export default {
   data() {
     return {
+      ValidateCodeSrc:`${config.baseUrl}/api/Account/ValidateCode`,
       ruleForm: {
           UserName: '',
           Password: '',
@@ -59,7 +62,7 @@ export default {
             { required: true, message: '请输入密码', trigger: 'change' }
           ],
           ValidateCode: [
-            { type: 'date', required: true, message: '请输入验证码', trigger: 'change' }
+            { required: true, message: '请输入验证码', trigger: 'change' }
           ]
         }
     }
@@ -68,10 +71,21 @@ export default {
     submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            axios.post("http://localhost:5000/api/Account/Login",
+            var obj = this;
+            axios.post(`${config.baseUrl}/api/Account/Login`,
             this.ruleForm,
             {withCredentials: true}).then(m=>{
-
+              debugger
+              if(m.data.code > 0){
+                this.$message({
+                  message: m.data.msg,
+                  type: 'warning'
+                });
+              }
+              else{
+                localStorage.setItem("token",m.data.token);
+                this.$router.push("home");
+              }              
             });
           } else {
             
@@ -82,7 +96,10 @@ export default {
       resetForm(formName) {
         this.$refs[formName].resetFields();
       }
-  }
+  },
+  mounted() {
+    console.log(config.baseUrl)
+  },
 };
 </script>
 

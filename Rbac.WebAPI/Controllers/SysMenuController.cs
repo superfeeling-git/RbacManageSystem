@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Rbac.IService;
-using Rbac.Dto.SysMenu;
+using Rbac.Dtos.SysMenu;
 
 namespace Rbac.WebAPI.Controllers
 {

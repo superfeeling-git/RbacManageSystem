@@ -41,7 +41,10 @@ namespace Rbac.Service
         public async Task<JwtDto> Login(LoginDto loginDto)
         {
             var code = httpContextAccessor.HttpContext.Request.Cookies["SetCode"];
-            if(loginDto.ValidateCode.ToLower() != code.ToLower())
+
+            var inputcode = MD5Helper.Encrypt($"{loginDto.ValidateCode.ToLower()}{configuration["JwtConfig:CookiesKey"]}");
+
+            if (inputcode != code.ToLower())
             {
                 return new JwtDto { code = 1, msg = "验证码错误" };
             }

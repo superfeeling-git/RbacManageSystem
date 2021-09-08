@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YPe7gRWAbXBR1ScqAD9VqdmHfzA1lFuvG3woTk44oaYrtypwmhfL9WCmngWHRj2yIr43m2hf2j60IUWBbHv3Qg==",
+  "dgSpecHash": "qx+FAPjtk6U2MNKXxsX01/Nr9fbzHWyw/NgjeVOQdbKEpRicN8cO4lv7Vaf6J1IEb+kpKIGB/I/mDDhdLD81eQ==",
   "success": true,
-  "projectFilePath": "E:\\Teaching\\RbacManageSystem\\Rbac.Unitity\\Rbac.Unitity.csproj",
+  "projectFilePath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Unitity\\Rbac.Unitity.csproj",
   "expectedPackageFiles": [
     "D:\\Administrator\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "D:\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

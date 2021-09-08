@@ -13,3 +13,4 @@ E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.runtimecon
 E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.runtimeconfig.dev.json
 E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.genruntimeconfig.cache
 E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.xml
+E:\Teaching\rbacmanagesystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.csproj.AssemblyReference.cache

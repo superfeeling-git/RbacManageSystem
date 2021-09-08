@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+0w6S3+wbGbn5yTu5xWzJld4T+A5WcfKyA2AlwUGeJ1CGGmzsJ3IsQMXCkoVO3pt0R8n03WNDEWK/1bQfViumQ==",
+  "dgSpecHash": "vseqkld83JNRCaNT1k+6ySxD6/iD47W2ZGJTdRn7b/hYvC0FbQW5MCr0bxwwCZ/dkjLs3jYc/wZQcKaCo6dETw==",
   "success": true,
-  "projectFilePath": "E:\\Teaching\\RbacManageSystem\\Rbac.Service\\Rbac.Service.csproj",
+  "projectFilePath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Service\\Rbac.Service.csproj",
   "expectedPackageFiles": [
     "D:\\Administrator\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "D:\\Administrator\\.nuget\\packages\\identitymodel\\5.1.0\\identitymodel.5.1.0.nupkg.sha512",

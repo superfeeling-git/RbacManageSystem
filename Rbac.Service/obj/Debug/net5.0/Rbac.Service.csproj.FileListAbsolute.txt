@@ -20,3 +20,5 @@ E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Unitity.pdb
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Entity.pdb
 E:\Teaching\RbacManageSystem\Rbac.Service\obj\Debug\net5.0\Rbac.Service.csproj.CopyComplete
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Entity.xml
+E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Dtos.dll
+E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Dtos.pdb

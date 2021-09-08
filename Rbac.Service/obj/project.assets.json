@@ -6679,11 +6679,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.Service\\Rbac.Service.csproj",
+      "projectUniqueName": "E:\\Teaching\\rbacmanagesystem\\Rbac.Service\\Rbac.Service.csproj",
       "projectName": "Rbac.Service",
-      "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Service\\Rbac.Service.csproj",
+      "projectPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Service\\Rbac.Service.csproj",
       "packagesPath": "D:\\Administrator\\.nuget\\packages",
-      "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Service\\obj\\",
+      "outputPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -6708,14 +6708,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj"
+            "E:\\Teaching\\rbacmanagesystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj": {
+              "projectPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj"
+            "E:\\Teaching\\rbacmanagesystem\\Rbac.IService\\Rbac.IService.csproj": {
+              "projectPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.IService\\Rbac.IService.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.Unitity\\Rbac.Unitity.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Unitity\\Rbac.Unitity.csproj"
+            "E:\\Teaching\\rbacmanagesystem\\Rbac.Unitity\\Rbac.Unitity.csproj": {
+              "projectPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Unitity\\Rbac.Unitity.csproj"
             }
           }
         }

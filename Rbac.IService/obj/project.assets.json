@@ -6086,11 +6086,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj",
+      "projectUniqueName": "E:\\Teaching\\rbacmanagesystem\\Rbac.IService\\Rbac.IService.csproj",
       "projectName": "Rbac.IService",
-      "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj",
+      "projectPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.IService\\Rbac.IService.csproj",
       "packagesPath": "D:\\Administrator\\.nuget\\packages",
-      "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\obj\\",
+      "outputPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.IService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -6115,11 +6115,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Teaching\\RbacManageSystem\\Rbac.Dto\\Rbac.Dtos.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dto\\Rbac.Dtos.csproj"
+            "E:\\Teaching\\rbacmanagesystem\\Rbac.Dto\\Rbac.Dtos.csproj": {
+              "projectPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Dto\\Rbac.Dtos.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
+            "E:\\Teaching\\rbacmanagesystem\\Rbac.Entity\\Rbac.Entity.csproj": {
+              "projectPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Entity\\Rbac.Entity.csproj"
             }
           }
         }

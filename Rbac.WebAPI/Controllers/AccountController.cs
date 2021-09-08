@@ -41,9 +41,9 @@ namespace Rbac.WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(LoginDto login)
+        public async Task<IActionResult> Login(LoginDto login)
         {
-            return Ok(adminService.Login(login));
+            return Ok(await adminService.Login(login));
         }
     }
 }

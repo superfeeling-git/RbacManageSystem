@@ -17,6 +17,8 @@ namespace Rbac.WebAPI.Inject
         {
             services.AddScoped<ISysMenuRepository, SysMenuRepository>();
             services.AddScoped<ISysMenuService<Dtos.SysMenu.ListDto>, SysMenuService<Dtos.SysMenu.ListDto>>();
+            services.AddScoped<IAdminRepository, AdminRepository>();
+            services.AddScoped<IAdminService<Dtos.Admin.ListDto>, AdminService<Dtos.Admin.ListDto>>();
             services.AddScoped<ValidateCode>();
         }
     }

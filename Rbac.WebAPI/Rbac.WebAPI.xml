@@ -4,11 +4,5 @@
         <name>Rbac.WebAPI</name>
     </assembly>
     <members>
-        <member name="M:Rbac.WebAPI.Controllers.ValidateCode.GeneralCode">
-            <summary>
-            生成随机串
-            </summary>
-            <returns></returns>
-        </member>
     </members>
 </doc>

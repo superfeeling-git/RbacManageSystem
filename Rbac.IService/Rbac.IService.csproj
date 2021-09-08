@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Rbac.Dto\Rbac.Dtos.csproj" />
     <ProjectReference Include="..\Rbac.Entity\Rbac.Entity.csproj" />
   </ItemGroup>
 

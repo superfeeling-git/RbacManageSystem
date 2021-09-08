@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="5.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Rbac.IRepositoty\Rbac.IRepositoty.csproj" />
     <ProjectReference Include="..\Rbac.IService\Rbac.IService.csproj" />
     <ProjectReference Include="..\Rbac.Unitity\Rbac.Unitity.csproj" />

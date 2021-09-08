@@ -81,7 +81,7 @@ namespace Rbac.Unitity
 
             bitmap.Save(memoryStream, ImageFormat.Jpeg);
 
-            httpContextAccessor.HttpContext.Response.Cookies.Append("SetCode", MD5Helper.Encrypt($"{validatecode}{configuration["JwtConfig:CookiesKey"]}"));
+            httpContextAccessor.HttpContext.Response.Cookies.Append("SetCode", MD5Helper.Encrypt($"{validatecode.ToLower()}{configuration["JwtConfig:CookiesKey"]}"));
 
             return memoryStream;
         }
