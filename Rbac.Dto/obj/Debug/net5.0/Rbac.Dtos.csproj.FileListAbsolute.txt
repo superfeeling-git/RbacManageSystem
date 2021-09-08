@@ -9,3 +9,4 @@ E:\Teaching\RbacManageSystem\Rbac.Dto\obj\Debug\net5.0\Rbac.Dtos.csproj.CoreComp
 E:\Teaching\RbacManageSystem\Rbac.Dto\obj\Debug\net5.0\Rbac.Dtos.dll
 E:\Teaching\RbacManageSystem\Rbac.Dto\obj\Debug\net5.0\ref\Rbac.Dtos.dll
 E:\Teaching\RbacManageSystem\Rbac.Dto\obj\Debug\net5.0\Rbac.Dtos.pdb
+E:\Teaching\RbacManageSystem\Rbac.Dto\obj\Debug\net5.0\Rbac.Dtos.csproj.AssemblyReference.cache

@@ -9,14 +9,15 @@ using Microsoft.Extensions.Configuration;
 using Rbac.Repository;
 using Rbac.IService;
 using Rbac.Service;
-using Rbac.Dto.SysMenu;
+using Rbac.Dtos.Admin;
+using Rbac.Unitity;
 
 namespace Rbac.Test
 {
     public class UnitTest1
     {
-        private ISysMenuService<Dto.SysMenu.ListDto> service;
-        private ISysMenuRepository repository;
+        private IAdminService<ListDto> service;
+        private IAdminRepository repository;
         public UnitTest1()
         {
             IServiceCollection services = new ServiceCollection();
@@ -25,20 +26,20 @@ namespace Rbac.Test
                 opt.UseSqlServer("Data Source=.;Initial Catalog=RbacManageSystem;Integrated Security=True");
             });
 
-            services.AddScoped<ISysMenuRepository, SysMenuRepository>();
-            services.AddScoped<ISysMenuService<Dto.SysMenu.ListDto>, SysMenuService<Dto.SysMenu.ListDto>>();
+            services.AddScoped<IAdminRepository, AdminRepository>();
+            services.AddScoped<IAdminService<ListDto>, AdminService<ListDto>>();
 
             var provider = services.BuildServiceProvider();
 
-            service = provider.GetService<ISysMenuService<Dto.SysMenu.ListDto>>();
-            repository = provider.GetService<ISysMenuRepository>();
+            service = provider.GetService<IAdminService<ListDto>>();
+            repository = provider.GetService<IAdminRepository>();
         }
 
 
         [Fact]
         public async Task Test1()
         {
-            
+            await service.CreateAsync(new InsertDto { UserName = "admin", Password = MD5Helper.Encrypt("admin") });
         }
     }
 }

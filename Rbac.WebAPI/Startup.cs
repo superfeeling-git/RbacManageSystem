@@ -68,6 +68,9 @@ namespace Rbac.WebAPI
                 option.UseSqlServer(Configuration.GetConnectionString("SqlServer"));
             });
 
+            //便于其他类库访问HTTP上下文
+            services.AddHttpContextAccessor();
+
             services.inject();
 
             services.AddAuthentication(option => {

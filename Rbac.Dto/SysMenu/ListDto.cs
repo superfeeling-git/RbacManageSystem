@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Rbac.Dto.SysMenu
+namespace Rbac.Dtos.SysMenu
 {
     public class ListDto
     {
