@@ -1,0 +1,15 @@
+E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.deps.json
+E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.dll
+E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\ref\Rbac.Entity.dll
+E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.pdb
+E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.GeneratedMSBuildEditorConfig.editorconfig
+E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.AssemblyInfoInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.AssemblyInfo.cs
+E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.csproj.CoreCompileInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.dll
+E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\ref\Rbac.Entity.dll
+E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.pdb
+E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.runtimeconfig.json
+E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.runtimeconfig.dev.json
+E:\Teaching\RbacManageSystem\Rbac.Entity\obj\Debug\net5.0\Rbac.Entity.genruntimeconfig.cache
+E:\Teaching\RbacManageSystem\Rbac.Entity\bin\Debug\net5.0\Rbac.Entity.xml

@@ -1,0 +1,12 @@
+E:\Teaching\RbacManageSystem\Rbac.Unitity\bin\Debug\net5.0\Rbac.Unitity.deps.json
+E:\Teaching\RbacManageSystem\Rbac.Unitity\bin\Debug\net5.0\Rbac.Unitity.dll
+E:\Teaching\RbacManageSystem\Rbac.Unitity\bin\Debug\net5.0\ref\Rbac.Unitity.dll
+E:\Teaching\RbacManageSystem\Rbac.Unitity\bin\Debug\net5.0\Rbac.Unitity.pdb
+E:\Teaching\RbacManageSystem\Rbac.Unitity\obj\Debug\net5.0\Rbac.Unitity.GeneratedMSBuildEditorConfig.editorconfig
+E:\Teaching\RbacManageSystem\Rbac.Unitity\obj\Debug\net5.0\Rbac.Unitity.AssemblyInfoInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.Unitity\obj\Debug\net5.0\Rbac.Unitity.AssemblyInfo.cs
+E:\Teaching\RbacManageSystem\Rbac.Unitity\obj\Debug\net5.0\Rbac.Unitity.csproj.CoreCompileInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.Unitity\obj\Debug\net5.0\Rbac.Unitity.dll
+E:\Teaching\RbacManageSystem\Rbac.Unitity\obj\Debug\net5.0\ref\Rbac.Unitity.dll
+E:\Teaching\RbacManageSystem\Rbac.Unitity\obj\Debug\net5.0\Rbac.Unitity.pdb
+E:\Teaching\RbacManageSystem\Rbac.Unitity\obj\Debug\net5.0\Rbac.Unitity.csproj.AssemblyReference.cache

@@ -1,0 +1,16 @@
+E:\Teaching\RbacManageSystem\Rbac.IService\bin\Debug\net5.0\Rbac.IService.deps.json
+E:\Teaching\RbacManageSystem\Rbac.IService\bin\Debug\net5.0\Rbac.IService.dll
+E:\Teaching\RbacManageSystem\Rbac.IService\bin\Debug\net5.0\ref\Rbac.IService.dll
+E:\Teaching\RbacManageSystem\Rbac.IService\bin\Debug\net5.0\Rbac.IService.pdb
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\Rbac.IService.csproj.AssemblyReference.cache
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\Rbac.IService.GeneratedMSBuildEditorConfig.editorconfig
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\Rbac.IService.AssemblyInfoInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\Rbac.IService.AssemblyInfo.cs
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\Rbac.IService.csproj.CoreCompileInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\Rbac.IService.dll
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\ref\Rbac.IService.dll
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\Rbac.IService.pdb
+E:\Teaching\RbacManageSystem\Rbac.IService\bin\Debug\net5.0\Rbac.Entity.dll
+E:\Teaching\RbacManageSystem\Rbac.IService\bin\Debug\net5.0\Rbac.Entity.pdb
+E:\Teaching\RbacManageSystem\Rbac.IService\obj\Debug\net5.0\Rbac.IService.csproj.CopyComplete
+E:\Teaching\RbacManageSystem\Rbac.IService\bin\Debug\net5.0\Rbac.Entity.xml

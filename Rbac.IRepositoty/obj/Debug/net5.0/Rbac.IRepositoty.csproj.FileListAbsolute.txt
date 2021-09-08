@@ -1,0 +1,16 @@
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\bin\Debug\net5.0\Rbac.IRepositoty.deps.json
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\bin\Debug\net5.0\Rbac.IRepositoty.dll
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\bin\Debug\net5.0\ref\Rbac.IRepositoty.dll
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\bin\Debug\net5.0\Rbac.IRepositoty.pdb
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\Rbac.IRepositoty.csproj.AssemblyReference.cache
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\Rbac.IRepositoty.GeneratedMSBuildEditorConfig.editorconfig
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\Rbac.IRepositoty.AssemblyInfoInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\Rbac.IRepositoty.AssemblyInfo.cs
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\Rbac.IRepositoty.csproj.CoreCompileInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\Rbac.IRepositoty.dll
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\ref\Rbac.IRepositoty.dll
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\Rbac.IRepositoty.pdb
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\bin\Debug\net5.0\Rbac.Entity.dll
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\bin\Debug\net5.0\Rbac.Entity.pdb
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\obj\Debug\net5.0\Rbac.IRepositoty.csproj.CopyComplete
+E:\Teaching\RbacManageSystem\Rbac.IRepositoty\bin\Debug\net5.0\Rbac.Entity.xml

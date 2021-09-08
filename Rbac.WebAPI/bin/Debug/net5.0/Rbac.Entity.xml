@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rbac.Entity</name>
+    </assembly>
+    <members>
+        <member name="P:Rbac.Entity.Role.RoleID">
+            <Summary>
+             角色ID
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.Role.RoleName">
+            <Summary>
+             角色名称
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.SysMenu.MenuID">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.SysMenu.MenuName">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.SysMenu.MenuLink">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.SysMenu.IsShow">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.SysMenu.ParnetID">
+            <Summary>
+             
+            </Summary>
+        </member>
+    </members>
+</doc>
