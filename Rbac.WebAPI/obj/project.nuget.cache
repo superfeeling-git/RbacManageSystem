@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0g+JQf1kNC5WkDqlrK0oBAasUDizjDNcDmyRzUb9/GeyMnXeKHOBmguY19NaH1dWYnehogLAEfga8ypmtDt1ag==",
+  "dgSpecHash": "mU9ZkkQsImgVt2Z05h3o2yx9Vf3K8rKjo47PYL52Q/mTZ4fvMfpiUVcNY8sNgZENvt4hOIypnio5G7WTCRSWMQ==",
   "success": true,
-  "projectFilePath": "E:\\Teaching\\rbacmanagesystem\\rbac.webapi\\Rbac.WebAPI.csproj",
+  "projectFilePath": "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj",
   "expectedPackageFiles": [
     "D:\\Administrator\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "D:\\Administrator\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9D+wGrDhOr/qU1gxC18djNjUp6aybW8lyHJXyUa0Gcr1Ueq1omAulBl8aqVmGlxPLrVu2w7qPYN32Kbj5SdxQg==",
+  "dgSpecHash": "Weqwb50RpG5/vp/mk9sQyY3I3I8tY9bl/U8iEsiulTtrIa1OPxeQoVh68aNbrPa+H2zDyetSyGFkg5lWVjtu3g==",
   "success": true,
-  "projectFilePath": "E:\\Teaching\\rbacmanagesystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj",
+  "projectFilePath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj",
   "expectedPackageFiles": [
     "D:\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "D:\\Administrator\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

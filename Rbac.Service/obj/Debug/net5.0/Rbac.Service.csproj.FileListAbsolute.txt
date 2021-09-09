@@ -22,3 +22,4 @@ E:\Teaching\RbacManageSystem\Rbac.Service\obj\Debug\net5.0\Rbac.Service.csproj.C
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Entity.xml
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Dtos.dll
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Dtos.pdb
+E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Dtos.xml

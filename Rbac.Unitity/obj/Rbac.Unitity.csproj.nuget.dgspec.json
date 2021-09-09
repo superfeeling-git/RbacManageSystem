@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Teaching\\rbacmanagesystem\\Rbac.Unitity\\Rbac.Unitity.csproj": {}
+    "E:\\Teaching\\RbacManageSystem\\Rbac.Unitity\\Rbac.Unitity.csproj": {}
   },
   "projects": {
-    "E:\\Teaching\\rbacmanagesystem\\Rbac.Unitity\\Rbac.Unitity.csproj": {
+    "E:\\Teaching\\RbacManageSystem\\Rbac.Unitity\\Rbac.Unitity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Teaching\\rbacmanagesystem\\Rbac.Unitity\\Rbac.Unitity.csproj",
+        "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.Unitity\\Rbac.Unitity.csproj",
         "projectName": "Rbac.Unitity",
-        "projectPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Unitity\\Rbac.Unitity.csproj",
+        "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Unitity\\Rbac.Unitity.csproj",
         "packagesPath": "D:\\Administrator\\.nuget\\packages",
-        "outputPath": "E:\\Teaching\\rbacmanagesystem\\Rbac.Unitity\\obj\\",
+        "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Unitity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

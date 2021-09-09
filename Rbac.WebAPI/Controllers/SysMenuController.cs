@@ -5,11 +5,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Rbac.IService;
 using Rbac.Dtos.SysMenu;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Rbac.WebAPI.Controllers
 {
     [ApiController]
     [Route("/api/[controller]/[action]")]
+    [Authorize]
     public class SysMenuController : Controller
     {
         private ISysMenuService<ListDto> sysMenuservice;
@@ -17,6 +19,12 @@ namespace Rbac.WebAPI.Controllers
         public SysMenuController(ISysMenuService<ListDto> _sysMenuservice)
         {
             this.sysMenuservice = _sysMenuservice;
+        }
+
+        [HttpGet]
+        public IActionResult List()
+        {
+            return Ok();
         }
 
         [HttpGet]

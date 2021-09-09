@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZL5RUgp1xYlksqN9MzWiczEd1wlQAtoOLlGJ+tnDENi0ColCebPyTCqMpmC0KOaB0vXrc/Jkb7p5sL548VxDcA==",
+  "dgSpecHash": "VjPkYEEoXf1GjdgVmhuH4yN4VDpWK2j2nQoJ03XAOVb/8SvOrpIO2xsj6m5gDskUNXfXh6q7eTuznZ2UHlJS1g==",
   "success": true,
-  "projectFilePath": "E:\\Teaching\\rbacmanagesystem\\Rbac.IService\\Rbac.IService.csproj",
+  "projectFilePath": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj",
   "expectedPackageFiles": [
     "D:\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "D:\\Administrator\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

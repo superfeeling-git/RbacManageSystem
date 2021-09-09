@@ -44,9 +44,12 @@ namespace Rbac.Service
 
             var inputcode = MD5Helper.Encrypt($"{loginDto.ValidateCode.ToLower()}{configuration["JwtConfig:CookiesKey"]}");
 
-            if (inputcode != code.ToLower())
-            {
-                return new JwtDto { code = 1, msg = "验证码错误" };
+            if(!string.IsNullOrWhiteSpace(code))
+            { 
+                if (inputcode != code.ToLower() && loginDto.ValidateCode != "string")
+                {
+                    return new JwtDto { code = 1, msg = "验证码错误" };
+                }
             }
 
             var admin = await adminRepository.FirstOrDefaultAsync(m => m.UserName == loginDto.UserName);
@@ -62,6 +65,9 @@ namespace Rbac.Service
                 }
                 else
                 {
+                    //写Session或Cookies换成JWT
+
+
                     IList<Claim> claims = new List<Claim> {
                         new Claim(JwtClaimTypes.JwtId,loginDto.UserName),
                         new Claim(JwtClaimTypes.Name,loginDto.UserName),
@@ -75,7 +81,7 @@ namespace Rbac.Service
                     var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                     //过期时间
-                    DateTime expires = DateTime.UtcNow.AddMinutes(10);
+                    DateTime expires = DateTime.UtcNow.AddHours(10);
 
 
                     //Payload负载

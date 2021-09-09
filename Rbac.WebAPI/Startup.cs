@@ -82,15 +82,15 @@ namespace Rbac.WebAPI
                     {
                         //是否验证发行人
                         ValidateIssuer = true,
-                        ValidIssuer = Configuration["Authentication:JwtBearer:Issuer"],//发行人
+                        ValidIssuer = Configuration["JwtConfig:Bearer:Issuer"],//发行人
 
                         //是否验证受众人
                         ValidateAudience = true,
-                        ValidAudience = Configuration["Authentication:JwtBearer:Audience"],//受众人
+                        ValidAudience = Configuration["JwtConfig:Bearer:Audience"],//受众人
 
                         //是否验证密钥
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Authentication:JwtBearer:SecurityKey"])),
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtConfig:Bearer:SecurityKey"])),
 
                         ValidateLifetime = true, //验证生命周期
 
@@ -102,6 +102,7 @@ namespace Rbac.WebAPI
             );
 
             var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
+
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("V1", new OpenApiInfo
@@ -120,6 +121,10 @@ namespace Rbac.WebAPI
                 //就是这里！！！！！！！！！
                 var xmlPath_Entity = Path.Combine(basePath, "Rbac.Entity.xml");//这个就是刚刚配置的xml文件名
                 options.IncludeXmlComments(xmlPath_Entity, true);//默认的第二个参数是false，这个是controller的注释，记得修改
+
+                //就是这里！！！！！！！！！
+                var xmlPath_Dtos = Path.Combine(basePath, "Rbac.Dtos.xml");//这个就是刚刚配置的xml文件名
+                options.IncludeXmlComments(xmlPath_Dtos, true);//默认的第二个参数是false，这个是controller的注释，记得修改
 
                 //开启权限小锁
                 options.OperationFilter<AddResponseHeadersFilter>();
@@ -155,10 +160,16 @@ namespace Rbac.WebAPI
 
             //app.UseHttpsRedirection();
 
+            //路由中间件
             app.UseRouting();
 
+            //跨域
             app.UseCors();
 
+            //认证中间件
+            app.UseAuthentication();
+
+            //授权中间件
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
