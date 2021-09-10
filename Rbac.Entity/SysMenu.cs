@@ -19,15 +19,15 @@ namespace Rbac.Entity
         ///<Summary>
         /// 
         ///</Summary>
-        public string MenuLink { get; set; }
+        public string MenuLink { get; set; } = "javascript:void(0)";
         ///<Summary>
         /// 
         ///</Summary>
         public bool IsShow { get; set; } = false;
         ///<Summary>
-        /// 
+        /// 父节点ID
         ///</Summary>
-        public int? ParnetID { get; set; }
+        public int ParnetID { get; set; } = 0;
         public List<RoleMenu> RoleMenu { get; set; }
     }
 }

@@ -36,7 +36,7 @@
         </member>
         <member name="P:Rbac.Entity.SysMenu.ParnetID">
             <Summary>
-             
+             父节点ID
             </Summary>
         </member>
     </members>

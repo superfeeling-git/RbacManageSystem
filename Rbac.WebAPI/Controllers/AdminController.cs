@@ -8,13 +8,19 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Rbac.WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     [Authorize]
     public class AdminController : ControllerBase
     {
         [HttpGet]
         public IActionResult Test()
+        {
+            return Ok();
+        }
+
+        [HttpGet]
+        public IActionResult Create(Dtos.Admin.InsertDto insertDto)
         {
             return Ok();
         }

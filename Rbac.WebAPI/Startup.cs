@@ -110,6 +110,8 @@ namespace Rbac.WebAPI
 
             services.AddSwaggerGen(options =>
             {
+                options.CustomSchemaIds(type => type.FullName);
+
                 options.SwaggerDoc("V1", new OpenApiInfo
                 {
                     // {ApiName} 定义成全局变量，方便修改

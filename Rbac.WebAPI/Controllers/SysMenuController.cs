@@ -21,6 +21,13 @@ namespace Rbac.WebAPI.Controllers
             this.sysMenuservice = _sysMenuservice;
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreateRootMenuAsync(InsertDto dto)
+        {
+            await sysMenuservice.CreateAsync(dto);
+            return Ok();
+        }
+
         [HttpGet]
         public IActionResult List()
         {
