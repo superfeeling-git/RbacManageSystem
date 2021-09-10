@@ -9,5 +9,6 @@ namespace Rbac.IRepositoty
 {
     public interface IAdminRepository : IBaseRepository<Admin, int>
     {
+
     }
 }

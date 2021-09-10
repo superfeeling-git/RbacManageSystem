@@ -22,37 +22,43 @@
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span>导航一</span>
+                <span>权限设置</span>
               </template>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
+              <el-menu-item index="1-1" @click="openMenu('权限设置','管理员添加')">管理员添加</el-menu-item>
+              <el-menu-item index="1-2" @click="openMenu('权限设置','管理员管理')">管理员管理</el-menu-item>
             </el-submenu>
-            <el-menu-item index="2">
-              <i class="el-icon-menu"></i>
-              <span slot="title">导航二</span>
-            </el-menu-item>
-            <el-menu-item index="3" disabled>
-              <i class="el-icon-document"></i>
-              <span slot="title">导航三</span>
-            </el-menu-item>
-            <el-menu-item index="4">
-              <i class="el-icon-setting"></i>
-              <span slot="title">导航四</span>
-            </el-menu-item>
           </el-menu>
         </el-aside>
-        <el-main>Main</el-main>
+        <el-main>
+          <nav-header :submenu="navData.submenu" :menuitem="navData.menuitem"></nav-header>
+          <div class="main">
+            <router-view></router-view>
+          </div>
+        </el-main>
       </el-container>
     </el-container>
   </div>
 </template>
 
 <script>
+import navHeader from '../components/nav.vue'
 export default {
+  components:{
+    navHeader
+  },
   data() {
-    return {};
+    return {
+      navData:{
+        submenu:"",
+        menuitem:""
+      }
+    };
   },
   methods: {
+    openMenu(submenu,menuitem){
+      this.navData.submenu = submenu;
+      this.navData.menuitem = menuitem;
+    },
     logout() {
       this.$router.push("/");
     },
@@ -61,6 +67,10 @@ export default {
 </script>
 
 <style scoped>
+.main {
+  border-top: 1px solid #e2e2e2;
+  margin-top: 20px;
+}
 .headText {
   text-align: left;
   font-size: 18px;
@@ -82,11 +92,9 @@ export default {
 }
 
 .el-main {
-  background-color: #e9eef3;
   color: #333;
   text-align: center;
-  line-height: 160px;
-  height: calc(100vh - 66px);
+  height: calc(100vh - 60px);
 }
 
 body > .el-container {

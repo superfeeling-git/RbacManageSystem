@@ -170,3 +170,10 @@ E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\Swashbuckle.AspNetCore.F
 E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\Rbac.Entity.xml
 E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\Rbac.WebAPI.xml
+E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\IdentityModel.dll
+E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\System.Drawing.Common.dll
+E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\System.Text.Json.dll
+E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\Rbac.Dtos.xml

@@ -39,10 +39,16 @@ namespace Rbac.Entity
                 action.HasKey(m => m.MenuID);
             });
 
+            modelBuilder.Entity<Goods>(action => {
+                action.HasKey(m => m.GoodsID);
+                action.Property(m => m.GoodsName).HasMaxLength(50).IsRequired(true);
+                action.Property(m => m.GoodsPic).HasMaxLength(500).IsRequired(true);
+            });
+
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Admin> Admin { get; set; }
+        public virtual DbSet<Admin> Admin { get; set; }
         public DbSet<AdminRole> AdminRole { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<RoleMenu> RoleMenu { get; set; }

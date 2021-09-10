@@ -77,6 +77,37 @@ namespace Rbac.Entity.Migrations
                     b.ToTable("AdminRole");
                 });
 
+            modelBuilder.Entity("Rbac.Entity.Goods", b =>
+                {
+                    b.Property<int>("GoodsID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CreateId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GoodsName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("GoodsPic")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("GoodsPrice")
+                        .HasColumnType("int");
+
+                    b.HasKey("GoodsID");
+
+                    b.ToTable("Goods");
+                });
+
             modelBuilder.Entity("Rbac.Entity.Role", b =>
                 {
                     b.Property<int>("RoleID")

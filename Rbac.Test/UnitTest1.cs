@@ -16,7 +16,7 @@ namespace Rbac.Test
 {
     public class UnitTest1
     {
-        private IAdminService<ListDto> service;
+        //private IAdminService<ListDto> service;
         private IAdminRepository repository;
         public UnitTest1()
         {
@@ -27,11 +27,11 @@ namespace Rbac.Test
             });
 
             services.AddScoped<IAdminRepository, AdminRepository>();
-            services.AddScoped<IAdminService<ListDto>, AdminService<ListDto>>();
+            //services.AddScoped<IAdminService<ListDto>, AdminService<ListDto>>();
 
             var provider = services.BuildServiceProvider();
 
-            service = provider.GetService<IAdminService<ListDto>>();
+            //service = provider.GetService<IAdminService<ListDto>>();
             repository = provider.GetService<IAdminRepository>();
         }
 
@@ -39,7 +39,8 @@ namespace Rbac.Test
         [Fact]
         public async Task Test1()
         {
-            await service.CreateAsync(new InsertDto { UserName = "admin", Password = MD5Helper.Encrypt("admin") });
+            var admin = await repository.FirstOrDefaultAsync(m => m.AdminId > 0);
+            
         }
     }
 }

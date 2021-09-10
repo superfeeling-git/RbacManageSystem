@@ -55,6 +55,7 @@ namespace Rbac.WebAPI
                 options.SerializerSettings.Converters.Add(new IsoDateTimeConverter() { DateTimeFormat = "yyyy/MM/dd HH:mm:ss" });
             }).AddControllersAsServices();
 
+            //跨域
             services.AddCors(option => {
                 option.AddDefaultPolicy(build => {
                     build.AllowCredentials();
@@ -64,6 +65,7 @@ namespace Rbac.WebAPI
                 });
             });
 
+            //EF Core的db上下文
             services.AddDbContext<RbacDbContext>(option => {
                 option.UseSqlServer(Configuration.GetConnectionString("SqlServer"));
             });
@@ -71,8 +73,10 @@ namespace Rbac.WebAPI
             //便于其他类库访问HTTP上下文
             services.AddHttpContextAccessor();
 
+            //使用.net core自带的注入
             services.inject();
 
+            //JWT认证参数
             services.AddAuthentication(option => {
                 option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -101,6 +105,7 @@ namespace Rbac.WebAPI
                 }
             );
 
+            //Swagger
             var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
 
             services.AddSwaggerGen(options =>
