@@ -1,7 +1,7 @@
 ﻿using Rbac.Dtos;
 using Rbac.Dtos.Admin;
 using Rbac.Entity;
-using Rbac.IRepositoty;
+using Rbac.IRepository;
 using Rbac.IService;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,6 @@ namespace Rbac.Service
         private IAdminRepository adminRepository;
         private readonly IHttpContextAccessor httpContextAccessor;
         private IConfiguration configuration;
-
 
         public AdminService(
             IAdminRepository adminRepository, 

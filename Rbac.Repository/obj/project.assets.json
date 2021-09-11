@@ -1556,17 +1556,17 @@
           "bin/placeholder/Rbac.Entity.dll": {}
         }
       },
-      "Rbac.IRepositoty/1.0.0": {
+      "Rbac.IRepository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Rbac.Entity": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Rbac.IRepositoty.dll": {}
+          "bin/placeholder/Rbac.IRepository.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Rbac.IRepositoty.dll": {}
+          "bin/placeholder/Rbac.IRepository.dll": {}
         }
       }
     }
@@ -6069,16 +6069,16 @@
       "path": "../Rbac.Entity/Rbac.Entity.csproj",
       "msbuildProject": "../Rbac.Entity/Rbac.Entity.csproj"
     },
-    "Rbac.IRepositoty/1.0.0": {
+    "Rbac.IRepository/1.0.0": {
       "type": "project",
-      "path": "../Rbac.IRepositoty/Rbac.IRepositoty.csproj",
-      "msbuildProject": "../Rbac.IRepositoty/Rbac.IRepositoty.csproj"
+      "path": "../Rbac.IRepository/Rbac.IRepository.csproj",
+      "msbuildProject": "../Rbac.IRepository/Rbac.IRepository.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Rbac.Entity >= 1.0.0",
-      "Rbac.IRepositoty >= 1.0.0"
+      "Rbac.IRepository >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6121,8 +6121,8 @@
             "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
               "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj"
+            "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj": {
+              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj"
             }
           }
         }

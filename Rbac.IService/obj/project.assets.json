@@ -6063,8 +6063,8 @@
     },
     "Rbac.Dtos/1.0.0": {
       "type": "project",
-      "path": "../Rbac.Dto/Rbac.Dtos.csproj",
-      "msbuildProject": "../Rbac.Dto/Rbac.Dtos.csproj"
+      "path": "../Rbac.Dtos/Rbac.Dtos.csproj",
+      "msbuildProject": "../Rbac.Dtos/Rbac.Dtos.csproj"
     },
     "Rbac.Entity/1.0.0": {
       "type": "project",
@@ -6115,8 +6115,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Teaching\\RbacManageSystem\\Rbac.Dto\\Rbac.Dtos.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dto\\Rbac.Dtos.csproj"
+            "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
+              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj"
             },
             "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
               "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"

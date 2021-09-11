@@ -42,7 +42,7 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          config.axios.post("",{}).then(m=>{
+          config.axios.post('/api/SysMenu/CreateRootMenu',this.ruleForm).then(m=>{
               
           });
         } else {

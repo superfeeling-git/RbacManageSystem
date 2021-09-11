@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Rbac.Entity\Rbac.Entity.csproj" />
-    <ProjectReference Include="..\Rbac.IRepositoty\Rbac.IRepositoty.csproj" />
+    <ProjectReference Include="..\Rbac.IRepository\Rbac.IRepository.csproj" />
     <ProjectReference Include="..\Rbac.IService\Rbac.IService.csproj" />
     <ProjectReference Include="..\Rbac.Repository\Rbac.Repository.csproj" />
     <ProjectReference Include="..\Rbac.Service\Rbac.Service.csproj" />

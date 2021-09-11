@@ -1,6 +1,6 @@
 using System;
 using Xunit;
-using Rbac.IRepositoty;
+using Rbac.IRepository;
 using Rbac.Entity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;

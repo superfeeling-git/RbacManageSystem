@@ -9,7 +9,7 @@
       "Rbac.Repository/1.0.0": {
         "dependencies": {
           "Rbac.Entity": "1.0.0",
-          "Rbac.IRepositoty": "1.0.0"
+          "Rbac.IRepository": "1.0.0"
         },
         "runtime": {
           "Rbac.Repository.dll": {}
@@ -1086,12 +1086,12 @@
           "Rbac.Entity.dll": {}
         }
       },
-      "Rbac.IRepositoty/1.0.0": {
+      "Rbac.IRepository/1.0.0": {
         "dependencies": {
           "Rbac.Entity": "1.0.0"
         },
         "runtime": {
-          "Rbac.IRepositoty.dll": {}
+          "Rbac.IRepository.dll": {}
         }
       }
     }
@@ -1807,7 +1807,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Rbac.IRepositoty/1.0.0": {
+    "Rbac.IRepository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

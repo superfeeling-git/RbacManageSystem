@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Rbac.IRepositoty;
+using Rbac.IRepository;
 using Rbac.Unitity;
 
 namespace Rbac.Service
@@ -68,7 +68,7 @@ namespace Rbac.Service
             return entity.MapToList<TEntity, TDto>();
         }
 
-        public (int, List<TDto>) PagedList<TInsertDto>(Expression<Func<TEntity, TKey>> orderBy, int PageIndex = 1, int PageSize = 10, Expression<Func<TEntity, bool>> Condition = null)
+        public (int, List<TDto>) PagedList(Expression<Func<TEntity, TKey>> orderBy, int PageIndex = 1, int PageSize = 10, Expression<Func<TEntity, bool>> Condition = null)
         {
             var entity = baseRepository.PagedList(orderBy, PageIndex, PageSize, Condition);
             return (entity.Item1, entity.Item2.MapToList<TEntity, TDto>());

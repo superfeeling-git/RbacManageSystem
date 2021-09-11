@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Rbac.Entity;
 using Rbac.IService;
-using Rbac.IRepositoty;
+using Rbac.IRepository;
 
 namespace Rbac.Service
 {

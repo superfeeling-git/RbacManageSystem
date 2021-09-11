@@ -1,0 +1,23 @@
+﻿using Rbac.Entity;
+using Rbac.IRepository;
+using Rbac.IService;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Rbac.Service
+{
+    public class #ModuleName#Service<TDto> : BaseService<#ModuleName#, TDto, int>, I#ModuleName#Service<TDto>
+        where TDto : class, new()
+    {
+        private I#ModuleName#Repository repository;
+
+        public #ModuleName#Service(I#ModuleName#Repository _repository)
+        {
+            this.baseRepository = _repository;
+            this.repository = _repository;
+        }
+    }
+}

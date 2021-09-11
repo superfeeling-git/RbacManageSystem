@@ -12,7 +12,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.9",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
-          "Rbac.IRepositoty": "1.0.0",
+          "Rbac.IRepository": "1.0.0",
           "Rbac.IService": "1.0.0",
           "Rbac.Unitity": "1.0.0"
         },
@@ -1129,12 +1129,12 @@
           "Rbac.Entity.dll": {}
         }
       },
-      "Rbac.IRepositoty/1.0.0": {
+      "Rbac.IRepository/1.0.0": {
         "dependencies": {
           "Rbac.Entity": "1.0.0"
         },
         "runtime": {
-          "Rbac.IRepositoty.dll": {}
+          "Rbac.IRepository.dll": {}
         }
       },
       "Rbac.IService/1.0.0": {
@@ -2003,7 +2003,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Rbac.IRepositoty/1.0.0": {
+    "Rbac.IRepository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

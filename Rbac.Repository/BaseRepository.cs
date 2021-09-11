@@ -1,4 +1,4 @@
-﻿using Rbac.IRepositoty;
+﻿using Rbac.IRepository;
 using System;
 using System.Collections.Generic;
 using Rbac.Entity;
@@ -92,6 +92,16 @@ namespace Rbac.Repository
             }
             var pagedata = list.OrderBy(orderBy).Page(PageIndex, PageSize).ToList();
             return (list.Count(), pagedata);
+        }
+
+        public IQueryable<TEntity> Query(Expression<Func<TEntity,bool>> Condition = null)
+        {
+            var list = __db.Set<TEntity>().AsQueryable();
+            if(Condition != null)
+            {
+                list = list.Where(Condition);
+            }
+            return list;
         }
 
         public async void UpdateAsync(Expression<Func<TEntity,bool>> Condition,Expression<Func<TEntity,TEntity>> updateExpression)

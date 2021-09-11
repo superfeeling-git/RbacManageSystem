@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rbac.Dtos</name>
+    </assembly>
+    <members>
+        <member name="P:Rbac.Dtos.Admin.LoginDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Rbac.Dtos.Admin.LoginDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Rbac.Dtos.Admin.LoginDto.ValidateCode">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.MenuID">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.MenuName">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.MenuLink">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.IsShow">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.ParnetID">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.MenuID">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.MenuName">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.MenuLink">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.IsShow">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.ParnetID">
+            <Summary>
+             
+            </Summary>
+        </member>
+    </members>
+</doc>

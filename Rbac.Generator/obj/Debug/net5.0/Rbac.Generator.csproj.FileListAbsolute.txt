@@ -1,0 +1,16 @@
+E:\Teaching\RbacManageSystem\Rbac.Generator\bin\Debug\net5.0\Rbac.Generator.exe
+E:\Teaching\RbacManageSystem\Rbac.Generator\bin\Debug\net5.0\Rbac.Generator.deps.json
+E:\Teaching\RbacManageSystem\Rbac.Generator\bin\Debug\net5.0\Rbac.Generator.runtimeconfig.json
+E:\Teaching\RbacManageSystem\Rbac.Generator\bin\Debug\net5.0\Rbac.Generator.runtimeconfig.dev.json
+E:\Teaching\RbacManageSystem\Rbac.Generator\bin\Debug\net5.0\Rbac.Generator.dll
+E:\Teaching\RbacManageSystem\Rbac.Generator\bin\Debug\net5.0\ref\Rbac.Generator.dll
+E:\Teaching\RbacManageSystem\Rbac.Generator\bin\Debug\net5.0\Rbac.Generator.pdb
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\Rbac.Generator.GeneratedMSBuildEditorConfig.editorconfig
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\Rbac.Generator.AssemblyInfoInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\Rbac.Generator.AssemblyInfo.cs
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\Rbac.Generator.csproj.CoreCompileInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\Rbac.Generator.dll
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\ref\Rbac.Generator.dll
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\Rbac.Generator.pdb
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\Rbac.Generator.genruntimeconfig.cache
+E:\Teaching\RbacManageSystem\Rbac.Generator\obj\Debug\net5.0\Rbac.Generator.csproj.AssemblyReference.cache

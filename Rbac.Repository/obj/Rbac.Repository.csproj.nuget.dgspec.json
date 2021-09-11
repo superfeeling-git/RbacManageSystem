@@ -86,14 +86,14 @@
         }
       }
     },
-    "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj": {
+    "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj",
-        "projectName": "Rbac.IRepositoty",
-        "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj",
+        "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj",
+        "projectName": "Rbac.IRepository",
+        "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj",
         "packagesPath": "D:\\Administrator\\.nuget\\packages",
-        "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\obj\\",
+        "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -187,8 +187,8 @@
               "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
                 "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
               },
-              "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj": {
-                "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj"
+              "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj": {
+                "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj"
               }
             }
           }

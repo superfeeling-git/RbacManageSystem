@@ -11,10 +11,8 @@ E:\Teaching\RbacManageSystem\Rbac.Service\obj\Debug\net5.0\ref\Rbac.Service.dll
 E:\Teaching\RbacManageSystem\Rbac.Service\obj\Debug\net5.0\Rbac.Service.pdb
 E:\Teaching\RbacManageSystem\Rbac.Service\obj\Debug\net5.0\Rbac.Service.csproj.AssemblyReference.cache
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Entity.dll
-E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.IRepositoty.dll
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.IService.dll
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Unitity.dll
-E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.IRepositoty.pdb
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.IService.pdb
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Unitity.pdb
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Entity.pdb
@@ -23,3 +21,5 @@ E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Entity.xml
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Dtos.dll
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Dtos.pdb
 E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.Dtos.xml
+E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.IRepository.dll
+E:\Teaching\RbacManageSystem\Rbac.Service\bin\Debug\net5.0\Rbac.IRepository.pdb

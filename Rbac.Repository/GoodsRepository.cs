@@ -1,5 +1,5 @@
 ﻿using Rbac.Entity;
-using Rbac.IRepositoty;
+using Rbac.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;

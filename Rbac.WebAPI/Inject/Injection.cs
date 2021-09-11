@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Rbac.IRepositoty;
+using Rbac.IRepository;
 using Rbac.Repository;
 using Rbac.IService;
 using Rbac.Service;

@@ -49,9 +49,9 @@ namespace Rbac.Entity
         }
 
         public virtual DbSet<Admin> Admin { get; set; }
-        public DbSet<AdminRole> AdminRole { get; set; }
-        public DbSet<Role> Role { get; set; }
-        public DbSet<RoleMenu> RoleMenu { get; set; }
-        public DbSet<SysMenu> SysMenu { get; set; }
+        public virtual DbSet<AdminRole> AdminRole { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<RoleMenu> RoleMenu { get; set; }
+        public virtual DbSet<SysMenu> SysMenu { get; set; }
     }
 }

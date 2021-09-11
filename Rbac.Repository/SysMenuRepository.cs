@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Rbac.Entity;
-using Rbac.IRepositoty;
+using Rbac.IRepository;
 
 namespace Rbac.Repository
 {

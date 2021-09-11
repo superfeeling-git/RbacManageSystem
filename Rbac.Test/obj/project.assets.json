@@ -2341,17 +2341,17 @@
           "bin/placeholder/Rbac.Entity.dll": {}
         }
       },
-      "Rbac.IRepositoty/1.0.0": {
+      "Rbac.IRepository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Rbac.Entity": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Rbac.IRepositoty.dll": {}
+          "bin/placeholder/Rbac.IRepository.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Rbac.IRepositoty.dll": {}
+          "bin/placeholder/Rbac.IRepository.dll": {}
         }
       },
       "Rbac.IService/1.0.0": {
@@ -2373,7 +2373,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Rbac.Entity": "1.0.0",
-          "Rbac.IRepositoty": "1.0.0"
+          "Rbac.IRepository": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Rbac.Repository.dll": {}
@@ -2390,7 +2390,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.9",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
-          "Rbac.IRepositoty": "1.0.0",
+          "Rbac.IRepository": "1.0.0",
           "Rbac.IService": "1.0.0",
           "Rbac.Unitity": "1.0.0"
         },
@@ -2429,7 +2429,7 @@
           "Microsoft.DotNet.PlatformAbstractions": "3.1.6",
           "Rbac.Dtos": "1.0.0",
           "Rbac.Entity": "1.0.0",
-          "Rbac.IRepositoty": "1.0.0",
+          "Rbac.IRepository": "1.0.0",
           "Rbac.IService": "1.0.0",
           "Rbac.Repository": "1.0.0",
           "Rbac.Service": "1.0.0",
@@ -8235,18 +8235,18 @@
     },
     "Rbac.Dtos/1.0.0": {
       "type": "project",
-      "path": "../Rbac.Dto/Rbac.Dtos.csproj",
-      "msbuildProject": "../Rbac.Dto/Rbac.Dtos.csproj"
+      "path": "../Rbac.Dtos/Rbac.Dtos.csproj",
+      "msbuildProject": "../Rbac.Dtos/Rbac.Dtos.csproj"
     },
     "Rbac.Entity/1.0.0": {
       "type": "project",
       "path": "../Rbac.Entity/Rbac.Entity.csproj",
       "msbuildProject": "../Rbac.Entity/Rbac.Entity.csproj"
     },
-    "Rbac.IRepositoty/1.0.0": {
+    "Rbac.IRepository/1.0.0": {
       "type": "project",
-      "path": "../Rbac.IRepositoty/Rbac.IRepositoty.csproj",
-      "msbuildProject": "../Rbac.IRepositoty/Rbac.IRepositoty.csproj"
+      "path": "../Rbac.IRepository/Rbac.IRepository.csproj",
+      "msbuildProject": "../Rbac.IRepository/Rbac.IRepository.csproj"
     },
     "Rbac.IService/1.0.0": {
       "type": "project",
@@ -8278,7 +8278,7 @@
     "net5.0": [
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "Rbac.Entity >= 1.0.0",
-      "Rbac.IRepositoty >= 1.0.0",
+      "Rbac.IRepository >= 1.0.0",
       "Rbac.IService >= 1.0.0",
       "Rbac.Repository >= 1.0.0",
       "Rbac.Service >= 1.0.0",
@@ -8329,8 +8329,8 @@
             "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
               "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepositoty\\Rbac.IRepositoty.csproj"
+            "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj": {
+              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj"
             },
             "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj": {
               "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj"

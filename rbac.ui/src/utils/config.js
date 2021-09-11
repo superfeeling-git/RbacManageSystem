@@ -2,6 +2,7 @@ import axios from 'axios'
 let baseUrl = "http://localhost:5000";
 
 axios.defaults.baseURL = baseUrl;
+axios.defaults.headers.common['Authorization'] = localStorage.getItem("token");
 
 // 添加响应拦截器
 axios.interceptors.response.use(function (response) {

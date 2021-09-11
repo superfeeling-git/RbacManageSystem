@@ -83,7 +83,7 @@ namespace Rbac.IService
         /// <param name="PageSize"></param>
         /// <param name="Condition"></param>
         /// <returns></returns>
-        (int, List<TDto>) PagedList<TInsertDto>(Expression<Func<TEntity, TKey>> orderBy, int PageIndex = 1, int PageSize = 10, Expression<Func<TEntity, bool>> Condition = null);
+        (int, List<TDto>) PagedList(Expression<Func<TEntity, TKey>> orderBy, int PageIndex = 1, int PageSize = 10, Expression<Func<TEntity, bool>> Condition = null);
         /// <summary>
         /// 单条删除
         /// </summary>

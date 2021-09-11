@@ -11,8 +11,8 @@ E:\Teaching\RbacManageSystem\Rbac.Repository\obj\Debug\net5.0\Rbac.Repository.dl
 E:\Teaching\RbacManageSystem\Rbac.Repository\obj\Debug\net5.0\ref\Rbac.Repository.dll
 E:\Teaching\RbacManageSystem\Rbac.Repository\obj\Debug\net5.0\Rbac.Repository.pdb
 E:\Teaching\RbacManageSystem\Rbac.Repository\bin\Debug\net5.0\Rbac.Entity.dll
-E:\Teaching\RbacManageSystem\Rbac.Repository\bin\Debug\net5.0\Rbac.IRepositoty.dll
 E:\Teaching\RbacManageSystem\Rbac.Repository\bin\Debug\net5.0\Rbac.Entity.pdb
-E:\Teaching\RbacManageSystem\Rbac.Repository\bin\Debug\net5.0\Rbac.IRepositoty.pdb
 E:\Teaching\RbacManageSystem\Rbac.Repository\obj\Debug\net5.0\Rbac.Repository.csproj.CopyComplete
 E:\Teaching\RbacManageSystem\Rbac.Repository\bin\Debug\net5.0\Rbac.Entity.xml
+E:\Teaching\RbacManageSystem\Rbac.Repository\bin\Debug\net5.0\Rbac.IRepository.dll
+E:\Teaching\RbacManageSystem\Rbac.Repository\bin\Debug\net5.0\Rbac.IRepository.pdb

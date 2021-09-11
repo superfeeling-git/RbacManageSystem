@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -23,9 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rbac.Dto\Rbac.Dtos.csproj" />
+    <ProjectReference Include="..\Rbac.Dtos\Rbac.Dtos.csproj" />
     <ProjectReference Include="..\Rbac.Entity\Rbac.Entity.csproj" />
-    <ProjectReference Include="..\Rbac.IRepositoty\Rbac.IRepositoty.csproj" />
+    <ProjectReference Include="..\Rbac.IRepository\Rbac.IRepository.csproj" />
     <ProjectReference Include="..\Rbac.IService\Rbac.IService.csproj" />
     <ProjectReference Include="..\Rbac.Repository\Rbac.Repository.csproj" />
     <ProjectReference Include="..\Rbac.Service\Rbac.Service.csproj" />
