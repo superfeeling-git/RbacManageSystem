@@ -68,7 +68,7 @@ namespace Rbac.Service
 
 
                     IList<Claim> claims = new List<Claim> {
-                        new Claim(JwtClaimTypes.JwtId,loginDto.UserName),
+                        new Claim(JwtClaimTypes.Id,admin.AdminId.ToString()),
                         new Claim(JwtClaimTypes.Name,loginDto.UserName),
                         new Claim(JwtClaimTypes.Role,string.Join(",", ""))
                     };

@@ -7,7 +7,7 @@
       :rules="rules"
       class="ruleForm"
     >
-      <el-form-item label="菜单名称" prop="MenuName">
+      <el-form-item label="菜单名称" prop="MenuName" ref="MenuName">
         <el-input v-model="ruleForm.MenuName"></el-input>
       </el-form-item>
 
@@ -42,8 +42,17 @@ export default {
     submitForm(formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          config.axios.post('/api/SysMenu/CreateRootMenu',this.ruleForm).then(m=>{
-              //console.log(m);
+          let _this = this;
+          config.axios.post('/SysMenu/CreateRootMenu',this.ruleForm).then(m=>{
+              this.$message({
+                message: '添加成功',
+                type: 'success',
+                onClose : function(o){
+                  _this.$refs.MenuName.resetField();
+                }
+              });
+          },m=>{
+            //console.clear();
           });
         } else {
           console.log("error submit!!");

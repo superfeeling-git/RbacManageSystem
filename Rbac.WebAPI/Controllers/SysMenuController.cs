@@ -29,9 +29,9 @@ namespace Rbac.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult List()
+        public IActionResult RootMenu()
         {
-            return Ok();
+            return Ok(sysMenuservice.getRootMenu());
         }
 
         [HttpGet]

@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rbac.Entity
+namespace Rbac.Dtos
 {
-    public class BaseModel<TKey>
+    public class BaseDto
     {
-        public TKey CreateById { get; set; }
         public string CreateByName { get; set; }
-        public DateTime CreateTime { get; set; } = DateTime.Now;
+        public DateTime CreateTime { get; set; }
     }
 }

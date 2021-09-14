@@ -1,6 +1,6 @@
 import router from '../router'
 import axios from 'axios'
-let baseUrl = "http://localhost:5000";
+let baseUrl = "http://localhost:5000/api/";
 
 axios.defaults.baseURL = baseUrl;
 axios.defaults.headers.common['Authorization'] = `bearer ${localStorage.getItem("token")}`;
@@ -12,6 +12,7 @@ axios.interceptors.response.use(function (response) {
     console.log(2);
     return response;
   }, function (error) {
+    console.log(error.response);
     // 对响应错误做点什么
     if(error.response.status == 401){
       //跳转处理

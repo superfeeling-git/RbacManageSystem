@@ -1,10 +1,14 @@
 ﻿using Rbac.IService;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Rbac.IRepository;
 using Rbac.Unitity;
+using System.Reflection;
+using Microsoft.AspNetCore.Http;
+using IdentityModel;
 
 namespace Rbac.Service
 {
@@ -14,25 +18,60 @@ namespace Rbac.Service
         where TKey : struct
     {
         protected IBaseRepository<TEntity, TKey> baseRepository;
+        protected IHttpContextAccessor _httpContextAccessor;
 
-        public virtual async Task BulkDeleteAsync(IEnumerable<TDto> entities)
+        public virtual async Task BulkDeleteAsync(IEnumerable<TDto> dtos)
         {
-            await baseRepository.BulkDeleteAsync(entities.MapToList<TDto, TEntity>());
+            await baseRepository.BulkDeleteAsync(dtos.MapToList<TDto, TEntity>());
         }
 
-        public virtual async Task BulkInsertAsync<TInsertDto>(IEnumerable<TInsertDto> entitys)
+        public virtual async Task BulkInsertAsync<TInsertDto>(IEnumerable<TInsertDto> dtos)
         {
-            await baseRepository.BulkInsertAsync(entitys.MapToList<TInsertDto, TEntity>());
+            var userid = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Id).Value;
+            var username = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Name).Value;
+
+            List<TEntity> entities = new List<TEntity>();
+
+            foreach (var item in dtos)
+            {
+                TEntity entity = item.MapTo<TEntity>();
+                Type type = entity.GetType();
+                type.GetProperty("CreateById").SetValue(entity, Convert.ToInt32(userid));
+                type.GetProperty("CreateByName").SetValue(entity, username);
+                entities.Add(entity);
+            }
+
+            await baseRepository.BulkInsertAsync(entities);
         }
 
-        public virtual async Task<int> CreateAsync<TInsertDto>(IEnumerable<TInsertDto> entitys)
+        public virtual async Task<int> CreateAsync<TInsertDto>(IEnumerable<TInsertDto> dtos)
         {
-            return await baseRepository.CreateAsync(entitys.MapToList<TInsertDto, TEntity>());
+            var userid = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Id).Value;
+            var username = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Name).Value;
+
+            List<TEntity> entities = new List<TEntity>();
+
+            foreach (var item in dtos)
+            {
+                TEntity entity = item.MapTo<TEntity>();
+                Type type = entity.GetType();
+                type.GetProperty("CreateById").SetValue(entity, Convert.ToInt32(userid));
+                type.GetProperty("CreateByName").SetValue(entity, username);
+                entities.Add(entity);
+            }
+
+            return await baseRepository.CreateAsync(entities);
         }
 
-        public virtual async Task<int> CreateAsync<TInsertDto>(TInsertDto entity)
+        public virtual async Task<int> CreateAsync<TInsertDto>(TInsertDto dto)
         {
-            return await baseRepository.CreateAsync(entity.MapTo<TEntity>());
+            var userid = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Id).Value;
+            var username = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Name).Value;
+            TEntity entity = dto.MapTo<TEntity>();
+            Type type = entity.GetType();
+            type.GetProperty("CreateById").SetValue(entity, Convert.ToInt32(userid));
+            type.GetProperty("CreateByName").SetValue(entity, username);
+            return await baseRepository.CreateAsync(entity);
         }
 
         public virtual async Task DeleteAsync(Expression<Func<TEntity, bool>> Condition)
@@ -40,9 +79,9 @@ namespace Rbac.Service
             await baseRepository.DeleteAsync(Condition);
         }
 
-        public virtual async Task<int> DeleteAsync(TDto entity)
+        public virtual async Task<int> DeleteAsync(TDto dto)
         {
-            return await baseRepository.DeleteAsync(entity.MapTo<TEntity>());
+            return await baseRepository.DeleteAsync(dto.MapTo<TEntity>());
         }
 
         public virtual async Task<int> DeleteAsync(TKey key)

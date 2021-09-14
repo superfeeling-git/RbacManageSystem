@@ -84,7 +84,7 @@ export default {
               }
               else{
                 localStorage.setItem("token",m.data.token);
-                this.$router.push("home");
+                window.location.href = "#/home";
               }              
             });
           } else {
