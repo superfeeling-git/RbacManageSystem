@@ -1790,6 +1790,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Rbac.Dtos": "1.0.0",
           "Rbac.Entity": "1.0.0"
         },
         "compile": {

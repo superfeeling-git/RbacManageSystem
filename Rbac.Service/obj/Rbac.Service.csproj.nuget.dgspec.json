@@ -180,6 +180,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
+                "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj"
+              },
               "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
                 "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
               }

@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rbac.Entity
+namespace Rbac.Dtos.GoodsCategory
 {
-    public class GoodsCategory
+    public class ListDto
     {
+        
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+    
     }
 }

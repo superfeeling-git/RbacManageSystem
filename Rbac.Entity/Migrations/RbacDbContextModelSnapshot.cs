@@ -77,12 +77,78 @@ namespace Rbac.Entity.Migrations
                     b.ToTable("AdminRole");
                 });
 
+            modelBuilder.Entity("Rbac.Entity.Contract", b =>
+                {
+                    b.Property<int>("ContractId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("ContractMoney")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ContractName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CreateId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("SignDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Square")
+                        .HasColumnType("int");
+
+                    b.HasKey("ContractId");
+
+                    b.ToTable("Contract");
+                });
+
+            modelBuilder.Entity("Rbac.Entity.Customer", b =>
+                {
+                    b.Property<int>("CustomerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Contact")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CreateId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CustomerCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CustomerId");
+
+                    b.ToTable("Customer");
+                });
+
             modelBuilder.Entity("Rbac.Entity.Goods", b =>
                 {
                     b.Property<int>("GoodsID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
 
                     b.Property<int>("CreateId")
                         .HasColumnType("int");
@@ -105,7 +171,24 @@ namespace Rbac.Entity.Migrations
 
                     b.HasKey("GoodsID");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Goods");
+                });
+
+            modelBuilder.Entity("Rbac.Entity.GoodsCategory", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("GoodsCategory");
                 });
 
             modelBuilder.Entity("Rbac.Entity.Role", b =>
@@ -179,7 +262,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<string>("MenuName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ParnetID")
+                    b.Property<int>("ParnetID")
                         .HasColumnType("int");
 
                     b.HasKey("MenuID");
@@ -202,6 +285,17 @@ namespace Rbac.Entity.Migrations
                     b.Navigation("Role");
                 });
 
+            modelBuilder.Entity("Rbac.Entity.Goods", b =>
+                {
+                    b.HasOne("Rbac.Entity.GoodsCategory", "GoodsCategory")
+                        .WithMany("Goods")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GoodsCategory");
+                });
+
             modelBuilder.Entity("Rbac.Entity.RoleMenu", b =>
                 {
                     b.HasOne("Rbac.Entity.SysMenu", "SysMenu")
@@ -217,6 +311,11 @@ namespace Rbac.Entity.Migrations
                     b.Navigation("Role");
 
                     b.Navigation("SysMenu");
+                });
+
+            modelBuilder.Entity("Rbac.Entity.GoodsCategory", b =>
+                {
+                    b.Navigation("Goods");
                 });
 
             modelBuilder.Entity("Rbac.Entity.SysMenu", b =>

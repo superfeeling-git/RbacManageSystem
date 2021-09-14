@@ -1076,6 +1076,11 @@
           }
         }
       },
+      "Rbac.Dtos/1.0.0": {
+        "runtime": {
+          "Rbac.Dtos.dll": {}
+        }
+      },
       "Rbac.Entity/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.9",
@@ -1088,6 +1093,7 @@
       },
       "Rbac.IRepository/1.0.0": {
         "dependencies": {
+          "Rbac.Dtos": "1.0.0",
           "Rbac.Entity": "1.0.0"
         },
         "runtime": {
@@ -1801,6 +1807,11 @@
       "sha512": "sha512-qmuhMbJ8MlwgOhFsrjQK0CTnChnbknN+AvxS6aU33E9SPV3jbFMtsi5VCajsKJ04zx53NZM0CcX5a2bF6F60yQ==",
       "path": "z.expressions.eval/4.0.52",
       "hashPath": "z.expressions.eval.4.0.52.nupkg.sha512"
+    },
+    "Rbac.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Rbac.Entity/1.0.0": {
       "type": "project",

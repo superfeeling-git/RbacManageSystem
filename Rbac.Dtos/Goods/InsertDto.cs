@@ -8,6 +8,7 @@ namespace Rbac.Dtos.Goods
 {
     public class InsertDto
     {
+        public int CategoryId { get; set; }
         public string GoodsName { get; set; }
         public string GoodsPic { get; set; }
     }

@@ -65,6 +65,7 @@ namespace Rbac.WebAPI.Controllers
         /// <param name="PageSize"></param>
         /// <param name="PageIndex"></param>
         /// <returns></returns>
+        [HttpGet]
         public IActionResult PageList(int PageSize = 10,int PageIndex = 1)
         {
             return Ok();

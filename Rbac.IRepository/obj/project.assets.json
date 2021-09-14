@@ -1541,6 +1541,16 @@
           "lib/netstandard2.1/Z.Expressions.Eval.dll": {}
         }
       },
+      "Rbac.Dtos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Rbac.Dtos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rbac.Dtos.dll": {}
+        }
+      },
       "Rbac.Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6051,6 +6061,11 @@
         "z.expressions.eval.nuspec"
       ]
     },
+    "Rbac.Dtos/1.0.0": {
+      "type": "project",
+      "path": "../Rbac.Dtos/Rbac.Dtos.csproj",
+      "msbuildProject": "../Rbac.Dtos/Rbac.Dtos.csproj"
+    },
     "Rbac.Entity/1.0.0": {
       "type": "project",
       "path": "../Rbac.Entity/Rbac.Entity.csproj",
@@ -6059,6 +6074,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Rbac.Dtos >= 1.0.0",
       "Rbac.Entity >= 1.0.0"
     ]
   },
@@ -6099,6 +6115,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
+              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj"
+            },
             "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
               "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
             }

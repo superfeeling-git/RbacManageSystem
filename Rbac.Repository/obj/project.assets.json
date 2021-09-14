@@ -1541,6 +1541,16 @@
           "lib/netstandard2.1/Z.Expressions.Eval.dll": {}
         }
       },
+      "Rbac.Dtos/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Rbac.Dtos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rbac.Dtos.dll": {}
+        }
+      },
       "Rbac.Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1560,6 +1570,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Rbac.Dtos": "1.0.0",
           "Rbac.Entity": "1.0.0"
         },
         "compile": {
@@ -6063,6 +6074,11 @@
         "z.expressions.eval.4.0.52.nupkg.sha512",
         "z.expressions.eval.nuspec"
       ]
+    },
+    "Rbac.Dtos/1.0.0": {
+      "type": "project",
+      "path": "../Rbac.Dtos/Rbac.Dtos.csproj",
+      "msbuildProject": "../Rbac.Dtos/Rbac.Dtos.csproj"
     },
     "Rbac.Entity/1.0.0": {
       "type": "project",

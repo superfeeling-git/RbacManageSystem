@@ -1,4 +1,5 @@
-﻿using Rbac.Entity;
+﻿using Rbac.Dtos.Goods;
+using Rbac.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Rbac.IService
     public interface IGoodsService<TDto> : IBaseService<Goods, TDto, int>
         where TDto : class, new()
     {
+        List<ListDto> GetAllGoods();
     }
 }

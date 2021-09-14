@@ -15,13 +15,14 @@ namespace Rbac.WebAPI.Controllers
     public class GoodsController : ControllerBase
     {
         private IGoodsService<ListDto> service;
+        private IGoodsCategoryService<Dtos.GoodsCategory.ListDto> categoryService;
 
-        /// <summary>
-        /// 构造函数注入
-        /// </summary>
-        /// <param name="_service"></param>
-        public GoodsController(IGoodsService<ListDto> _service)
+        
+        public GoodsController(IGoodsService<ListDto> _service
+            , IGoodsCategoryService<Dtos.GoodsCategory.ListDto> _categoryService
+            )
         {
+            this.categoryService = _categoryService;
             this.service = _service;
         }
 
@@ -54,9 +55,9 @@ namespace Rbac.WebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetList()
+        public IActionResult GetList()
         {
-            return new JsonResult(await service.ListAsync());
+            return new JsonResult(service.GetAllGoods());
         }
 
         /// <summary>
@@ -65,6 +66,7 @@ namespace Rbac.WebAPI.Controllers
         /// <param name="PageSize"></param>
         /// <param name="PageIndex"></param>
         /// <returns></returns>
+        [HttpGet]
         public IActionResult PageList(int PageSize = 10,int PageIndex = 1)
         {
             return Ok();

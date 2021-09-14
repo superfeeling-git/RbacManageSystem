@@ -4,5 +4,122 @@
         <name>Rbac.WebAPI</name>
     </assembly>
     <members>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.#ctor(Rbac.IService.IContractService{Rbac.Dtos.Contract.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.CreateAsync(Rbac.Dtos.Contract.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.#ctor(Rbac.IService.IGoodsCategoryService{Rbac.Dtos.GoodsCategory.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.CreateAsync(Rbac.Dtos.GoodsCategory.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.CreateAsync(Rbac.Dtos.Goods.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

@@ -1,4 +1,5 @@
-﻿using Rbac.Entity;
+﻿using Rbac.Dtos.Goods;
+using Rbac.Entity;
 using Rbac.IRepository;
 using Rbac.IService;
 using System;
@@ -13,11 +14,39 @@ namespace Rbac.Service
         where TDto : class, new()
     {
         private IGoodsRepository repository;
+        private IGoodsCategoryRepository categoryRepository;
+        //lasjdfljasdlf
 
-        public GoodsService(IGoodsRepository _repository)
+
+
+
+
+
+
+
+        public GoodsService(IGoodsRepository _repository, IGoodsCategoryRepository _categoryRepository)
         {
             this.baseRepository = _repository;
             this.repository = _repository;
+            this.categoryRepository = _categoryRepository;
+        }
+
+        public List<ListDto> GetAllGoods()
+        {
+            /*var goods = repository.Query();
+            var category = categoryRepository.Query();
+
+            var list = goods.Join(category, a => a.CategoryId, b => b.CategoryId,(a,b)=> new ListDto {
+                CategoryName = b.CategoryName,
+                GoodsID = a.GoodsID,
+                GoodsName = a.GoodsName,
+                GoodsPic = a.GoodsPic,
+                GoodsPrice = a.GoodsPrice
+            });*/
+
+            //return list.ToList();
+
+            return repository.JoinList();            
         }
     }
 }
