@@ -23,3 +23,4 @@ E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Debug\net5.0\Rbac.Dtos.csproj.CoreCom
 E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Debug\net5.0\Rbac.Dtos.dll
 E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Debug\net5.0\ref\Rbac.Dtos.dll
 E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Debug\net5.0\Rbac.Dtos.pdb
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Debug\net5.0\Rbac.Dtos.csproj.AssemblyReference.cache

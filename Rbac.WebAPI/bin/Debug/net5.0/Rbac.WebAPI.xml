@@ -45,6 +45,47 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.#ctor(Rbac.IService.IDepartmentService{Rbac.Dtos.Department.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.CreateAsync(Rbac.Dtos.Department.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.#ctor(Rbac.IService.IGoodsCategoryService{Rbac.Dtos.GoodsCategory.ListDto})">
             <summary>
             构造函数注入

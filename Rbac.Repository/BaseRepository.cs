@@ -83,7 +83,7 @@ namespace Rbac.Repository
             return await list.ToListAsync();
         }
 
-        public (int, List<TEntity>) PagedList(Expression<Func<TEntity,TKey>> orderBy, int PageIndex = 1,int PageSize = 10, Expression<Func<TEntity, bool>> Condition = null)
+        public virtual (int, List<TEntity>) PagedList(Expression<Func<TEntity,TKey>> orderBy, int PageIndex = 1,int PageSize = 10, Expression<Func<TEntity, bool>> Condition = null)
         {
             var list = __db.Set<TEntity>().AsQueryable();
             if(Condition != null)
@@ -94,7 +94,7 @@ namespace Rbac.Repository
             return (list.Count(), pagedata);
         }
 
-        public IQueryable<TEntity> Query(Expression<Func<TEntity,bool>> Condition = null)
+        public virtual IQueryable<TEntity> Query(Expression<Func<TEntity,bool>> Condition = null)
         {
             var list = __db.Set<TEntity>().AsQueryable();
             if(Condition != null)
@@ -104,7 +104,7 @@ namespace Rbac.Repository
             return list;
         }
 
-        public async void UpdateAsync(Expression<Func<TEntity,bool>> Condition,Expression<Func<TEntity,TEntity>> updateExpression)
+        public virtual async Task UpdateAsync(Expression<Func<TEntity,bool>> Condition,Expression<Func<TEntity,TEntity>> updateExpression)
         {
             await __db.Set<TEntity>().Where(Condition).UpdateAsync(updateExpression);
         }

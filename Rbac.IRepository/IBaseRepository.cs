@@ -96,6 +96,6 @@ namespace Rbac.IRepository
         /// </summary>
         /// <param name="Condition"></param>
         /// <param name="updateExpression"></param>
-        void UpdateAsync(Expression<Func<TEntity, bool>> Condition, Expression<Func<TEntity, TEntity>> updateExpression);
+        Task UpdateAsync(Expression<Func<TEntity, bool>> Condition, Expression<Func<TEntity, TEntity>> updateExpression);
     }
 }

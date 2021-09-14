@@ -28,6 +28,8 @@ namespace Rbac.WebAPI.Inject
             services.AddScoped<IGoodsCategoryService<Dtos.GoodsCategory.ListDto>, GoodsCategoryService<Dtos.GoodsCategory.ListDto>>();
             services.AddScoped<IContractRepository, ContractRepository>();
             services.AddScoped<IContractService<Dtos.Contract.ListDto>, ContractService<Dtos.Contract.ListDto>>();
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            services.AddScoped<IDepartmentService<Dtos.Department.ListDto>, DepartmentService<Dtos.Department.ListDto>>();
         }
     }
 }

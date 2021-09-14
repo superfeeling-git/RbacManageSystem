@@ -140,6 +140,30 @@ namespace Rbac.Entity.Migrations
                     b.ToTable("Customer");
                 });
 
+            modelBuilder.Entity("Rbac.Entity.Department", b =>
+                {
+                    b.Property<int>("DeptId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CreateId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeptManage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DeptName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("DeptId");
+
+                    b.ToTable("Department");
+                });
+
             modelBuilder.Entity("Rbac.Entity.Goods", b =>
                 {
                     b.Property<int>("GoodsID")

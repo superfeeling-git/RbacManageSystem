@@ -69,7 +69,7 @@ export default {
     openMenu(submenu,menuitem){
       this.navData.submenu = submenu;
       this.navData.menuitem = menuitem;
-      this.$router.push('/sysmenu/create');
+      this.$router.push('/sysmenu/create?flag=' + menuitem);
     },
     logout() {
       this.$router.push("/");

@@ -14,15 +14,18 @@ namespace Rbac.Generator
 
         static void Main(string[] args)
         {
-            var ModuleName = "Contract";
-            GeneratorCode(ModuleName, "Repository", true);
+            var ModuleName = "Department";
+            /*GeneratorCode(ModuleName, "Repository", true);
             GeneratorCode(ModuleName, "Repository", false);
             GeneratorCode(ModuleName, "Service", true);
             GeneratorCode(ModuleName, "Service", false);
-            GeneratorCode(ModuleName, "WebAPI", isAPI: true);
-            /*GeneratorDtos(ModuleName);
-            GeneratorInject(ModuleName);
-            GeneratorContext(ModuleName, "ContractId");
+            GeneratorCode(ModuleName, "WebAPI", isAPI: true);*/
+            GeneratorDtos(ModuleName, IsUpdate: true);
+
+
+
+            /*GeneratorInject(ModuleName);
+            GeneratorContext(ModuleName, "DeptId");
             GeneratorDbSet(ModuleName);*/
         }
 
@@ -172,6 +175,7 @@ namespace Rbac.Generator
         }
         #endregion
 
+        #region 生成dbset
         /// <summary>
         /// 生成dbset
         /// </summary>
@@ -188,8 +192,9 @@ namespace Rbac.Generator
             var lastDbSet = regex.Matches(content).Last().Value;
 
             content = content.Replace(lastDbSet, $"{lastDbSet}{Environment.NewLine}        public virtual DbSet<{ModuleName}> {ModuleName} {{ get; set; }}");
-            
+
             File.WriteAllText(targetPath, content);
         }
+        #endregion
     }
 }
