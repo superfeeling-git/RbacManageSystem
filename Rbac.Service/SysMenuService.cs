@@ -28,5 +28,15 @@ namespace Rbac.Service
         {
             return sysMenuRepository.Query().Where(m => m.ParnetID == 0).MapToList<SysMenu, RootMenuDto>();
         }
+
+        public List<MenuDto> QueryMenu(QueryDto dto)
+        {
+            var list = sysMenuRepository.Query();
+            if (!string.IsNullOrWhiteSpace(dto.MenuName))
+            {
+                list = list.Where(m => m.MenuName.Contains(dto.MenuName));
+            }
+            return list.MapToList<SysMenu, MenuDto>();
+        }
     }
 }

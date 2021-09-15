@@ -41,13 +41,12 @@
 </template>
 
 <script>
-import axios from 'axios'
 import config from '../utils/config'
 
 export default {
   data() {
     return {
-      ValidateCodeSrc:`${config.baseUrl}/api/Account/ValidateCode`,
+      ValidateCodeSrc:`${config.baseUrl}/Account/ValidateCode`,
       ruleForm: {
           UserName: '',
           Password: '',
@@ -72,10 +71,9 @@ export default {
         this.$refs[formName].validate((valid) => {
           if (valid) {
             var obj = this;
-            axios.post(`${config.baseUrl}/api/Account/Login`,
+            config.axios.post(`/Account/Login`,
             this.ruleForm,
             {withCredentials: true}).then(m=>{
-              debugger
               if(m.data.code > 0){
                 this.$message({
                   message: m.data.msg,
@@ -84,7 +82,9 @@ export default {
               }
               else{
                 localStorage.setItem("token",m.data.token);
+                config.axios.defaults.headers.common['Authorization'] = `bearer ${m.data.token}`;
                 this.$router.push("home");
+                //window.location.href = "#/home";
               }              
             });
           } else {
@@ -98,7 +98,7 @@ export default {
       }
   },
   mounted() {
-    console.log(config.baseUrl)
+    
   },
 };
 </script>

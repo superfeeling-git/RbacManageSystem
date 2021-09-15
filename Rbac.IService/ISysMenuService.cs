@@ -12,5 +12,6 @@ namespace Rbac.IService
         where TDto : class, new()
     {
         List<RootMenuDto> getRootMenu();
+        List<MenuDto> QueryMenu(QueryDto dto);
     }
 }

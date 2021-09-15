@@ -28,8 +28,8 @@
               </template>
               <el-menu-item index="1-1" @click="openMenu('权限设置','管理员添加')">管理员添加</el-menu-item>
               <el-menu-item index="1-2" @click="openMenu('权限设置','管理员管理')">管理员管理</el-menu-item>
-              <el-menu-item index="1-3" @click="openMenu('权限设置','菜单添加')">菜单添加</el-menu-item>
-              <el-menu-item index="1-4" @click="openMenu('权限设置','菜单管理')">菜单管理</el-menu-item>
+              <el-menu-item index="1-3" @click="openMenu('权限设置','菜单添加','/sysmenu/create')">一级菜单添加</el-menu-item>
+              <el-menu-item index="1-4" @click="openMenu('权限设置','菜单管理','/sysmenu/rootmenu')">一级菜单管理</el-menu-item>
             </el-submenu>
             <el-submenu index="2">
               <template slot="title">
@@ -61,15 +61,15 @@ export default {
     return {
       navData:{
         submenu:"",
-        menuitem:""
+        menuitem:"",
       }
     };
   },
   methods: {
-    openMenu(submenu,menuitem){
+    openMenu(submenu,menuitem,url=""){
       this.navData.submenu = submenu;
       this.navData.menuitem = menuitem;
-      this.$router.push('/sysmenu/create?flag=' + menuitem);
+      this.$router.push(url).catch(err => {err});
     },
     logout() {
       this.$router.push("/");
