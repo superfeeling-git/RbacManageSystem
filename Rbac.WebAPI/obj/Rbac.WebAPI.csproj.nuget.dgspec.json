@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Teaching\\RbacManageSystem\\rbac.webapi\\Rbac.WebAPI.csproj": {}
+    "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj": {}
   },
   "projects": {
     "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
@@ -533,14 +533,14 @@
         }
       }
     },
-    "E:\\Teaching\\RbacManageSystem\\rbac.webapi\\Rbac.WebAPI.csproj": {
+    "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\rbac.webapi\\Rbac.WebAPI.csproj",
+        "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj",
         "projectName": "Rbac.WebAPI",
-        "projectPath": "E:\\Teaching\\RbacManageSystem\\rbac.webapi\\Rbac.WebAPI.csproj",
+        "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj",
         "packagesPath": "D:\\Administrator\\.nuget\\packages",
-        "outputPath": "E:\\Teaching\\RbacManageSystem\\rbac.webapi\\obj\\",
+        "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
