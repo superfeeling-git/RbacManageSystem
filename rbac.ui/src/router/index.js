@@ -5,9 +5,7 @@ import home from '../page/home'
 import create from '../page/SysMenu/create'
 import rootmenu from '../page/SysMenu/rootmenu'
 
-
 Vue.use(Router)
-
 
 export default new Router({
   routes: [

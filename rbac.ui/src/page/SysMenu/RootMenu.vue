@@ -20,7 +20,6 @@ export default {
     },
     methods: {
         format(row,col){
-            console.log(col);
             if(row.menuLink == undefined)
                 return '-';
             else

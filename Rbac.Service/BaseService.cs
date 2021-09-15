@@ -67,6 +67,7 @@ namespace Rbac.Service
         {
             var userid = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Id).Value;
             var username = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Name).Value;
+            
             TEntity entity = dto.MapTo<TEntity>();
             Type type = entity.GetType();
             type.GetProperty("CreateById").SetValue(entity, Convert.ToInt32(userid));

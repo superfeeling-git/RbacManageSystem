@@ -69,5 +69,15 @@
              
             </Summary>
         </member>
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.MenuName">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.MenuLink">
+            <Summary>
+             
+            </Summary>
+        </member>
     </members>
 </doc>
