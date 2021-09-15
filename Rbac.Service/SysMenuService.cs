@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Rbac.Entity;
 using Rbac.IService;
 using Rbac.IRepository;
+using Rbac.Dtos.SysMenu;
+using Rbac.Unitity;
 
 namespace Rbac.Service
 {
@@ -18,6 +20,17 @@ namespace Rbac.Service
         {
             this.baseRepository = sysMenuRepository;
             this.sysMenuRepository = sysMenuRepository;
+        }
+
+        public List<TDto> QueryMenu(QueryDto dto)
+        {
+            var list = sysMenuRepository.Query();
+            if (!string.IsNullOrWhiteSpace(dto.MenuName))
+            {
+                list = list.Where(m => m.MenuName.Contains(dto.MenuName));
+            }
+
+            return list.ToList().MapToList<SysMenu, TDto>();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Rbac.WebAPI.Controllers
 {
     [ApiController]
     [Route("/api/[controller]/[action]")]
-    [Authorize]
+    //[Authorize]
     public class SysMenuController : Controller
     {
         private ISysMenuService<ListDto> sysMenuservice;
@@ -29,9 +29,9 @@ namespace Rbac.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult List()
+        public IActionResult List(QueryDto dto)
         {
-            return Ok();
+            return new JsonResult(sysMenuservice.QueryMenu(dto));
         }
 
         [HttpGet]
