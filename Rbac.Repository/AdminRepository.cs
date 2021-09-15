@@ -17,18 +17,5 @@ namespace Rbac.Repository
             this.__db = db;
             this._db = db;
         }
-
-        public void Test()
-        {
-            var a = _db.Admin.AsQueryable();
-            var b = _db.Customer.AsQueryable();
-
-            var c = a.Join(b, a => a.AdminId, b => b.CreateId,(a,b)=> new { a, b });
-
-            foreach (var item in c)
-            {
-                
-            }
-        }
     }
 }

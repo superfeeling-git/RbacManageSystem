@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Rbac.Dtos.Customer;
+using Microsoft.AspNetCore.Http;
 
 namespace Rbac.Service
 {
@@ -15,10 +16,11 @@ namespace Rbac.Service
     {
         private ICustomerRepository repository;
 
-        public CustomerService(ICustomerRepository _repository)
+        public CustomerService(ICustomerRepository _repository, IHttpContextAccessor _httpContextAccessor)
         {
             this.baseRepository = _repository;
             this.repository = _repository;
+            this._httpContextAccessor = _httpContextAccessor;
         }
 
         public override Task<int> CreateAsync<TInsertDto>(TInsertDto entity)

@@ -10,8 +10,8 @@ using Rbac.Entity;
 namespace Rbac.Entity.Migrations
 {
     [DbContext(typeof(RbacDbContext))]
-    [Migration("20210915040717_1207-1")]
-    partial class _12071
+    [Migration("20210914130419_0914-4")]
+    partial class _09144
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,8 +28,11 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -61,8 +64,11 @@ namespace Rbac.Entity.Migrations
                     b.Property<int?>("AdminId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -92,8 +98,11 @@ namespace Rbac.Entity.Migrations
                     b.Property<string>("ContractName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -122,8 +131,11 @@ namespace Rbac.Entity.Migrations
                     b.Property<string>("Contact")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -149,8 +161,11 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -176,8 +191,11 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -224,8 +242,11 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -245,8 +266,11 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -273,8 +297,11 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CreateId")
+                    b.Property<int>("CreateById")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Rbac.Dtos.SysMenu
 {
-    public class QueryDto
+    public class RootMenuDto : BaseDto
     {
+        public int MenuID { get; set; }
         public string MenuName { get; set; }
-        public int? ParentId { get; set; }
+        public string MenuLink { get; set; }
     }
 }

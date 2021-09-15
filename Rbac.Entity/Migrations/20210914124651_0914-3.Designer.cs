@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rbac.Entity;
 
 namespace Rbac.Entity.Migrations
 {
     [DbContext(typeof(RbacDbContext))]
-    partial class RbacDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210914124651_0914-3")]
+    partial class _09143
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,7 +31,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
@@ -65,7 +67,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
@@ -99,7 +101,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
@@ -132,7 +134,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
@@ -162,7 +164,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
@@ -192,7 +194,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
@@ -243,7 +245,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
@@ -267,7 +269,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")
@@ -298,7 +300,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("CreateById")
                         .HasColumnType("int");
 
-                    b.Property<string>("CreateByName")
+                    b.Property<string>("CreateByUser")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateTime")

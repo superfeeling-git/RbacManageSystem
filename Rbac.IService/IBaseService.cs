@@ -15,28 +15,28 @@ namespace Rbac.IService
         /// </summary>
         /// <param name="entities"></param>
         /// <returns></returns>
-        Task BulkDeleteAsync(IEnumerable<TDto> entities);
+        Task BulkDeleteAsync(IEnumerable<TDto> dtos);
         /// <summary>
         /// 批量插入
         /// </summary>
         /// <typeparam name="TInsertDto"></typeparam>
         /// <param name="entitys"></param>
         /// <returns></returns>
-        Task BulkInsertAsync<TInsertDto>(IEnumerable<TInsertDto> entitys);
+        Task BulkInsertAsync<TInsertDto>(IEnumerable<TInsertDto> dtos);
         /// <summary>
         /// 批量插入
         /// </summary>
         /// <typeparam name="TInsertDto"></typeparam>
         /// <param name="entitys"></param>
         /// <returns></returns>
-        Task<int> CreateAsync<TInsertDto>(IEnumerable<TInsertDto> entitys);
+        Task<int> CreateAsync<TInsertDto>(IEnumerable<TInsertDto> dtos);
         /// <summary>
         /// 单条插入
         /// </summary>
         /// <typeparam name="TInsertDto"></typeparam>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task<int> CreateAsync<TInsertDto>(TInsertDto entity);
+        Task<int> CreateAsync<TInsertDto>(TInsertDto dto);
         /// <summary>
         /// 根据条件删除
         /// </summary>
@@ -48,7 +48,7 @@ namespace Rbac.IService
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task<int> DeleteAsync(TDto entity);
+        Task<int> DeleteAsync(TDto dto);
         /// <summary>
         /// 根据主键删除
         /// </summary>

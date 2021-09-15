@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using Rbac.Entity;
 using Rbac.IRepository;
 using Rbac.IService;
@@ -14,10 +15,11 @@ namespace Rbac.Service
     {
         private IGoodsCategoryRepository repository;
 
-        public GoodsCategoryService(IGoodsCategoryRepository _repository)
+        public GoodsCategoryService(IGoodsCategoryRepository _repository, IHttpContextAccessor _httpContextAccessor)
         {
             this.baseRepository = _repository;
             this.repository = _repository;
+            this._httpContextAccessor = _httpContextAccessor;
         }
     }
 }

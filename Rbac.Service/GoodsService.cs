@@ -1,4 +1,5 @@
-﻿using Rbac.Dtos.Goods;
+﻿using Microsoft.AspNetCore.Http;
+using Rbac.Dtos.Goods;
 using Rbac.Entity;
 using Rbac.IRepository;
 using Rbac.IService;
@@ -15,20 +16,17 @@ namespace Rbac.Service
     {
         private IGoodsRepository repository;
         private IGoodsCategoryRepository categoryRepository;
-        //lasjdfljasdlf
 
-
-
-
-
-
-
-
-        public GoodsService(IGoodsRepository _repository, IGoodsCategoryRepository _categoryRepository)
+        public GoodsService(
+            IGoodsRepository _repository, 
+            IGoodsCategoryRepository _categoryRepository,
+            IHttpContextAccessor _httpContextAccessor
+            )
         {
             this.baseRepository = _repository;
             this.repository = _repository;
             this.categoryRepository = _categoryRepository;
+            this._httpContextAccessor = _httpContextAccessor;
         }
 
         public List<ListDto> GetAllGoods()

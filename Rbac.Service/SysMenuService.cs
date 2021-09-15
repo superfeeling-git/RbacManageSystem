@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using Rbac.Entity;
 using Rbac.IService;
 using Rbac.IRepository;
-using Rbac.Dtos.SysMenu;
+using Microsoft.AspNetCore.Http;
 using Rbac.Unitity;
+using Rbac.Dtos.SysMenu;
 
 namespace Rbac.Service
 {
@@ -16,21 +17,16 @@ namespace Rbac.Service
     {
         private ISysMenuRepository sysMenuRepository;
 
-        public SysMenuService(ISysMenuRepository sysMenuRepository)
+        public SysMenuService(ISysMenuRepository sysMenuRepository, IHttpContextAccessor _httpContextAccessor)
         {
             this.baseRepository = sysMenuRepository;
             this.sysMenuRepository = sysMenuRepository;
+            this._httpContextAccessor = _httpContextAccessor;
         }
 
-        public List<TDto> QueryMenu(QueryDto dto)
+        public List<RootMenuDto> getRootMenu()
         {
-            var list = sysMenuRepository.Query();
-            if (!string.IsNullOrWhiteSpace(dto.MenuName))
-            {
-                list = list.Where(m => m.MenuName.Contains(dto.MenuName));
-            }
-
-            return list.ToList().MapToList<SysMenu, TDto>();
+            return sysMenuRepository.Query().Where(m => m.ParnetID == 0).MapToList<SysMenu, RootMenuDto>();
         }
     }
 }
