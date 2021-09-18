@@ -7,6 +7,8 @@ import rootmenu from '../page/SysMenu/rootmenu'
 
 Vue.use(Router)
 
+console.log('----');
+
 export default new Router({
   routes: [
     {

@@ -22,45 +22,54 @@
 </template>
 
 <script>
-import config from '../../utils/config'
-
+import config from "../../utils/config";
+import bus from "../../router/bus";
 
 export default {
+  name: "createmenu-b",
   data() {
     return {
       ruleForm: {
         MenuName: "",
       },
-        rules: {
-          MenuName: [
-            { required: true, message: '请输入菜单名称', trigger: 'blur' }
-          ]
-        },
+      rules: {
+        MenuName: [
+          { required: true, message: "请输入菜单名称", trigger: "blur" },
+        ],
+      },
     };
   },
   methods: {
     submitForm(formName) {
-      this.$refs[formName].validate((valid) => {
-        if (valid) {
-          let _this = this;
-          config.axios.post('/SysMenu/CreateRootMenu',this.ruleForm).then(m=>{
-              this.$message({
-                message: '添加成功',
-                type: 'success',
-                onClose : function(o){
-                  _this.$refs.MenuName.resetField();
-                }
-              });
-          },m=>{
-            //console.clear();
-          });
-        } else {
-          console.log("error submit!!");
-          return false;
-        }
+      return new Promise((resolve, reject) => {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+            let _this = this;
+            config.axios.post("/SysMenu/CreateRootMenu", this.ruleForm).then(
+              (m) => {
+                this.$message({
+                  message: "添加成功",
+                  type: "success",
+                  onClose: function (o) {
+                    //bus.$emit('send',false);
+                    resolve();
+                  },
+                });
+              },
+              (m) => {
+                //console.clear();
+              }
+            );
+          } else {
+            console.log("error submit!!");
+            return false;
+          }
+        });
+        
       });
     },
     resetForm(formName) {
+      bus.$emit("send", false);
       this.$refs[formName].resetFields();
     },
   },
