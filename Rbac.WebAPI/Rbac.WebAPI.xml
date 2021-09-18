@@ -4,6 +4,11 @@
         <name>Rbac.WebAPI</name>
     </assembly>
     <members>
+        <member name="T:Rbac.WebAPI.Configuration.JsonSetting">
+            <summary>
+            //添加JSON序列化编码，防止中文被编码为Unicode字符。
+            </summary>
+        </member>
         <member name="M:Rbac.WebAPI.Controllers.ContractController.#ctor(Rbac.IService.IContractService{Rbac.Dtos.Contract.ListDto})">
             <summary>
             构造函数注入

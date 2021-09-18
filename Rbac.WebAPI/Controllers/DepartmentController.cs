@@ -13,6 +13,7 @@ namespace Rbac.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "gp")]
     public class DepartmentController : ControllerBase
     {
         private IDepartmentService<ListDto> service;

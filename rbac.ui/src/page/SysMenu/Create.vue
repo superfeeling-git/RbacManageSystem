@@ -11,7 +11,7 @@
         <el-input v-model="ruleForm.MenuName"></el-input>
       </el-form-item>
 
-      <el-form-item>
+      <el-form-item v-if="enableSef">
         <el-button type="primary" @click="submitForm('ruleForm')"
           >立即创建</el-button
         >
@@ -29,6 +29,7 @@ export default {
   name: "createmenu-b",
   data() {
     return {
+      enableSef:false,
       ruleForm: {
         MenuName: "",
       },

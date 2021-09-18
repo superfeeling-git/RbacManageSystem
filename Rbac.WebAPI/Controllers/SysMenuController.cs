@@ -34,6 +34,12 @@ namespace Rbac.WebAPI.Controllers
             return Ok(sysMenuservice.getRootMenu());
         }
 
+        [HttpGet]
+        public async Task<IActionResult> QueryMenu(int id)
+        {
+            return Ok(await sysMenuservice.FindAsync(id));
+        }
+
         [HttpPost]
         public IActionResult QueryMenu(QueryDto dto)
         {

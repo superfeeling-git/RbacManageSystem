@@ -14,14 +14,36 @@
     </el-dialog>
 
     <el-table :data="tableData" style="width: 100%" stripe border :key="timer">
+      <el-table-column type="selection" sortable> </el-table-column>
       <el-table-column prop="menuID" label="菜单ID" sortable width="180">
       </el-table-column>
-      <el-table-column prop="menuName" label="菜单名称" sortable width="180">
+      <el-table-column
+        prop="menuName"
+        label="菜单名称"
+        :formatter="formatName"
+        sortable
+        width="180"
+      >
       </el-table-column>
       <el-table-column prop="menuLink" label="菜单链接" :formatter="format">
       </el-table-column>
       <el-table-column prop="createByName" label="创建人"> </el-table-column>
       <el-table-column prop="createTime" label="创建时间" sortable>
+      </el-table-column>
+      <el-table-column label="操作">
+        <template slot-scope="scope">
+          <el-button
+            size="mini"
+            @click="handleEdit(scope.$index, scope.row, scope.column)"
+            >编辑</el-button
+          >
+          <el-button
+            size="mini"
+            type="danger"
+            @click="handleDelete(scope.$index, scope.row)"
+            >删除</el-button
+          >
+        </template>
       </el-table-column>
     </el-table>
   </div>
@@ -33,7 +55,7 @@ import bus from "../../router/bus";
 
 export default {
   name: "rootmenu",
-  inject:['reload'],
+  inject: ["reload"],
   components: { rbacCreate },
   data() {
     return {
@@ -53,12 +75,18 @@ export default {
       this.dialogFormVisible = true;
     },
     save() {
-      this.$refs.modelcreate.submitForm("ruleForm").then((o)=>{
-        this.dialogFormVisible = false;        
+      this.$refs.modelcreate.submitForm("ruleForm").then((o) => {
+        this.dialogFormVisible = false;
       });
     },
     test() {
       this.reload();
+    },
+    formatName(row, column, cellValue, index) {
+      return cellValue;
+    },
+    handleEdit(index, row, col) {
+      console.log(index, row, col);
     },
   },
   mounted() {

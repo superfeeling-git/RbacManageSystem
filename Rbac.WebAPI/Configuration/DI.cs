@@ -9,11 +9,11 @@ using Rbac.IService;
 using Rbac.Service;
 using Rbac.Unitity;
 
-namespace Rbac.WebAPI.Inject
+namespace Rbac.WebAPI.Configuration
 {
-    public static class Injection
+    public static class DI
     {
-        public static void inject(this IServiceCollection services)
+        public static void AddIoc(this IServiceCollection services)
         {
             services.AddScoped<ValidateCode>();
             services.AddScoped<ISysMenuRepository, SysMenuRepository>();
