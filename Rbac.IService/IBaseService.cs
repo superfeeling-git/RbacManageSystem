@@ -96,7 +96,7 @@ namespace Rbac.IService
         /// <typeparam name="TUpdateDto"></typeparam>
         /// <param name="Condition"></param>
         /// <param name="updateExpression"></param>
-        Task UpdateAsync(Expression<Func<TEntity, bool>> Condition, Expression<Func<TEntity, TEntity>> updateExpression);
+        Task<int> UpdateAsync(Expression<Func<TEntity, bool>> Condition, Expression<Func<TEntity, TEntity>> updateExpression);
 
     }
 }

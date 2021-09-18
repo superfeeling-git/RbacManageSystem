@@ -104,9 +104,9 @@ namespace Rbac.Repository
             return list;
         }
 
-        public virtual async Task UpdateAsync(Expression<Func<TEntity,bool>> Condition,Expression<Func<TEntity,TEntity>> updateExpression)
+        public virtual async Task<int> UpdateAsync(Expression<Func<TEntity,bool>> Condition,Expression<Func<TEntity,TEntity>> updateExpression)
         {
-            await __db.Set<TEntity>().Where(Condition).UpdateAsync(updateExpression);
+            return await __db.Set<TEntity>().Where(Condition).UpdateAsync(updateExpression);
         }
     }
 }

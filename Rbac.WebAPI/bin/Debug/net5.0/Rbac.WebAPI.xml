@@ -167,5 +167,39 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.CreateRootMenuAsync(Rbac.Dtos.SysMenu.InsertDto)">
+            <summary>
+            创建一级菜单
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.RootMenu">
+            <summary>
+            获取所有一级菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.QueryMenuAsync(System.Int32)">
+            <summary>
+            根据ID查询菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.QueryMenu(Rbac.Dtos.SysMenu.QueryDto)">
+            <summary>
+            条件查询菜单
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.UpdateMenu(Rbac.Dtos.SysMenu.MenuDto)">
+            <summary>
+            更新菜单名称
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

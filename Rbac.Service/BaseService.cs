@@ -118,9 +118,9 @@ namespace Rbac.Service
             await baseRepository.SingleDeleteAsync(dto.MapTo<TEntity>());
         }
 
-        public virtual async Task UpdateAsync(Expression<Func<TEntity, bool>> Condition, Expression<Func<TEntity, TEntity>> updateExpression)
+        public virtual async Task<int> UpdateAsync(Expression<Func<TEntity, bool>> Condition, Expression<Func<TEntity, TEntity>> updateExpression)
         {
-            await baseRepository.UpdateAsync(Condition, updateExpression);
+            return await baseRepository.UpdateAsync(Condition, updateExpression);
         }
     }
 }
