@@ -10,6 +10,7 @@ namespace Rbac.Entity
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+        public int ParnetID { get; set; } = 0;
         public List<Goods> Goods { get; set; }
     }
 }

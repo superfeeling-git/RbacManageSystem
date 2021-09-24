@@ -13,6 +13,7 @@ namespace Rbac.Entity
         {
             
             
+            
             modelBuilder.Entity<Admin>(action => {
                 action.HasKey(m => m.AdminId);
                 action.Property<string>("LastModify").HasColumnType("nvarchar(500)");
@@ -56,6 +57,10 @@ namespace Rbac.Entity
         
             modelBuilder.Entity<Department>(action => {
                 action.HasKey(m => m.DeptId);
+            });
+        
+            modelBuilder.Entity<GoodsCategory>(action => {
+                action.HasKey(m => m.CategoryId);
             });
         }
     }

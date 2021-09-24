@@ -14,19 +14,19 @@ namespace Rbac.Generator
 
         static void Main(string[] args)
         {
-            var ModuleName = "Department";
-            /*GeneratorCode(ModuleName, "Repository", true);
+            var ModuleName = "GoodsCategory";
+            GeneratorCode(ModuleName, "Repository", true);
             GeneratorCode(ModuleName, "Repository", false);
             GeneratorCode(ModuleName, "Service", true);
             GeneratorCode(ModuleName, "Service", false);
-            GeneratorCode(ModuleName, "WebAPI", isAPI: true);*/
+            GeneratorCode(ModuleName, "WebAPI", isAPI: true);
             GeneratorDtos(ModuleName, IsUpdate: true);
 
 
 
-            /*GeneratorInject(ModuleName);
-            GeneratorContext(ModuleName, "DeptId");
-            GeneratorDbSet(ModuleName);*/
+            GeneratorInject(ModuleName);
+            GeneratorContext(ModuleName, "CategoryId");
+            GeneratorDbSet(ModuleName);
         }
 
         #region 生成仓储、Service的接口及实现层
@@ -120,7 +120,7 @@ namespace Rbac.Generator
         static void GeneratorInject(string ModuleName)
         {
             //目标路径
-            var targetPath = Path.GetFullPath($"{basePath}{projectName}WebAPI/Inject/Injection.cs");
+            var targetPath = Path.GetFullPath($"{basePath}{projectName}WebAPI/Configuration/DI.cs");
 
             var content = File.ReadAllText(targetPath);
 

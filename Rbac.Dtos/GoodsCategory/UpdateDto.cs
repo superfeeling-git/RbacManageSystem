@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rbac.Dtos.GoodsCategory
 {
-    public class ListDto
+    public class UpdateDto
     {
         
         public int CategoryId { get; set; }

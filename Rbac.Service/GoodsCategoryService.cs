@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Http;
 using Rbac.Entity;
 using Rbac.IRepository;
 using Rbac.IService;
@@ -7,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using System.Linq.Expressions;
 
 namespace Rbac.Service
 {
@@ -20,6 +21,13 @@ namespace Rbac.Service
             this.baseRepository = _repository;
             this.repository = _repository;
             this._httpContextAccessor = _httpContextAccessor;
+        }
+
+
+        
+        public override Task<List<TDto>> ListAsync(Expression<Func<GoodsCategory, bool>> Condition = null)
+        {
+            return base.ListAsync(Condition);
         }
     }
 }
