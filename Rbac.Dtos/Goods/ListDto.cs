@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Rbac.Dtos.Goods
 {
-    public class ListDto
+    public class ListDto: BaseDto
     {
         public int GoodsID { get; set; }
         public string GoodsName { get; set; }
         public int GoodsPrice { get; set; }
         public string GoodsPic { get; set; }
         public string CategoryName { get; set; }
+        public int CategoryId { get; set; }
     }
 }

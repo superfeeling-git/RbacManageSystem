@@ -56,7 +56,7 @@ namespace Rbac.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetList()
         {
-            return new JsonResult(await service.ListAsync());
+            return new JsonResult(await service.GetNodes());
         }
 
         /// <summary>

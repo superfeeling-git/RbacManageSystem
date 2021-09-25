@@ -152,10 +152,12 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Rbac.WebAPI.Controllers.GoodsController.PageList(System.Int32,System.Int32)">
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.PageList(System.String,System.Int32,System.Int32,System.Int32)">
             <summary>
-            分页，未实现
+            分页
             </summary>
+            <param name="GoodsName"></param>
+            <param name="CategoryId"></param>
             <param name="PageSize"></param>
             <param name="PageIndex"></param>
             <returns></returns>

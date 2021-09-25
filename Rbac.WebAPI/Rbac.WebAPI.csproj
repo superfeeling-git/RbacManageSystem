@@ -31,4 +31,8 @@
     <ProjectReference Include="..\Rbac.Service\Rbac.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\UploadFiles\" />
+  </ItemGroup>
+
 </Project>

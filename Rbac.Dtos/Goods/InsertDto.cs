@@ -11,5 +11,7 @@ namespace Rbac.Dtos.Goods
         public int CategoryId { get; set; }
         public string GoodsName { get; set; }
         public string GoodsPic { get; set; }
+        public int GoodsPrice { get; set; }
+        public string Details { get; set; }
     }
 }

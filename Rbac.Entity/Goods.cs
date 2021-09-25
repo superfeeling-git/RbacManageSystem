@@ -13,6 +13,7 @@ namespace Rbac.Entity
         public int GoodsPrice { get; set; }
         public string GoodsPic { get; set; }
         public int CategoryId { get; set; }
+        public string Details { get; set; }
         public GoodsCategory GoodsCategory { get; set; }
     }
 }

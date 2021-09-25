@@ -198,6 +198,9 @@ namespace Rbac.Entity.Migrations
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Details")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("GoodsName")
                         .IsRequired()
                         .HasMaxLength(50)

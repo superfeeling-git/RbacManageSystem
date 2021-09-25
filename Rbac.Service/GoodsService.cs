@@ -8,6 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rbac.Dtos;
+using System.Linq.Expressions;
+using System.Linq.Dynamic.Core;
 
 namespace Rbac.Service
 {
@@ -29,22 +32,41 @@ namespace Rbac.Service
             this._httpContextAccessor = _httpContextAccessor;
         }
 
-        public List<ListDto> GetAllGoods()
+        /// <summary>
+        /// 带有条件查询的两条联查的商品分页
+        /// </summary>
+        /// <param name="orderBy"></param>
+        /// <param name="PageIndex"></param>
+        /// <param name="PageSize"></param>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public (int, List<ListDto>) PagedList(Expression<Func<ListDto, int>> orderBy, int PageIndex = 1, int PageSize = 10, QueryDto query = null)
         {
-            /*var goods = repository.Query();
-            var category = categoryRepository.Query();
+            var goods = repository.Query();
+            var categories = categoryRepository.Query();
 
-            var list = goods.Join(category, a => a.CategoryId, b => b.CategoryId,(a,b)=> new ListDto {
+            var list = goods.Join(categories, a => a.CategoryId, b => b.CategoryId, (a, b) => new ListDto {
                 CategoryName = b.CategoryName,
+                CreateByName = a.CreateByName,
+                CreateTime = a.CreateTime,
                 GoodsID = a.GoodsID,
                 GoodsName = a.GoodsName,
                 GoodsPic = a.GoodsPic,
-                GoodsPrice = a.GoodsPrice
-            });*/
+                GoodsPrice = a.GoodsPrice,
+                CategoryId = b.CategoryId
+            });
 
-            //return list.ToList();
+            if(query.CategoryId != null && query.CategoryId > 0)
+            {
+                list = list.Where(m => m.CategoryId == query.CategoryId);
+            }
 
-            return repository.JoinList();            
+            if (!string.IsNullOrWhiteSpace(query.GoodsName))
+            {
+                list = list.Where(m => m.GoodsName.Contains(query.GoodsName));
+            }
+
+            return (list.Count(), list.OrderBy(orderBy).Page(PageIndex, PageSize).ToList());
         }
     }
 }

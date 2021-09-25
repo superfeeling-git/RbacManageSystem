@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Rbac.Dtos.Goods;
 using Rbac.IService;
 using Rbac.Entity;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Rbac.WebAPI.Controllers
 {
@@ -17,14 +19,18 @@ namespace Rbac.WebAPI.Controllers
     {
         private IGoodsService<ListDto> service;
         private IGoodsCategoryService<Dtos.GoodsCategory.ListDto> categoryService;
+        private IWebHostEnvironment env;
 
-        
-        public GoodsController(IGoodsService<ListDto> _service
-            , IGoodsCategoryService<Dtos.GoodsCategory.ListDto> _categoryService
+
+
+        public GoodsController(IGoodsService<ListDto> _service,
+            IGoodsCategoryService<Dtos.GoodsCategory.ListDto> _categoryService,
+            IWebHostEnvironment env
             )
         {
             this.categoryService = _categoryService;
             this.service = _service;
+            this.env = env;
         }
 
         /// <summary>
@@ -56,21 +62,23 @@ namespace Rbac.WebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult GetList()
+        public async Task<IActionResult> GetList()
         {
-            return new JsonResult(service.GetAllGoods());
+            return new JsonResult(await service.ListAsync());
         }
 
         /// <summary>
-        /// 分页，未实现
+        /// 分页
         /// </summary>
+        /// <param name="GoodsName"></param>
+        /// <param name="CategoryId"></param>
         /// <param name="PageSize"></param>
         /// <param name="PageIndex"></param>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult PageList(int PageSize = 10,int PageIndex = 1)
+        public IActionResult PageList(string GoodsName, int CategoryId = 0,int PageSize = 10,int PageIndex = 1)
         {
-            return Ok();
+            return Ok(service.PagedList(m=>m.GoodsID,PageIndex,PageSize,new QueryDto { CategoryId = CategoryId, GoodsName = GoodsName }));
         }
 
         /// <summary>
@@ -85,5 +93,23 @@ namespace Rbac.WebAPI.Controllers
             return Ok();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> UploadPic(IFormFile file)
+        {
+            string fileName = string.Empty;
+
+            if (file.Length > 0)
+            {
+                fileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(file.FileName)}";
+
+                string filePath = $"{env.WebRootPath}/Uploadfiles/{fileName}";
+
+                using (var stream = System.IO.File.Create(filePath))
+                {
+                    await file.CopyToAsync(stream);
+                }
+            }
+            return Ok(new { fileName = fileName });
+        }
     }
 }
