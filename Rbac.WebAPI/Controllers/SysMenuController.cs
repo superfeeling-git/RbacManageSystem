@@ -52,7 +52,7 @@ namespace Rbac.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> QueryMenuAsync(int id)
         {
-            return Ok(await sysMenuservice.FindAsync(id));
+            return Ok(await sysMenuservice.FindAsync<InsertDto>(id));
         }
 
         /// <summary>

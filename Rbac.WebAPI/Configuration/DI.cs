@@ -32,6 +32,8 @@ namespace Rbac.WebAPI.Configuration
             services.AddScoped<IDepartmentService<Dtos.Department.ListDto>, DepartmentService<Dtos.Department.ListDto>>();
             services.AddScoped<IGoodsCategoryRepository, GoodsCategoryRepository>();
             services.AddScoped<IGoodsCategoryService<Dtos.GoodsCategory.ListDto>, GoodsCategoryService<Dtos.GoodsCategory.ListDto>>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<IStudentService<Dtos.Student.ListDto>, StudentService<Dtos.Student.ListDto>>();
         }
     }
 }

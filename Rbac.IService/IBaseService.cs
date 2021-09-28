@@ -60,7 +60,7 @@ namespace Rbac.IService
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        Task<TDto> FindAsync(TKey key);
+        Task<TModel> FindAsync<TModel>(TKey key);
         /// <summary>
         /// 根据条件返回单条实体
         /// </summary>

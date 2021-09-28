@@ -28,6 +28,9 @@ namespace Rbac.Entity
         /// 父节点ID
         ///</Summary>
         public int ParnetID { get; set; } = 0;
+        /// <summary>
+        /// 菜单角色
+        /// </summary>
         public List<RoleMenu> RoleMenu { get; set; }
     }
 }

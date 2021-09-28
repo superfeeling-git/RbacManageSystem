@@ -73,6 +73,9 @@ namespace Rbac.WebAPI
 
             //app.UseHttpsRedirection();
 
+            //静态文件中间件
+            app.UseStaticFiles();
+
             //路由中间件
             app.UseRouting();
 

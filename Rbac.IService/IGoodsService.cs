@@ -22,5 +22,6 @@ namespace Rbac.IService
         /// <param name="query"></param>
         /// <returns></returns>
         (int, List<ListDto>) PagedList(Expression<Func<ListDto, int>> orderBy, int PageIndex = 1, int PageSize = 10, QueryDto query = null);
+        Task<EntityDto> FindAsync(int key);
     }
 }

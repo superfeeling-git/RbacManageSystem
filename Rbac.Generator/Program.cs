@@ -14,7 +14,7 @@ namespace Rbac.Generator
 
         static void Main(string[] args)
         {
-            var ModuleName = "GoodsCategory";
+            var ModuleName = "Admin";
             GeneratorCode(ModuleName, "Repository", true);
             GeneratorCode(ModuleName, "Repository", false);
             GeneratorCode(ModuleName, "Service", true);
@@ -22,10 +22,8 @@ namespace Rbac.Generator
             GeneratorCode(ModuleName, "WebAPI", isAPI: true);
             GeneratorDtos(ModuleName, IsUpdate: true);
 
-
-
             GeneratorInject(ModuleName);
-            GeneratorContext(ModuleName, "CategoryId");
+            GeneratorContext(ModuleName, "AdminId");
             GeneratorDbSet(ModuleName);
         }
 

@@ -47,7 +47,7 @@ namespace Rbac.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> Find(int id)
         {
-            var model = await service.FindAsync(id);
+            var model = await service.FindAsync<InsertDto>(id);
             return Ok(model);
         }
 

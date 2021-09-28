@@ -231,6 +231,9 @@ namespace Rbac.Entity.Migrations
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ParentPath")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("ParnetID")
                         .HasColumnType("int");
 
@@ -292,6 +295,33 @@ namespace Rbac.Entity.Migrations
                     b.HasIndex("RoleID");
 
                     b.ToTable("RoleMenu");
+                });
+
+            modelBuilder.Entity("Rbac.Entity.Student", b =>
+                {
+                    b.Property<int>("StudentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreateById")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreateByName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("StudentName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("StudentId");
+
+                    b.ToTable("Student");
                 });
 
             modelBuilder.Entity("Rbac.Entity.SysMenu", b =>

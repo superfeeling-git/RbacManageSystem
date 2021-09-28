@@ -89,10 +89,10 @@ namespace Rbac.Service
             return await baseRepository.DeleteAsync(key);
         }
 
-        public virtual async Task<TDto> FindAsync(TKey key)
+        public virtual async Task<TModel> FindAsync<TModel>(TKey key)
         {
             var entity = await baseRepository.FindAsync(key);
-            return entity.MapTo<TDto>();
+            return entity.MapTo<TModel>();
         }
 
         public virtual async Task<TDto> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> Condition = null)

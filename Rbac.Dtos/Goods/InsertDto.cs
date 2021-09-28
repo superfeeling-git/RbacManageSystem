@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Rbac.Dtos.Goods
 {
-    public class InsertDto
+    public class InsertDto : BaseDto
     {
+        public int GoodsId { get; set; }
         public int CategoryId { get; set; }
         public string GoodsName { get; set; }
         public string GoodsPic { get; set; }

@@ -30,5 +30,6 @@ namespace Rbac.Entity
         public virtual DbSet<GoodsCategory> GoodsCategory { get; set; }
         public virtual DbSet<Contract> Contract { get; set; }
         public virtual DbSet<Department> Department { get; set; }
+        public virtual DbSet<Student> Student { get; set; }
     }
 }

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using Rbac.Dtos;
 using System.Linq.Expressions;
 using System.Linq.Dynamic.Core;
+using Rbac.Unitity;
 
 namespace Rbac.Service
 {
@@ -67,6 +68,22 @@ namespace Rbac.Service
             }
 
             return (list.Count(), list.OrderBy(orderBy).Page(PageIndex, PageSize).ToList());
+        }
+
+        public async Task<EntityDto> FindAsync(int key)
+        {
+            //商品实体
+            var model = (await repository.FindAsync(key)).MapTo<EntityDto>();
+            //分类实体
+            var category = await categoryRepository.FindAsync(model.CategoryId);
+
+            var path = $"{category.ParentPath},{category.CategoryId}";
+
+            var arr = path.Split(',').Select(m => Convert.ToInt32(m)).Where(m => m > 0).ToArray();
+
+            model.value = arr;
+
+            return model;
         }
     }
 }

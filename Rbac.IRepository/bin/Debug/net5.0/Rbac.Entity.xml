@@ -39,5 +39,10 @@
              父节点ID
             </Summary>
         </member>
+        <member name="P:Rbac.Entity.SysMenu.RoleMenu">
+            <summary>
+            菜单角色
+            </summary>
+        </member>
     </members>
 </doc>

@@ -1,5 +1,3 @@
-ï»¿using Rbac.Dtos;
-using Rbac.Dtos.Admin;
 using Rbac.Entity;
 using Rbac.IRepository;
 using Rbac.IService;
@@ -9,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Rbac.Unitity;
+using Rbac.Dtos.Admin;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using IdentityModel;
+using Rbac.Unitity;
 using Microsoft.Extensions.Configuration;
-using System.IdentityModel.Tokens.Jwt;
 
 namespace Rbac.Service
 {
@@ -26,7 +25,7 @@ namespace Rbac.Service
         private IConfiguration configuration;
 
         public AdminService(
-            IAdminRepository adminRepository, 
+            IAdminRepository adminRepository,
             IHttpContextAccessor _httpContextAccessor,
             IConfiguration _configuration
             )
@@ -37,34 +36,35 @@ namespace Rbac.Service
             this.configuration = _configuration;
         }
 
+
         public async Task<JwtDto> Login(LoginDto loginDto)
         {
             var code = httpContextAccessor.HttpContext.Request.Cookies["SetCode"];
 
             var inputcode = MD5Helper.Encrypt($"{loginDto.ValidateCode.ToLower()}{configuration["JwtConfig:CookiesKey"]}");
 
-            if(!string.IsNullOrWhiteSpace(code))
-            { 
+            if (!string.IsNullOrWhiteSpace(code))
+            {
                 if (inputcode != code.ToLower() && loginDto.ValidateCode != "string")
                 {
-                    return new JwtDto { code = 1, msg = "éªŒè¯ç é”™è¯¯" };
+                    return new JwtDto { code = 1, msg = "ÑéÖ¤Âë´íÎó" };
                 }
             }
 
             var admin = await adminRepository.FirstOrDefaultAsync(m => m.UserName == loginDto.UserName);
-            if(admin == null)
+            if (admin == null)
             {
-                return new JwtDto { code = 1, msg = "ç”¨æˆ·ä¸å­˜åœ¨" };
+                return new JwtDto { code = 1, msg = "ÓÃ»§²»´æÔÚ" };
             }
             else
             {
-                if(MD5Helper.Encrypt(loginDto.Password).ToLower() != admin.Password.ToLower())
+                if (MD5Helper.Encrypt(loginDto.Password).ToLower() != admin.Password.ToLower())
                 {
-                    return new JwtDto { code = 1, msg = "å¯†ç é”™è¯¯" };
+                    return new JwtDto { code = 1, msg = "ÃÜÂë´íÎó" };
                 }
                 else
                 {
-                    //å†™Sessionæˆ–Cookiesæ¢æˆJWT
+                    //Ğ´Session»òCookies»»³ÉJWT
 
 
                     IList<Claim> claims = new List<Claim> {
@@ -74,17 +74,17 @@ namespace Rbac.Service
                         new Claim(JwtClaimTypes.Role,string.Join(",", ""))
                     };
 
-                    //JWTå¯†é’¥
+                    //JWTÃÜÔ¿
                     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtConfig:Bearer:SecurityKey"]));
 
-                    //ç®—æ³•
+                    //Ëã·¨
                     var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-                    //è¿‡æœŸæ—¶é—´
+                    //¹ıÆÚÊ±¼ä
                     DateTime expires = DateTime.UtcNow.AddHours(10);
 
 
-                    //Payloadè´Ÿè½½
+                    //Payload¸ºÔØ
                     var token = new JwtSecurityToken(
                         issuer: configuration["JwtConfig:Bearer:Issuer"],
                         audience: configuration["JwtConfig:Bearer:Audience"],
@@ -96,7 +96,7 @@ namespace Rbac.Service
 
                     var handler = new JwtSecurityTokenHandler();
 
-                    //ç”Ÿæˆä»¤ç‰Œ
+                    //Éú³ÉÁîÅÆ
                     string jwt = handler.WriteToken(token);
 
                     return new JwtDto { code = 0, token = jwt, expires = expires };

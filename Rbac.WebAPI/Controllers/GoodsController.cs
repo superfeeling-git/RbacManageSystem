@@ -94,6 +94,27 @@ namespace Rbac.WebAPI.Controllers
         }
 
         [HttpPost]
+        public async Task<IActionResult> BulkDelete(List<ListDto> dtos)
+        {
+            await service.BulkDeleteAsync(dtos);
+            return Ok();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateAsync(InsertDto dto)
+        {
+            var count = await service.UpdateAsync(m => m.GoodsID == dto.GoodsId, m => new Goods {
+                GoodsName = dto.GoodsName,
+                GoodsPic = dto.GoodsPic,
+                GoodsPrice = dto.GoodsPrice,
+                Details = dto.Details,
+                CategoryId = dto.CategoryId
+            });
+
+            return Ok(count);
+        }
+
+        [HttpPost]
         public async Task<IActionResult> UploadPic(IFormFile file)
         {
             string fileName = string.Empty;
