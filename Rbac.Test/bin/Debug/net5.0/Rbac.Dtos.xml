@@ -19,6 +19,46 @@
             验证码
             </summary>
         </member>
+        <member name="P:Rbac.Dtos.Role.InsertDto.RoleId">
+            <Summary>
+             角色ID
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.Role.InsertDto.RoleName">
+            <Summary>
+             角色名称
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.Role.ListDto.RoleId">
+            <Summary>
+             角色ID
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.Role.ListDto.RoleName">
+            <Summary>
+             角色名称
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.Role.RoleDto.RoleId">
+            <Summary>
+             角色ID
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.Role.RoleDto.RoleName">
+            <Summary>
+             角色名称
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.Role.UpdateDto.RoleId">
+            <Summary>
+             角色ID
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.Role.UpdateDto.RoleName">
+            <Summary>
+             角色名称
+            </Summary>
+        </member>
         <member name="P:Rbac.Dtos.SysMenu.InsertDto.MenuID">
             <Summary>
              
@@ -39,20 +79,20 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.InsertDto.ParnetID">
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.ParentID">
             <Summary>
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.ListDto.MenuID">
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.MenuId">
             <Summary>
              
             </Summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.ListDto.MenuName">
-            <Summary>
-             
-            </Summary>
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.ListDto.MenuLink">
             <Summary>
@@ -64,10 +104,15 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.ListDto.ParnetID">
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.ParentId">
             <Summary>
              
             </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.children">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.MenuDto.MenuName">
             <Summary>
@@ -75,6 +120,16 @@
             </Summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.MenuDto.MenuLink">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.IsShow">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.ParentID">
             <Summary>
              
             </Summary>

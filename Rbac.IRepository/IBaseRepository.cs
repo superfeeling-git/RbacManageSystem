@@ -59,6 +59,12 @@ namespace Rbac.IRepository
         /// <returns></returns>
         Task<TEntity> FindAsync(TKey key);
         /// <summary>
+        /// 判断某条记录是否存在
+        /// </summary>
+        /// <param name="Condition"></param>
+        /// <returns></returns>
+        Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> Condition = null);
+        /// <summary>
         /// 根据条件（拉姆达）查找单条
         /// </summary>
         /// <param name="Condition"></param>

@@ -11,6 +11,7 @@ namespace Rbac.Entity
     {
         public static void build(this ModelBuilder modelBuilder)
         {
+            
             modelBuilder.Entity<Admin>(action => {
                 action.HasKey(m => m.AdminId);
                 action.Property<string>("LastModify").HasColumnType("nvarchar(500)");
@@ -21,7 +22,7 @@ namespace Rbac.Entity
             });
 
             modelBuilder.Entity<Role>(action => {
-                action.HasKey(m => m.RoleID);
+                action.HasKey(m => m.RoleId);
             });
 
             modelBuilder.Entity<RoleMenu>(action => {
@@ -30,7 +31,7 @@ namespace Rbac.Entity
             });
 
             modelBuilder.Entity<SysMenu>(action => {
-                action.HasKey(m => m.MenuID);
+                action.HasKey(m => m.MenuId);
             });
 
             modelBuilder.Entity<Goods>(action => {

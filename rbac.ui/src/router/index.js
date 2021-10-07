@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import login from '../page/login'
 import home from '../page/home'
-import create from '../page/SysMenu/create'
-import rootmenu from '../page/SysMenu/rootmenu'
+import sysmenuCreate from '../page/SysMenu/create'
+import sysmenuIndex from '../page/SysMenu/index'
+import roleIndex from '../page/Role/index'
+import adminIndex from '../page/Admin/index'
 
 Vue.use(Router)
 
@@ -22,14 +24,19 @@ export default new Router({
       component: home,
       children:[
         {
-          path:'/sysmenu/create',
-          name:'create',
-          component:create
+          path:'/sysmenu/index',
+          name:'sysmenuIndex',
+          component:sysmenuIndex
         },
         {
-          path:'/sysmenu/rootmenu',
-          name:'rootmenu',
-          component:rootmenu
+          path:'/role/index',
+          name:'roleIndex',
+          component:roleIndex
+        },
+        {
+          path:'/admin/index',
+          name:'adminIndex',
+          component:adminIndex
         }
       ]
     }

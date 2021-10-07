@@ -11,7 +11,7 @@ namespace Rbac.Entity
         ///<Summary>
         /// 
         ///</Summary>
-        public int MenuID { get; set; }
+        public int MenuId { get; set; }
         ///<Summary>
         /// 
         ///</Summary>
@@ -27,7 +27,7 @@ namespace Rbac.Entity
         ///<Summary>
         /// 父节点ID
         ///</Summary>
-        public int ParnetID { get; set; } = 0;
+        public int ParentId { get; set; } = 0;
         /// <summary>
         /// 菜单角色
         /// </summary>

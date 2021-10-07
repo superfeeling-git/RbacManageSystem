@@ -177,3 +177,4 @@ E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\runtimes\win\lib\netcore
 E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\Rbac.Dtos.xml
 E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\Rbac.IRepository.dll
 E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\Rbac.IRepository.pdb
+E:\Teaching\RbacManageSystem\Rbac.Test\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

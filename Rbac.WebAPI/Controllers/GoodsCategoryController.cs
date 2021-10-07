@@ -12,6 +12,7 @@ namespace Rbac.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "mom")]
     public class GoodsCategoryController : ControllerBase
     {
         private IGoodsCategoryService<ListDto> service;
@@ -43,7 +44,7 @@ namespace Rbac.WebAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> Find(int id)
+        public async Task<IActionResult> FindAsync(int id)
         {
             var model = await service.FindAsync<InsertDto>(id);
             return Ok(model);
@@ -54,9 +55,9 @@ namespace Rbac.WebAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetList()
+        public async Task<IActionResult> GetListAsync()
         {
-            return new JsonResult(await service.GetNodes());
+            return new JsonResult(await service.GetNodesAsync());
         }
 
         /// <summary>
@@ -77,7 +78,7 @@ namespace Rbac.WebAPI.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteAsync(int id)
         {
             await service.DeleteAsync(id);
             return Ok();

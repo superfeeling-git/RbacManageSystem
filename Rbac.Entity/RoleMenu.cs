@@ -9,6 +9,7 @@ namespace Rbac.Entity
     public class RoleMenu : BaseModel<int>
     {
         public int Id { get; set; }
+        public int RoleId { get; set; }
         public int MenuId { get; set; }
         public Role Role { get; set; }
         public SysMenu SysMenu { get; set; }

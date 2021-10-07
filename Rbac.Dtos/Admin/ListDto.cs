@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rbac.Dtos.Admin
 {
-    public class ListDto
+    public class ListDto:BaseDto
     {
         
         public int AdminId { get; set; }

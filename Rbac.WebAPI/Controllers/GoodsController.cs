@@ -14,7 +14,7 @@ namespace Rbac.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [ApiExplorerSettings(GroupName = "gp")]
+    [ApiExplorerSettings(GroupName = "mom")]
     public class GoodsController : ControllerBase
     {
         private IGoodsService<ListDto> service;

@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 using Rbac.Dtos.Admin;
 using Rbac.IService;
 using Rbac.Entity;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Rbac.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]
     public class AdminController : ControllerBase
     {
         private IAdminService<ListDto> service;
@@ -31,10 +34,9 @@ namespace Rbac.WebAPI.Controllers
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> CreateAsync(InsertDto dto)
+        public async Task<IActionResult> CreateAsync(AdminDto dto)
         {
-            await service.CreateAsync(dto);
-            return Ok();
+            return Ok(await service.CreateAsync(dto));
         }
 
         /// <summary>
@@ -45,7 +47,7 @@ namespace Rbac.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> Find(int id)
         {
-            var model = await service.FindAsync<Admin>(id);
+            var model = await service.FindAsync<AdminDto>(id);
             return Ok(model);
         }
 
@@ -60,15 +62,17 @@ namespace Rbac.WebAPI.Controllers
         }
 
         /// <summary>
-        /// 分页，未实现
+        /// 
         /// </summary>
         /// <param name="PageSize"></param>
         /// <param name="PageIndex"></param>
+        /// <param name="keywords"></param>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult PageList(int PageSize = 10,int PageIndex = 1)
+        public IActionResult PageList(int PageSize = 10,int PageIndex = 1,string keywords="")
         {
-            return Ok();
+            var list = service.PagedList(m => m.AdminId, PageIndex, PageSize, keywords);
+            return Ok(list);
         }
 
         /// <summary>
@@ -83,5 +87,18 @@ namespace Rbac.WebAPI.Controllers
             return Ok();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> SettingRolesAsync(SettingRolesDto dto)
+        {
+            await service.SettingRoles(dto);
+            return Ok();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateAsync(AdminDto dto)
+        {
+            await service.UpdateAsync(dto);
+            return Ok();
+        }
     }
 }

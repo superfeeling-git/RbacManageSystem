@@ -27,6 +27,6 @@ namespace Rbac.Dtos.SysMenu
         ///<Summary>
         /// 
         ///</Summary>
-        public int? ParnetID { get; set; }
+        public int ParentID { get; set; } = 0;
     }
 }

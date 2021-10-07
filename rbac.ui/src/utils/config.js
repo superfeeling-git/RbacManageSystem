@@ -7,14 +7,16 @@ axios.defaults.headers.common['Authorization'] = `bearer ${localStorage.getItem(
 
 // 添加响应拦截器
 axios.interceptors.response.use(function (response) {
-    // 对响应数据做点什么
-    return response;
-  }, function (error) {
+  // 对响应数据做点什么
+  return response;
+}, function (error) {
+  if (error.response.status == 401 || error.response.status == 403) {
     router.push("/");
-    return Promise.reject(error);
-  });
+  }
+  return Promise.reject(error);
+});
 
 export default {
-    baseUrl,
-    axios
+  baseUrl,
+  axios
 }

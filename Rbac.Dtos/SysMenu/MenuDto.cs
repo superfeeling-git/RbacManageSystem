@@ -17,6 +17,13 @@ namespace Rbac.Dtos.SysMenu
         /// 
         ///</Summary>
         public string MenuLink { get; set; }
-
+        ///<Summary>
+        /// 
+        ///</Summary>
+        public bool IsShow { get; set; } = false;
+        ///<Summary>
+        /// 
+        ///</Summary>
+        public int ParentID { get; set; } = 0;
     }
 }

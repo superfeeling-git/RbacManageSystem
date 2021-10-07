@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Rbac.Dtos.SysMenu
 {
-    public class ListDto
+    public class ListDto : BaseDto
     {
         ///<Summary>
         /// 
         ///</Summary>
-        public int MenuID { get; set; }
-        ///<Summary>
+        public int MenuId { get; set; }
+        /// <summary>
         /// 
-        ///</Summary>
+        /// </summary>
         public string MenuName { get; set; }
         ///<Summary>
         /// 
@@ -24,6 +24,10 @@ namespace Rbac.Dtos.SysMenu
         ///<Summary>
         /// 
         ///</Summary>
-        public int? ParnetID { get; set; }
+        public int ParentId { get; set; } = 0;
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<ListDto> children { get; set; } = new List<ListDto>();
     }
 }

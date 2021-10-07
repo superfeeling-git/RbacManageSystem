@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Rbac.Entity;
 using Rbac.WebAPI.Configuration;
+using Rbac.Unitity;
+using Rbac.Dtos;
 
 namespace Rbac.WebAPI
 {
@@ -33,6 +35,10 @@ namespace Rbac.WebAPI
                 });
             });
 
+            services.AddAutoMapper(cfg => {
+                cfg.AddProfile<RbacProfile>();
+            });
+
             //EF Core的db上下文
             services.AddDbContext<RbacDbContext>(option => {
                 option.UseSqlServer(Configuration.GetConnectionString("SqlServer"));
@@ -40,6 +46,8 @@ namespace Rbac.WebAPI
 
             //便于其他类库访问HTTP上下文
             services.AddHttpContextAccessor();
+
+            services.AddHttpContext();
 
             //使用.net core自带的注入
             services.AddIoc();
@@ -54,14 +62,14 @@ namespace Rbac.WebAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseStaticHttpContext();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                string ApiName = "Rbac.Core";
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/V1/swagger.json", $"{ApiName} V1");
+                    c.SwaggerEndpoint("/swagger/V1/swagger.json", "通用模块");
                     c.SwaggerEndpoint("/swagger/gp/swagger.json", "登录模块");
                     c.SwaggerEndpoint("/swagger/mom/swagger.json", "业务模块");
                     c.SwaggerEndpoint("/swagger/dm/swagger.json", "其他模块");

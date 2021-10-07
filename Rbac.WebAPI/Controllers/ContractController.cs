@@ -8,14 +8,15 @@ using Rbac.Dtos.Contract;
 using Rbac.IService;
 using Rbac.Entity;
 
+
 namespace Rbac.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [ApiExplorerSettings(GroupName = "gp")]
+    [ApiExplorerSettings(GroupName = "mom")]
     public class ContractController : ControllerBase
     {
-        private IContractService<ListDto> service;
+        private IContractService<ListDto> service;        
 
         /// <summary>
         /// 构造函数注入

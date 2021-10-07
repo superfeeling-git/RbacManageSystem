@@ -47,6 +47,28 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -126,7 +148,7 @@
             },
             "Z.EntityFramework.Plus.EFCore": {
               "target": "Package",
-              "version": "[5.2.9, )"
+              "version": "[5.2.13, )"
             }
           },
           "imports": [
@@ -511,6 +533,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.9.4, )"
@@ -582,7 +608,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
+                "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj"
+              },
+              "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
+                "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -706,6 +739,10 @@
               "target": "Package",
               "version": "[10.1.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.9, )"
@@ -723,6 +760,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[5.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

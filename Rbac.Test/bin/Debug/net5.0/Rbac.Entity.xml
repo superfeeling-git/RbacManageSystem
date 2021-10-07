@@ -4,7 +4,7 @@
         <name>Rbac.Entity</name>
     </assembly>
     <members>
-        <member name="P:Rbac.Entity.Role.RoleID">
+        <member name="P:Rbac.Entity.Role.RoleId">
             <Summary>
              角色ID
             </Summary>
@@ -14,7 +14,12 @@
              角色名称
             </Summary>
         </member>
-        <member name="P:Rbac.Entity.SysMenu.MenuID">
+        <member name="P:Rbac.Entity.Role.AdminRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rbac.Entity.SysMenu.MenuId">
             <Summary>
              
             </Summary>
@@ -34,10 +39,15 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Entity.SysMenu.ParnetID">
+        <member name="P:Rbac.Entity.SysMenu.ParentId">
             <Summary>
              父节点ID
             </Summary>
+        </member>
+        <member name="P:Rbac.Entity.SysMenu.RoleMenu">
+            <summary>
+            菜单角色
+            </summary>
         </member>
     </members>
 </doc>

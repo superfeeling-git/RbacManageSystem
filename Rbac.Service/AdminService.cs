@@ -14,6 +14,11 @@ using Microsoft.IdentityModel.Tokens;
 using IdentityModel;
 using Rbac.Unitity;
 using Microsoft.Extensions.Configuration;
+using Rbac.Dtos.Role;
+using Rbac.Dtos;
+using AutoMapper;
+using System.Linq.Expressions;
+
 
 namespace Rbac.Service
 {
@@ -21,22 +26,34 @@ namespace Rbac.Service
         where TDto : class, new()
     {
         private IAdminRepository adminRepository;
+        private IRoleRepository roleRepository;
         private readonly IHttpContextAccessor httpContextAccessor;
         private IConfiguration configuration;
+        private IMapper mapper;
 
-        public AdminService(
+        public AdminService
+            (
             IAdminRepository adminRepository,
             IHttpContextAccessor _httpContextAccessor,
-            IConfiguration _configuration
+            IConfiguration _configuration,
+            IRoleRepository roleRepository,
+            IMapper mapper
             )
         {
             this.baseRepository = adminRepository;
             this.adminRepository = adminRepository;
             this.httpContextAccessor = _httpContextAccessor;
+            this._httpContextAccessor = _httpContextAccessor;
             this.configuration = _configuration;
+            this.roleRepository = roleRepository;
+            this.mapper = mapper;
         }
 
-
+        /// <summary>
+        /// 登录
+        /// </summary>
+        /// <param name="loginDto"></param>
+        /// <returns></returns>
         public async Task<JwtDto> Login(LoginDto loginDto)
         {
             var code = httpContextAccessor.HttpContext.Request.Cookies["SetCode"];
@@ -64,8 +81,8 @@ namespace Rbac.Service
                 }
                 else
                 {
-                    //写Session或Cookies换成JWT
-
+                    //更新末次登录时间
+                    await adminRepository.UpdateAsync(m => m.UserName == admin.UserName, m => new Admin { LastLoginTime = DateTime.Now });
 
                     IList<Claim> claims = new List<Claim> {
                         new Claim(JwtClaimTypes.Id,admin.AdminId.ToString()),
@@ -102,6 +119,85 @@ namespace Rbac.Service
                     return new JwtDto { code = 0, token = jwt, expires = expires };
                 }
             }
+        }
+
+        /// <summary>
+        /// 配置角色
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        public async Task SettingRoles(SettingRolesDto dto)
+        {
+            await roleRepository.BulkInsertAsync(dto.Role.MapToList<RoleDto, Role>());
+        }
+
+        public async Task<ResultInfo> CreateAsync(AdminDto dto)
+        {
+            if (await adminRepository.ExistsAsync(m => m.UserName == dto.UserName))
+            {
+                return new ResultInfo { code = 1, msg = "已经存在同名管理员" };
+            }
+
+            dto.Password = MD5Helper.Encrypt(dto.Password);
+
+            var admin = mapper.Map<AdminDto, Admin>(dto);
+
+            await adminRepository.CreateAsync(admin);
+
+            return new ResultInfo { code = 0 };
+        }
+
+        public (int, List<TDto>) PagedList(Expression<Func<Admin, int>> orderBy, int PageIndex = 1, int PageSize = 10, string keywords = "")
+        {
+            var list = adminRepository.Query();
+            if(!string.IsNullOrWhiteSpace(keywords))
+            {
+                list = list.Where(m=>m.UserName.Contains(keywords));
+            }
+
+            return list.OrderBy(orderBy).PagedList<Admin,TDto>(PageIndex, PageSize);
+        }
+
+
+        public override async Task<AdminDto> FindAsync<AdminDto>(int key)
+        {
+            var admin = await adminRepository.FindAsync(key);
+            admin.Password = string.Empty;
+            return mapper.Map<Admin, AdminDto>(admin);
+        }
+
+        public async Task<ResultInfo> UpdateAsync(AdminDto dto)
+        {
+            if (await adminRepository.ExistsAsync(m => m.UserName == dto.UserName && m.AdminId != dto.AdminId))
+            {
+                return new ResultInfo { code = 1, msg = "已经存在同名管理员" };
+            }
+
+            var admin = mapper.Map<AdminDto, Admin>(dto);            
+
+            await adminRepository.RemoveRole(dto.AdminId);
+
+            await adminRepository.BulkInsertAsync(admin.AdminRole);
+
+            if(!string.IsNullOrWhiteSpace(admin.Password))
+            {
+                dto.Password = MD5Helper.Encrypt(dto.Password);
+
+                await adminRepository.UpdateAsync(m => m.AdminId == dto.AdminId, admin => new Admin
+                {
+                    UserName = dto.UserName,
+                    Password = dto.Password
+                });
+            }
+            else
+            {
+                await adminRepository.UpdateAsync(m => m.AdminId == dto.AdminId, admin => new Admin
+                {
+                    UserName = dto.UserName
+                });
+            }            
+
+            return new ResultInfo { code = 0 };
         }
     }
 }

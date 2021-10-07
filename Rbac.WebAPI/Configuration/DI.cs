@@ -8,12 +8,14 @@ using Rbac.Repository;
 using Rbac.IService;
 using Rbac.Service;
 using Rbac.Unitity;
+using Rbac.Dtos;
+using Rbac.Dtos.Admin;
 
 namespace Rbac.WebAPI.Configuration
 {
     public static class DI
     {
-        public static void AddIoc(this IServiceCollection services)
+        public static IServiceCollection AddIoc(this IServiceCollection services)
         {
             services.AddScoped<ValidateCode>();
             services.AddScoped<ISysMenuRepository, SysMenuRepository>();
@@ -34,6 +36,10 @@ namespace Rbac.WebAPI.Configuration
             services.AddScoped<IGoodsCategoryService<Dtos.GoodsCategory.ListDto>, GoodsCategoryService<Dtos.GoodsCategory.ListDto>>();
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<IStudentService<Dtos.Student.ListDto>, StudentService<Dtos.Student.ListDto>>();
+            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddScoped<IRoleService<Dtos.Role.ListDto>, RoleService<Dtos.Role.ListDto>>();
+            services.AddScoped<Recurve>();
+            return services;
         }
     }
 }

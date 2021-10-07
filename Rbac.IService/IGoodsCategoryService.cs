@@ -11,6 +11,6 @@ namespace Rbac.IService
     public interface IGoodsCategoryService<TDto> : IBaseService<GoodsCategory, TDto, int>
         where TDto : class, new()
     {
-        Task<List<TreeDto>> GetNodes();
+        Task<List<TreeDto>> GetNodesAsync();
     }
 }

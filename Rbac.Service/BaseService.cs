@@ -9,6 +9,7 @@ using Rbac.Unitity;
 using System.Reflection;
 using Microsoft.AspNetCore.Http;
 using IdentityModel;
+using Rbac.Dtos;
 
 namespace Rbac.Service
 {
@@ -65,6 +66,7 @@ namespace Rbac.Service
 
         public virtual async Task<int> CreateAsync<TInsertDto>(TInsertDto dto)
         {
+            var claims = _httpContextAccessor.HttpContext.User.Claims;
             var userid = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Id).Value;
             var username = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Name).Value;
             TEntity entity = dto.MapTo<TEntity>();

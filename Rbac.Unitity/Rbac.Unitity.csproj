@@ -13,4 +13,9 @@
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Rbac.Dtos\Rbac.Dtos.csproj" />
+    <ProjectReference Include="..\Rbac.Entity\Rbac.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

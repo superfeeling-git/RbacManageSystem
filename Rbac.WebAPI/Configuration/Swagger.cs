@@ -14,13 +14,13 @@ namespace Rbac.WebAPI.Configuration
 {
     public static class Swagger
     {
-        public static void AddSwagger(this IServiceCollection services)
+        public static IServiceCollection AddSwagger(this IServiceCollection services)
         {
             string ApiName = "Rbac.Core";
             
             var basePath = Microsoft.DotNet.PlatformAbstractions.ApplicationEnvironment.ApplicationBasePath;
 
-            services.AddSwaggerGen(options =>
+            return services.AddSwaggerGen(options =>
             {
                 options.CustomSchemaIds(type => type.FullName);
 

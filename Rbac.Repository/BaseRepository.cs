@@ -108,5 +108,15 @@ namespace Rbac.Repository
         {
             return await __db.Set<TEntity>().Where(Condition).UpdateAsync(updateExpression);
         }
+
+        public Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> Condition = null)
+        {
+            var query = __db.Set<TEntity>().AsQueryable();
+            if(Condition != null)
+            {
+                query = query.Where(Condition);
+            }
+            return query.AnyAsync();
+        }
     }
 }

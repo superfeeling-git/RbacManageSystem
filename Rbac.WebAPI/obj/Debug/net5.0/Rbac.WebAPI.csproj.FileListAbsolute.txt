@@ -16,7 +16,6 @@ E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\Rbac.WebAPI.GeneratedM
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\Rbac.WebAPI.AssemblyInfoInputs.cache
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\Rbac.WebAPI.AssemblyInfo.cs
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\Rbac.WebAPI.csproj.CoreCompileInputs.cache
-E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\Rbac.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\Rbac.WebAPI.MvcApplicationPartsAssemblyInfo.cache
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\staticwebassets\Rbac.WebAPI.StaticWebAssets.Manifest.cache
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\staticwebassets\Rbac.WebAPI.StaticWebAssets.xml
@@ -96,3 +95,7 @@ E:\Teaching\RbacManageSystem\Rbac.WebAPI\bin\Debug\net5.0\runtimes\win\lib\netco
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\bin\Debug\net5.0\Rbac.Dtos.xml
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\bin\Debug\net5.0\Rbac.IRepository.dll
 E:\Teaching\RbacManageSystem\Rbac.WebAPI\bin\Debug\net5.0\Rbac.IRepository.pdb
+E:\Teaching\RbacManageSystem\Rbac.WebAPI\obj\Debug\net5.0\Rbac.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+E:\Teaching\RbacManageSystem\rbac.webapi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Teaching\RbacManageSystem\Rbac.WebAPI\bin\Debug\net5.0\Castle.Core.dll
+E:\Teaching\RbacManageSystem\Rbac.WebAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Proxies.dll

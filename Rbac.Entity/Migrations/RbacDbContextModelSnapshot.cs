@@ -59,7 +59,7 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("AdminId")
+                    b.Property<int>("AdminId")
                         .HasColumnType("int");
 
                     b.Property<int>("CreateById")
@@ -71,14 +71,14 @@ namespace Rbac.Entity.Migrations
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("RoleID")
+                    b.Property<int>("RoleId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AdminId");
 
-                    b.HasIndex("RoleID");
+                    b.HasIndex("RoleId");
 
                     b.ToTable("AdminRole");
                 });
@@ -231,11 +231,11 @@ namespace Rbac.Entity.Migrations
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ParentID")
+                        .HasColumnType("int");
+
                     b.Property<string>("ParentPath")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ParnetID")
-                        .HasColumnType("int");
 
                     b.HasKey("CategoryId");
 
@@ -244,7 +244,7 @@ namespace Rbac.Entity.Migrations
 
             modelBuilder.Entity("Rbac.Entity.Role", b =>
                 {
-                    b.Property<int>("RoleID")
+                    b.Property<int>("RoleId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -261,7 +261,7 @@ namespace Rbac.Entity.Migrations
                     b.Property<string>("RoleName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RoleID");
+                    b.HasKey("RoleId");
 
                     b.ToTable("Role");
                 });
@@ -285,14 +285,14 @@ namespace Rbac.Entity.Migrations
                     b.Property<int>("MenuId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("RoleID")
+                    b.Property<int>("RoleId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("MenuId");
 
-                    b.HasIndex("RoleID");
+                    b.HasIndex("RoleId");
 
                     b.ToTable("RoleMenu");
                 });
@@ -326,7 +326,7 @@ namespace Rbac.Entity.Migrations
 
             modelBuilder.Entity("Rbac.Entity.SysMenu", b =>
                 {
-                    b.Property<int>("MenuID")
+                    b.Property<int>("MenuId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -349,10 +349,10 @@ namespace Rbac.Entity.Migrations
                     b.Property<string>("MenuName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ParnetID")
+                    b.Property<int>("ParentId")
                         .HasColumnType("int");
 
-                    b.HasKey("MenuID");
+                    b.HasKey("MenuId");
 
                     b.ToTable("SysMenu");
                 });
@@ -360,12 +360,16 @@ namespace Rbac.Entity.Migrations
             modelBuilder.Entity("Rbac.Entity.AdminRole", b =>
                 {
                     b.HasOne("Rbac.Entity.Admin", "Admin")
-                        .WithMany()
-                        .HasForeignKey("AdminId");
+                        .WithMany("AdminRole")
+                        .HasForeignKey("AdminId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Rbac.Entity.Role", "Role")
-                        .WithMany()
-                        .HasForeignKey("RoleID");
+                        .WithMany("AdminRole")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Admin");
 
@@ -393,16 +397,28 @@ namespace Rbac.Entity.Migrations
 
                     b.HasOne("Rbac.Entity.Role", "Role")
                         .WithMany()
-                        .HasForeignKey("RoleID");
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Role");
 
                     b.Navigation("SysMenu");
                 });
 
+            modelBuilder.Entity("Rbac.Entity.Admin", b =>
+                {
+                    b.Navigation("AdminRole");
+                });
+
             modelBuilder.Entity("Rbac.Entity.GoodsCategory", b =>
                 {
                     b.Navigation("Goods");
+                });
+
+            modelBuilder.Entity("Rbac.Entity.Role", b =>
+                {
+                    b.Navigation("AdminRole");
                 });
 
             modelBuilder.Entity("Rbac.Entity.SysMenu", b =>

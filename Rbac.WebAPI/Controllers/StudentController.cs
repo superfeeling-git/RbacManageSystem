@@ -12,6 +12,7 @@ namespace Rbac.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [ApiExplorerSettings(GroupName = "mom")]
     public class StudentController : ControllerBase
     {
         private IStudentService<ListDto> service;

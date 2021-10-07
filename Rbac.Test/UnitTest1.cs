@@ -11,6 +11,9 @@ using Rbac.IService;
 using Rbac.Service;
 using Rbac.Dtos.Admin;
 using Rbac.Unitity;
+using System.Collections.Generic;
+using Rbac.Dtos.Role;
+using AutoMapper;
 
 namespace Rbac.Test
 {
@@ -37,10 +40,26 @@ namespace Rbac.Test
 
 
         [Fact]
-        public async Task Test1()
+        public void Test1()
         {
-            var admin = await repository.FirstOrDefaultAsync(m => m.AdminId > 0);
-            
+            var mapper = new MapperConfiguration(exp => {
+                exp.CreateMap<AdminDto, Admin>();
+                exp.CreateMap<RoleDto, Role>();
+            });
+
+            var imapper = mapper.CreateMapper();
+
+            var obj = new AdminDto
+            {
+                AdminId = 1,
+                UserName = "feeling",
+                Password = Guid.NewGuid().ToString(),
+                Role = new List<RoleDto> {
+                    new RoleDto{ RoleId = 1, RoleName = "超级管理员" }
+                }
+            };
+
+            var admin = imapper.Map<AdminDto, Admin>(obj);
         }
     }
 }

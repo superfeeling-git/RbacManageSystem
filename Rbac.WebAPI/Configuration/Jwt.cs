@@ -7,18 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authentication;
 
 namespace Rbac.WebAPI.Configuration
 {
     public static class Jwt
     {
-        public static void AddJwtBearer(this IServiceCollection services)
+        public static AuthenticationBuilder AddJwtBearer(this IServiceCollection services)
         {
             var provider = services.BuildServiceProvider();
 
             var config = provider.GetService<IConfiguration>();
 
-            services.AddAuthentication(option => {
+            return services.AddAuthentication(option => {
                 option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(

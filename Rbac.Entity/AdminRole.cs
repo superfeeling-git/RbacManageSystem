@@ -8,8 +8,8 @@ namespace Rbac.Entity
 {
     public class AdminRole : BaseModel<int>
     {
-        public int Id { get; set; }
-        public Admin Admin { get; set; }
-        public Role Role { get; set; }
+        public virtual int Id { get; set; }
+        public virtual int AdminId { get; set; }
+        public virtual int RoleId { get; set; }
     }
 }

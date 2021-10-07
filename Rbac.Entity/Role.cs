@@ -12,11 +12,15 @@ namespace Rbac.Entity
         ///<Summary>
         /// 角色ID
         ///</Summary>
-        public int RoleID { get; set; }
+        public int RoleId { get; set; }
         ///<Summary>
         /// 角色名称
         ///</Summary>
         public string RoleName { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<AdminRole> AdminRole { get; set; }
         #endregion    
     }
 }

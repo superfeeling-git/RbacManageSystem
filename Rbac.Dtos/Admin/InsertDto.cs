@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Rbac.Dtos.Role;
 
 namespace Rbac.Dtos.Admin
 {
@@ -11,6 +12,7 @@ namespace Rbac.Dtos.Admin
         
         public int AdminId { get; set; }
         public string UserName { get; set; }
-        public string Password { get; set; }    
+        public string Password { get; set; }
+        public List<RoleDto> Dto { get; set; }
     }
 }

@@ -14,17 +14,17 @@ namespace Rbac.Generator
 
         static void Main(string[] args)
         {
-            var ModuleName = "Admin";
-            GeneratorCode(ModuleName, "Repository", true);
+            var ModuleName = "AdminRole";
+            /*GeneratorCode(ModuleName, "Repository", true);
             GeneratorCode(ModuleName, "Repository", false);
             GeneratorCode(ModuleName, "Service", true);
             GeneratorCode(ModuleName, "Service", false);
-            GeneratorCode(ModuleName, "WebAPI", isAPI: true);
+            GeneratorCode(ModuleName, "WebAPI", isAPI: true);*/
             GeneratorDtos(ModuleName, IsUpdate: true);
 
-            GeneratorInject(ModuleName);
-            GeneratorContext(ModuleName, "AdminId");
-            GeneratorDbSet(ModuleName);
+            /*GeneratorInject(ModuleName);
+            GeneratorContext(ModuleName, "RoleId");
+            GeneratorDbSet(ModuleName);*/
         }
 
         #region 生成仓储、Service的接口及实现层
@@ -95,8 +95,11 @@ namespace Rbac.Generator
             templateContent = templateContent.Replace("#ModuleName#", ModuleName);
 
             entityContent = templateContent.Replace("#DtoName#", "ListDto");
-
             File.WriteAllText($"{targetPath}/ListDto.cs", entityContent);
+
+            entityContent = templateContent.Replace("#DtoName#", $"{ModuleName}Dto");
+            File.WriteAllText($"{targetPath}/{ModuleName}Dto.cs", entityContent);
+
             if (IsInsert)
             {
                 entityContent = templateContent.Replace("#DtoName#", "InsertDto");
