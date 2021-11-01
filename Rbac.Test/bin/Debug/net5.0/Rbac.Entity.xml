@@ -49,5 +49,10 @@
             菜单角色
             </summary>
         </member>
+        <member name="P:Rbac.Entity.SysMenu.OrderId">
+            <summary>
+            
+            </summary>
+        </member>
     </members>
 </doc>

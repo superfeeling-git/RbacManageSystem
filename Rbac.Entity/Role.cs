@@ -21,6 +21,10 @@ namespace Rbac.Entity
         /// 
         /// </summary>
         public List<AdminRole> AdminRole { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public List<RolePermission> RolePermission { get; set; }
         #endregion    
     }
 }

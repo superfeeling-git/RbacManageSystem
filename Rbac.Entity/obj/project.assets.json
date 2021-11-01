@@ -1522,7 +1522,7 @@
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
         }
       },
-      "Z.EntityFramework.Extensions.EFCore/5.2.9": {
+      "Z.EntityFramework.Extensions.EFCore/5.2.13": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -1539,15 +1539,15 @@
           "lib/netstandard2.1/Z.EntityFramework.Extensions.EFCore.dll": {}
         }
       },
-      "Z.EntityFramework.Plus.EFCore/5.2.9": {
+      "Z.EntityFramework.Plus.EFCore/5.2.13": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "Microsoft.EntityFrameworkCore.Relational": "[5.0.0, 6.0.0)",
           "System.Reflection.Emit": "4.7.0",
           "System.Reflection.TypeExtensions": "4.7.0",
-          "Z.EntityFramework.Extensions.EFCore": "[5.2.9]",
-          "Z.Expressions.Eval": "[4.0.52]"
+          "Z.EntityFramework.Extensions.EFCore": "[5.2.13]",
+          "Z.Expressions.Eval": "[4.0.54]"
         },
         "compile": {
           "lib/netstandard2.1/Z.EntityFramework.Plus.EFCore.dll": {}
@@ -1556,7 +1556,7 @@
           "lib/netstandard2.1/Z.EntityFramework.Plus.EFCore.dll": {}
         }
       },
-      "Z.Expressions.Eval/4.0.52": {
+      "Z.Expressions.Eval/4.0.54": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
@@ -6083,37 +6083,37 @@
         "system.xml.xpath.nuspec"
       ]
     },
-    "Z.EntityFramework.Extensions.EFCore/5.2.9": {
-      "sha512": "ACsvlr1pY6B1WfqYD90jz8DepwMgJx5UBW8iMg4nIHlOtM131znj+8biGHwGR1o47QPHDi/+BIJX2d/SbZTifg==",
+    "Z.EntityFramework.Extensions.EFCore/5.2.13": {
+      "sha512": "fpXcNrGBRxOhY/sHw9dZ/s6lrxjCIgJHbNaeV9nZ8sT5fpwPAhBGavOnS5KdQ6+5fyLnqgEg+4LIUzNIxUBuDA==",
       "type": "package",
-      "path": "z.entityframework.extensions.efcore/5.2.9",
+      "path": "z.entityframework.extensions.efcore/5.2.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Z.EntityFramework.Extensions.EFCore.dll",
         "lib/netstandard2.1/Z.EntityFramework.Extensions.EFCore.xml",
-        "z.entityframework.extensions.efcore.5.2.9.nupkg.sha512",
+        "z.entityframework.extensions.efcore.5.2.13.nupkg.sha512",
         "z.entityframework.extensions.efcore.nuspec"
       ]
     },
-    "Z.EntityFramework.Plus.EFCore/5.2.9": {
-      "sha512": "SgZm8OXooSFKov1hsoexZUtolYbsAWB+mR3LUIKFY0B0OladQBU7CArtyVn+RHUVZPIwA/i0V2/EnP7nPhYtoA==",
+    "Z.EntityFramework.Plus.EFCore/5.2.13": {
+      "sha512": "bMhGOyrcISlinPHm76c0qO2fFG6BFecWypeI406nYt6K/hopRmOuWTJsSq2Gqrvr4j2b0hQc1mUjn4IPpSL5qA==",
       "type": "package",
-      "path": "z.entityframework.plus.efcore/5.2.9",
+      "path": "z.entityframework.plus.efcore/5.2.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Z.EntityFramework.Plus.EFCore.deps.json",
         "lib/netstandard2.1/Z.EntityFramework.Plus.EFCore.dll",
         "lib/netstandard2.1/Z.EntityFramework.Plus.EFCore.xml",
-        "z.entityframework.plus.efcore.5.2.9.nupkg.sha512",
+        "z.entityframework.plus.efcore.5.2.13.nupkg.sha512",
         "z.entityframework.plus.efcore.nuspec"
       ]
     },
-    "Z.Expressions.Eval/4.0.52": {
-      "sha512": "qmuhMbJ8MlwgOhFsrjQK0CTnChnbknN+AvxS6aU33E9SPV3jbFMtsi5VCajsKJ04zx53NZM0CcX5a2bF6F60yQ==",
+    "Z.Expressions.Eval/4.0.54": {
+      "sha512": "PSFHZVmSXNee//9T5Vdylo7T2cPBueit3dnjo9TeB9QKUdfgdH1XXiZMa/s8FMnWLM/dyMu5SachL4r0nl39RA==",
       "type": "package",
-      "path": "z.expressions.eval/4.0.52",
+      "path": "z.expressions.eval/4.0.54",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6125,7 +6125,7 @@
         "lib/netstandard2.0/Z.Expressions.Eval.xml",
         "lib/netstandard2.1/Z.Expressions.Eval.dll",
         "lib/netstandard2.1/Z.Expressions.Eval.xml",
-        "z.expressions.eval.4.0.52.nupkg.sha512",
+        "z.expressions.eval.4.0.54.nupkg.sha512",
         "z.expressions.eval.nuspec"
       ]
     }
@@ -6135,7 +6135,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.9",
       "System.Linq.Dynamic.Core >= 1.2.12",
-      "Z.EntityFramework.Plus.EFCore >= 5.2.9"
+      "Z.EntityFramework.Plus.EFCore >= 5.2.13"
     ]
   },
   "packageFolders": {
@@ -6203,7 +6203,7 @@
           },
           "Z.EntityFramework.Plus.EFCore": {
             "target": "Package",
-            "version": "[5.2.9, )"
+            "version": "[5.2.13, )"
           }
         },
         "imports": [

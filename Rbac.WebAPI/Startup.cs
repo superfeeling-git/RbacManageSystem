@@ -8,6 +8,9 @@ using Rbac.Entity;
 using Rbac.WebAPI.Configuration;
 using Rbac.Unitity;
 using Rbac.Dtos;
+using Rbac.IService;
+using Rbac.IRepository;
+using CSRedis;
 
 namespace Rbac.WebAPI
 {
@@ -23,7 +26,9 @@ namespace Rbac.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddJsonSetting();
+            services.AddControllers(option=> {
+                //option.Filters.Add<AuthonizationFilter>();
+            }).AddJsonSetting();            
 
             //跨域
             services.AddCors(option => {
@@ -34,6 +39,10 @@ namespace Rbac.WebAPI
                     build.WithOrigins("http://localhost:8080").AllowCredentials();
                 });
             });
+
+            CSRedisClient client = new CSRedisClient(Configuration["Redis:ConnectionStrings"]);
+            //services.AddSingleton<CSRedisClient>(client);
+            RedisHelper.Initialization(client);
 
             services.AddAutoMapper(cfg => {
                 cfg.AddProfile<RbacProfile>();
@@ -49,7 +58,7 @@ namespace Rbac.WebAPI
 
             services.AddHttpContext();
 
-            //使用.net core自带的注入
+            //使用.net core自带的注册
             services.AddIoc();
 
             //JWT认证参数
@@ -60,7 +69,7 @@ namespace Rbac.WebAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IRoleRepository roleRepository)
         {
             app.UseStaticHttpContext();
             if (env.IsDevelopment())
@@ -89,6 +98,9 @@ namespace Rbac.WebAPI
 
             //跨域
             app.UseCors();
+
+            //可以通过静态变量向其他类中传递数据
+            //RolePermission.Role = roleRepository.ListAsync().Result;
 
             //认证中间件
             app.UseAuthentication();

@@ -20,6 +20,10 @@ namespace Rbac.Dtos.SysMenu
         ///<Summary>
         /// 
         ///</Summary>
+        public int OrderId { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public bool IsShow { get; set; } = false;
         ///<Summary>
         /// 

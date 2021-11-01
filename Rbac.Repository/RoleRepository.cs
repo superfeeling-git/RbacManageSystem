@@ -26,16 +26,33 @@ namespace Rbac.Repository
             return list.Select(m => m.MenuId).ToList();
         }
 
-        public async Task SetPermission(Permission permission)
+        public async Task SetPermission(RoleMenuDto roleMenuDto)
         {
-            await _db.RoleMenu.Where(m=>m.RoleId == permission.RoleId).DeleteFromQueryAsync();
+            await _db.RoleMenu.Where(m=>m.RoleId == roleMenuDto.RoleId).DeleteFromQueryAsync();
             List<RoleMenu> roles = new List<RoleMenu>();
-            foreach (var item in permission.MenuId)
+            foreach (var item in roleMenuDto.MenuId)
             {
-                roles.Add(new RoleMenu { RoleId = permission.RoleId, MenuId = item });
+                roles.Add(new RoleMenu { RoleId = roleMenuDto.RoleId, MenuId = item });
             }
             await _db.RoleMenu.AddRangeAsync(roles);
             await _db.SaveChangesAsync();
+        }
+
+        public List<int> getRolesByMenu(string url)
+        {
+            return _db.RoleMenu
+                .Where(m => _db.SysMenu.Where(m => m.MenuLink == url.ToLower()).Select(m => m.MenuId).Contains(m.MenuId))
+                .Select(a => a.RoleId).ToList();
+
+            /*return await _db.Role.Join(_db.RoleMenu, a => a.RoleId, b => b.RoleId, (a, b) => new { a, b })
+                .Join(_db.SysMenu, a => a.b.MenuId, b => b.MenuId, (a, b) => new { a, b })
+                .Where(m => m.b.MenuLink == url.ToLower())
+                .Select(m => m.a.b.RoleId).ToListAsync();*/
+        }
+
+        public Task SetPermission(Permission permission)
+        {
+            throw new NotImplementedException();
         }
     }
 }

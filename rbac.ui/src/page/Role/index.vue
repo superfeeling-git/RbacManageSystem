@@ -24,6 +24,14 @@
                         @click="
                             SettingRole(scope.$index, scope.row, scope.column)
                         "
+                        >配置菜单</el-button
+                    >
+                    <el-button
+                        size="mini"
+                        type="warning"
+                        @click="
+                            SettingRole(scope.$index, scope.row, scope.column)
+                        "
                         >配置权限</el-button
                     >
                     <el-button

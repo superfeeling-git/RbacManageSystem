@@ -45,6 +45,11 @@
                 :formatter="formatShow"
             >
             </el-table-column>
+            <el-table-column
+                prop="orderId"
+                label="菜单排序"
+                width="120"
+            ></el-table-column>
             <el-table-column prop="createByName" label="创建人" width="120">
             </el-table-column>
             <el-table-column
@@ -98,7 +103,7 @@ export default {
     },
     data() {
         return {
-            dialogTitle:"添加分类",
+            dialogTitle: "添加分类",
             menuId: 0,
             formName: "menuCreate",
             timer: new Date().getTime(),
@@ -135,7 +140,7 @@ export default {
             });
         },
         handleEdit(index, row, col) {
-            this.dialogTitle="编辑分类";
+            this.dialogTitle = "编辑分类";
             axios(`/SysMenu/GetPath?id=${row.menuId}`).then((res) => {
                 this.formName = "menuEdit";
                 this.dialogFormVisible = true;
@@ -178,6 +183,7 @@ export default {
                 });
         },
         fetch() {
+            console.log(1);
             axios("/sysmenu/GetMenu").then((m) => {
                 this.tableData = m.data;
             });

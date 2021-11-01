@@ -52,7 +52,7 @@ export default {
                 menuName: "",
                 parentId: 0,
                 isShow: false,
-                menuLink: "",
+                menuLink: ""
             },
             rules: {
                 menuName: [

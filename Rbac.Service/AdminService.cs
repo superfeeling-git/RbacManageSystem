@@ -84,11 +84,14 @@ namespace Rbac.Service
                     //更新末次登录时间
                     await adminRepository.UpdateAsync(m => m.UserName == admin.UserName, m => new Admin { LastLoginTime = DateTime.Now });
 
+                    var roles = string.Join(",",await adminRepository.GetRoleAsync(admin.AdminId));
+
                     IList<Claim> claims = new List<Claim> {
                         new Claim(JwtClaimTypes.Id,admin.AdminId.ToString()),
                         new Claim(JwtClaimTypes.Name,loginDto.UserName),
                         new Claim(JwtClaimTypes.Email,loginDto.UserName),
-                        new Claim(JwtClaimTypes.Role,string.Join(",", ""))
+                        new Claim(JwtClaimTypes.Role,roles)
+
                     };
 
                     //JWT密钥
@@ -175,7 +178,7 @@ namespace Rbac.Service
 
             var admin = mapper.Map<AdminDto, Admin>(dto);            
 
-            await adminRepository.RemoveRole(dto.AdminId);
+            await adminRepository.RemoveRoleAsync(dto.AdminId);
 
             await adminRepository.BulkInsertAsync(admin.AdminRole);
 

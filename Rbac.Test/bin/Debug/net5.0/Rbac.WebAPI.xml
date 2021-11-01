@@ -35,12 +35,13 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Rbac.WebAPI.Controllers.AdminController.PageList(System.Int32,System.Int32)">
+        <member name="M:Rbac.WebAPI.Controllers.AdminController.PageList(System.Int32,System.Int32,System.String)">
             <summary>
-            分页，未实现
+            
             </summary>
             <param name="PageSize"></param>
             <param name="PageIndex"></param>
+            <param name="keywords"></param>
             <returns></returns>
         </member>
         <member name="M:Rbac.WebAPI.Controllers.AdminController.Delete(System.Int32)">

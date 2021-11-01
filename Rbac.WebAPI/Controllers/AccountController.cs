@@ -12,11 +12,13 @@ using System.Text;
 using Rbac.IService;
 using Rbac.Unitity;
 using Rbac.Dtos.Admin;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Rbac.WebAPI.Controllers
 {
     [ApiController]
     [Route("/api/[controller]/[action]")]
+    [AllowAnonymous]
     public class AccountController : ControllerBase
     {
         private IConfiguration configuration;

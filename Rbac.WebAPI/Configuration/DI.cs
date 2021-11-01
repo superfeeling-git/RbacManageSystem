@@ -10,6 +10,7 @@ using Rbac.Service;
 using Rbac.Unitity;
 using Rbac.Dtos;
 using Rbac.Dtos.Admin;
+using Rbac.Entity;
 
 namespace Rbac.WebAPI.Configuration
 {
@@ -38,7 +39,7 @@ namespace Rbac.WebAPI.Configuration
             services.AddScoped<IStudentService<Dtos.Student.ListDto>, StudentService<Dtos.Student.ListDto>>();
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<IRoleService<Dtos.Role.ListDto>, RoleService<Dtos.Role.ListDto>>();
-            services.AddScoped<Recurve>();
+            services.AddScoped<Recurve>();            
             return services;
         }
     }

@@ -49,6 +49,11 @@
              角色名称
             </Summary>
         </member>
+        <member name="P:Rbac.Dtos.Role.RoleDto.AdminRole">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:Rbac.Dtos.Role.UpdateDto.RoleId">
             <Summary>
              角色ID
@@ -74,10 +79,15 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.InsertDto.IsShow">
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.ApiRoute">
             <Summary>
              
             </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.IsShow">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.InsertDto.ParentID">
             <Summary>
@@ -99,10 +109,15 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.ListDto.IsShow">
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.ApiRoute">
             <Summary>
              
             </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.IsShow">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.ListDto.ParentId">
             <Summary>
@@ -124,10 +139,15 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.MenuDto.IsShow">
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.ApiRoute">
             <Summary>
              
             </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.IsShow">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.MenuDto.ParentID">
             <Summary>

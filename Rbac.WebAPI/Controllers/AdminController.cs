@@ -14,7 +14,7 @@ namespace Rbac.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class AdminController : ControllerBase
     {
         private IAdminService<ListDto> service;
@@ -55,7 +55,7 @@ namespace Rbac.WebAPI.Controllers
         /// 获取所有数据
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpGet("/GetAll")]
         public async Task<IActionResult> GetList()
         {
             return new JsonResult(await service.ListAsync());

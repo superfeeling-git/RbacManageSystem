@@ -16,7 +16,7 @@ namespace Rbac.Entity.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.9")
+                .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Rbac.Entity.Admin", b =>
@@ -30,7 +30,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -42,10 +43,12 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("AdminId");
 
@@ -66,7 +69,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -100,7 +104,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -133,7 +138,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -163,7 +169,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -193,7 +200,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -253,13 +261,15 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RoleName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("RoleId");
 
@@ -277,7 +287,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -311,7 +322,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -335,7 +347,8 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CreateByName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
@@ -344,10 +357,15 @@ namespace Rbac.Entity.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("MenuLink")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("MenuName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
 
                     b.Property<int>("ParentId")
                         .HasColumnType("int");
@@ -359,21 +377,17 @@ namespace Rbac.Entity.Migrations
 
             modelBuilder.Entity("Rbac.Entity.AdminRole", b =>
                 {
-                    b.HasOne("Rbac.Entity.Admin", "Admin")
+                    b.HasOne("Rbac.Entity.Admin", null)
                         .WithMany("AdminRole")
                         .HasForeignKey("AdminId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Rbac.Entity.Role", "Role")
+                    b.HasOne("Rbac.Entity.Role", null)
                         .WithMany("AdminRole")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Admin");
-
-                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("Rbac.Entity.Goods", b =>

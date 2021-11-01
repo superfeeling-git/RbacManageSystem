@@ -15,11 +15,13 @@ namespace Rbac.Service
         where TDto : class, new()
     {
         private IRoleRepository repository;
+        private ISysMenuRepository sysMenuRepository;
 
-        public RoleService(IRoleRepository _repository, IHttpContextAccessor _httpContextAccessor)
+        public RoleService(IRoleRepository _repository, IHttpContextAccessor _httpContextAccessor, ISysMenuRepository sysMenuRepository)
         {
             this.baseRepository = _repository;
             this.repository = _repository;
+            this.sysMenuRepository = sysMenuRepository;
             this._httpContextAccessor = _httpContextAccessor;
         }
 
@@ -31,6 +33,11 @@ namespace Rbac.Service
         public async Task SetPermission(Permission permission)
         {
             await repository.SetPermission(permission);
+        }
+
+        public List<int> getRolesByMenu(string url)
+        {
+            return repository.getRolesByMenu(url);
         }
     }
 }

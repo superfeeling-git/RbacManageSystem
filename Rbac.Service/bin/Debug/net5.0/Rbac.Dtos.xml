@@ -79,10 +79,15 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.InsertDto.IsShow">
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.OrderId">
             <Summary>
              
             </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.IsShow">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.InsertDto.ParentID">
             <Summary>
@@ -104,10 +109,15 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.ListDto.IsShow">
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.OrderId">
             <Summary>
              
             </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.IsShow">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.ListDto.ParentId">
             <Summary>
@@ -129,10 +139,15 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.MenuDto.IsShow">
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.OrderId">
             <Summary>
              
             </Summary>
+        </member>
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.IsShow">
+            <summary>
+            
+            </summary>
         </member>
         <member name="P:Rbac.Dtos.SysMenu.MenuDto.ParentID">
             <Summary>

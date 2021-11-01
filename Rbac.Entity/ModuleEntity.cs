@@ -14,6 +14,8 @@ namespace Rbac.Entity
             
             modelBuilder.Entity<Admin>(action => {
                 action.HasKey(m => m.AdminId);
+                action.Property(m => m.UserName).HasMaxLength(50);
+                action.Property(m => m.Password).HasMaxLength(50);
                 action.Property<string>("LastModify").HasColumnType("nvarchar(500)");
             });
 
@@ -23,6 +25,7 @@ namespace Rbac.Entity
 
             modelBuilder.Entity<Role>(action => {
                 action.HasKey(m => m.RoleId);
+                action.Property(m => m.RoleName).HasMaxLength(50);
             });
 
             modelBuilder.Entity<RoleMenu>(action => {
@@ -32,6 +35,8 @@ namespace Rbac.Entity
 
             modelBuilder.Entity<SysMenu>(action => {
                 action.HasKey(m => m.MenuId);
+                action.Property(m => m.MenuName).HasMaxLength(500);
+                action.Property(m => m.MenuLink).HasMaxLength(500);
             });
 
             modelBuilder.Entity<Goods>(action => {

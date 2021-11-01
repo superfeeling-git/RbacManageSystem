@@ -27,7 +27,12 @@ namespace Rbac.Repository
             return admin;
         }
 
-        public async Task<int> RemoveRole(int adminId)
+        public async Task<List<int>> GetRoleAsync(int adminId)
+        {
+            return await _db.AdminRole.Where(m => m.AdminId == adminId).Select(m=>m.RoleId).ToListAsync();
+        }
+
+        public async Task<int> RemoveRoleAsync(int adminId)
         {
             return await _db.AdminRole.Where(m => m.AdminId == adminId).DeleteFromQueryAsync();
         }

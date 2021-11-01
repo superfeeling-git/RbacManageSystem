@@ -63,7 +63,7 @@ namespace Rbac.Service
                 dtos.Add(new CategoryDto { CategoryId = item.MenuId, CategoryName = item.MenuName, ParentId = item.ParentId });
             }
 
-            foreach (var item in sysMenus.Where(m => m.ParentId == 0))
+            foreach (var item in sysMenus.Where(m => m.ParentId == 0).OrderBy(m => m.OrderId))
             {
                 TreeDto treemodel = new TreeDto { value = item.MenuId, label = item.MenuName };
                 reducer.GetSubNodes(treemodel, dtos);
@@ -78,7 +78,7 @@ namespace Rbac.Service
 
         public List<ListDto> GetMenu()
         {
-            foreach (var item in sysMenus.Where(m => m.ParentId == 0))
+            foreach (var item in sysMenus.Where(m => m.ParentId == 0).OrderBy(m => m.OrderId))
             {
                 ListDto treemodel = item.MapTo<ListDto>();
                 GetSubNodes(treemodel, sysMenus);
@@ -90,7 +90,7 @@ namespace Rbac.Service
 
         public void GetSubNodes(ListDto tree, List<SysMenu> list)
         {
-            foreach (var item in list.Where(m => m.ParentId == tree.MenuId))
+            foreach (var item in list.Where(m => m.ParentId == tree.MenuId).OrderBy(m => m.OrderId))
             {
                 ListDto treemodel = item.MapTo<ListDto>();
                 tree.children.Add(treemodel);

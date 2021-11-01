@@ -12,7 +12,7 @@ namespace Rbac.WebAPI.Controllers
 {
     [ApiController]
     [Route("/api/[controller]/[action]")]
-    [Authorize]
+    //[Authorize]
     public class SysMenuController : Controller
     {
         private ISysMenuService<ListDto> sysMenuservice;
@@ -63,7 +63,8 @@ namespace Rbac.WebAPI.Controllers
         [HttpGet]
         public IActionResult GetMenuAsync()
         {
-            return new JsonResult(sysMenuservice.GetMenu());
+            var list = sysMenuservice.GetMenu();
+            return new JsonResult(list);
         }
 
         /// <summary>
@@ -84,7 +85,14 @@ namespace Rbac.WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateMenu(MenuDto dto)
         {
-            var count = await sysMenuservice.UpdateAsync(m => m.MenuId == dto.MenuID, m => new SysMenu { MenuName = dto.MenuName, IsShow = dto.IsShow, MenuLink = dto.MenuLink, ParentId = dto.ParentID });
+            var count = await sysMenuservice.UpdateAsync(m => m.MenuId == dto.MenuID, m => 
+            new SysMenu {
+                MenuName = dto.MenuName,
+                IsShow = dto.IsShow,
+                MenuLink = dto.MenuLink,
+                ParentId = dto.ParentID,
+                OrderId = dto.OrderId
+            });
             return Ok(count);
         }
 

@@ -20,6 +20,9 @@
             <el-form-item label="菜单名称" prop="menuName" ref="menuName">
                 <el-input v-model="ruleForm.menuName"></el-input>
             </el-form-item>
+            <el-form-item label="菜单排序" prop="orderId">
+                <el-input v-model="ruleForm.orderId"></el-input>
+            </el-form-item>
             <el-form-item
                 label="菜单链接"
                 prop="menuLink"
@@ -58,12 +61,20 @@ export default {
                 parentId: 0,
                 isShow: false,
                 menuLink: "",
+                orderId: 0
             },
             rules: {
                 menuName: [
                     {
                         required: true,
                         message: "请输入菜单名称",
+                        trigger: "blur",
+                    },
+                ],
+                orderId: [
+                    {
+                        required: true,
+                        message: "请输入菜单排序",
                         trigger: "blur",
                     },
                 ],

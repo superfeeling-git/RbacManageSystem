@@ -47,7 +47,7 @@ namespace Rbac.Test
                 exp.CreateMap<RoleDto, Role>();
             });
 
-            var imapper = mapper.CreateMapper();
+            /*var imapper = mapper.CreateMapper();
 
             var obj = new AdminDto
             {
@@ -57,9 +57,9 @@ namespace Rbac.Test
                 Role = new List<RoleDto> {
                     new RoleDto{ RoleId = 1, RoleName = "超级管理员" }
                 }
-            };
+            };*/
 
-            var admin = imapper.Map<AdminDto, Admin>(obj);
+            //var admin = imapper.Map<AdminDto, Admin>(obj);
         }
     }
 }

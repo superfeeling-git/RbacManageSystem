@@ -4,6 +4,36 @@
         <name>Rbac.Entity</name>
     </assembly>
     <members>
+        <member name="P:Rbac.Entity.Permission.PermissionId">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.Permission.PermissionName">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.Permission.PermissionLink">
+            <Summary>
+             
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.Permission.ParentId">
+            <Summary>
+             父节点ID
+            </Summary>
+        </member>
+        <member name="P:Rbac.Entity.Permission.RolePermission">
+            <summary>
+            菜单角色
+            </summary>
+        </member>
+        <member name="P:Rbac.Entity.Permission.OrderId">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="P:Rbac.Entity.Role.RoleId">
             <Summary>
              角色ID
@@ -15,6 +45,11 @@
             </Summary>
         </member>
         <member name="P:Rbac.Entity.Role.AdminRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Rbac.Entity.Role.RolePermission">
             <summary>
             
             </summary>
@@ -47,6 +82,11 @@
         <member name="P:Rbac.Entity.SysMenu.RoleMenu">
             <summary>
             菜单角色
+            </summary>
+        </member>
+        <member name="P:Rbac.Entity.SysMenu.OrderId">
+            <summary>
+            
             </summary>
         </member>
     </members>

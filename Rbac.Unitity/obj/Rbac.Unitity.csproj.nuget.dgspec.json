@@ -148,7 +148,7 @@
             },
             "Z.EntityFramework.Plus.EFCore": {
               "target": "Package",
-              "version": "[5.2.9, )"
+              "version": "[5.2.13, )"
             }
           },
           "imports": [

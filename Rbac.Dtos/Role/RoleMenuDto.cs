@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rbac.Dtos.Role
 {
-    public class Permission
+    public class RoleMenuDto
     {
         public int RoleId { get; set; }
         public List<int> MenuId { get; set; }

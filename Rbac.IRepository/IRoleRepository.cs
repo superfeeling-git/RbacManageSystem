@@ -12,5 +12,6 @@ namespace Rbac.IRepository
     {
         Task<List<int>> GetPermission(int id);
         Task SetPermission(Permission permission);
+        List<int> getRolesByMenu(string url);
     }
 }

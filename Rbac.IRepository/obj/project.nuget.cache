@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uJUNR58vDh0cwWDnI+V+iV0/aSZTPbY+exJUXPGVMff0X2+4qFjsDbcsBFo0t8r43u/KdDgVa4VpizDeL/rJNg==",
+  "dgSpecHash": "sHHSzIG+6rYkKsjOVXmsZKD7xr2gnRLJLcnU94HyRTzBTS75/1PdjhoGUTxV/GfI3LB69/+CBiMV6fW/8uducA==",
   "success": true,
   "projectFilePath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj",
   "expectedPackageFiles": [
@@ -130,9 +130,9 @@
     "D:\\Administrator\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "D:\\Administrator\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
-    "D:\\Administrator\\.nuget\\packages\\z.entityframework.extensions.efcore\\5.2.9\\z.entityframework.extensions.efcore.5.2.9.nupkg.sha512",
-    "D:\\Administrator\\.nuget\\packages\\z.entityframework.plus.efcore\\5.2.9\\z.entityframework.plus.efcore.5.2.9.nupkg.sha512",
-    "D:\\Administrator\\.nuget\\packages\\z.expressions.eval\\4.0.52\\z.expressions.eval.4.0.52.nupkg.sha512"
+    "D:\\Administrator\\.nuget\\packages\\z.entityframework.extensions.efcore\\5.2.13\\z.entityframework.extensions.efcore.5.2.13.nupkg.sha512",
+    "D:\\Administrator\\.nuget\\packages\\z.entityframework.plus.efcore\\5.2.13\\z.entityframework.plus.efcore.5.2.13.nupkg.sha512",
+    "D:\\Administrator\\.nuget\\packages\\z.expressions.eval\\4.0.54\\z.expressions.eval.4.0.54.nupkg.sha512"
   ],
   "logs": []
 }

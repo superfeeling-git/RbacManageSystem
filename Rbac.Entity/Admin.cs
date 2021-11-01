@@ -11,4 +11,5 @@ namespace Rbac.Entity
         public DateTime? LastLoginTime { get; set; }
         public List<AdminRole> AdminRole { get; set; }
     }
+
 }

@@ -9,8 +9,6 @@ import adminIndex from '../page/Admin/index'
 
 Vue.use(Router)
 
-console.log('----');
-
 export default new Router({
   routes: [
     {
