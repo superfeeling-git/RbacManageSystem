@@ -47,6 +47,8 @@ namespace Rbac.Test
                 exp.CreateMap<RoleDto, Role>();
             });
 
+            Assert.Equal("a", "b");
+
             /*var imapper = mapper.CreateMapper();
 
             var obj = new AdminDto

@@ -35,6 +35,7 @@ namespace Rbac.WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateAsync(InsertDto dto)
         {
+            
             await service.CreateAsync(dto);
             return Ok();
         }

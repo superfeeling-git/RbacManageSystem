@@ -23,7 +23,8 @@ namespace Rbac.WebAPI.Configuration
                 option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(
-                option => {
+                option => { 
+                    
                     option.TokenValidationParameters = new TokenValidationParameters
                     {
                         //是否验证发行人

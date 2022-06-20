@@ -32,5 +32,19 @@ namespace Rbac.Service
 
             return base.CreateAsync(entity);
         }
+
+        public async Task<(int, List<BaseModel<int>>)> Test()
+        {
+            return 
+                (1, 
+                new List<BaseModel<int>> 
+                {
+                    new BaseModel<int> 
+                    {
+                        CreateById = 1, 
+                        CreateByName = "123" 
+                    } 
+                });
+        }
     }
 }

@@ -12,35 +12,39 @@ namespace Rbac.Repository
 {
     public class AdminRepository : BaseRepository<Admin, int>, IAdminRepository
     {
-        private RbacDbContext _db;
+        //private RbacDbContext _db;
 
         public AdminRepository(RbacDbContext db)
         {
             this.__db = db;
-            this._db = db;
         }
 
         public override async Task<Admin> FindAsync(int key)
         {            
             var admin = await base.FindAsync(key);
-            admin.AdminRole = await _db.AdminRole.Where(m => m.AdminId == key).ToListAsync();
+            admin.AdminRole = await __db.AdminRole.Where(m => m.AdminId == key).ToListAsync();
             return admin;
         }
 
         public async Task<List<int>> GetRoleAsync(int adminId)
         {
-            return await _db.AdminRole.Where(m => m.AdminId == adminId).Select(m=>m.RoleId).ToListAsync();
+            return await __db.AdminRole.Where(m => m.AdminId == adminId).Select(m=>m.RoleId).ToListAsync();
         }
 
         public async Task<int> RemoveRoleAsync(int adminId)
         {
-            return await _db.AdminRole.Where(m => m.AdminId == adminId).DeleteFromQueryAsync();
+            return await __db.AdminRole.Where(m => m.AdminId == adminId).DeleteFromQueryAsync();
         }
 
         public async Task BulkInsertAsync(IEnumerable<AdminRole> entitys)
         {
-            await _db.AdminRole.AddRangeAsync(entitys);
-            await _db.SaveChangesAsync();
+            await __db.AdminRole.AddRangeAsync(entitys);
+            await __db.SaveChangesAsync();
+        }
+
+        public override Task<int> CreateAsync(Admin entity)
+        {
+            return base.CreateAsync(entity);
         }
     }
 }

@@ -6,6 +6,7 @@ import sysmenuCreate from '../page/SysMenu/create'
 import sysmenuIndex from '../page/SysMenu/index'
 import roleIndex from '../page/Role/index'
 import adminIndex from '../page/Admin/index'
+import memberlist from '../page/Member/list'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
           path:'/admin/index',
           name:'adminIndex',
           component:adminIndex
+        },
+        {
+          path:'/member/list',
+          name:'memberlist',
+          component:memberlist
         }
       ]
     }

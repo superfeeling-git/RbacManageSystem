@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj": {}
+    "E:\\Tech\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj": {}
   },
   "projects": {
-    "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
+    "E:\\Tech\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj",
+        "projectUniqueName": "E:\\Tech\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj",
         "projectName": "Rbac.Dtos",
-        "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj",
-        "packagesPath": "D:\\Administrator\\.nuget\\packages",
-        "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\obj\\",
+        "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj",
+        "packagesPath": "D:\\.nuget\\packages",
+        "outputPath": "E:\\Tech\\RbacManageSystem\\Rbac.Dtos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -28,9 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -84,26 +80,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
+    "E:\\Tech\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj",
+        "projectUniqueName": "E:\\Tech\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj",
         "projectName": "Rbac.Entity",
-        "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj",
-        "packagesPath": "D:\\Administrator\\.nuget\\packages",
-        "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\obj\\",
+        "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj",
+        "packagesPath": "D:\\.nuget\\packages",
+        "outputPath": "E:\\Tech\\RbacManageSystem\\Rbac.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -112,9 +106,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
@@ -166,26 +158,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj": {
+    "E:\\Tech\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj",
+        "projectUniqueName": "E:\\Tech\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj",
         "projectName": "Rbac.IService",
-        "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj",
-        "packagesPath": "D:\\Administrator\\.nuget\\packages",
-        "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\obj\\",
+        "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj",
+        "packagesPath": "D:\\.nuget\\packages",
+        "outputPath": "E:\\Tech\\RbacManageSystem\\Rbac.IService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -194,19 +184,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
-                "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj"
+              "E:\\Tech\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
+                "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj"
               },
-              "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
-                "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
+              "E:\\Tech\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
+                "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
               }
             }
           }
@@ -235,7 +223,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -130,6 +130,7 @@ export default {
         },
         addMenu() {
             this.formName = "menuCreate";
+            this.dialogTitle = "添加分类";
             this.dialogFormVisible = true;
             this.menuId = [];
         },

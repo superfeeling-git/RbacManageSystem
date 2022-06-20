@@ -66,14 +66,14 @@ namespace Rbac.Service
 
         public virtual async Task<int> CreateAsync<TInsertDto>(TInsertDto dto)
         {
-            /*var claims = _httpContextAccessor.HttpContext.User.Claims;
+            var claims = _httpContextAccessor.HttpContext.User.Claims;
             var userid = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Id).Value;
             var username = _httpContextAccessor.HttpContext.User.Claims.First(m => m.Type == JwtClaimTypes.Name).Value;
             TEntity entity = dto.MapTo<TEntity>();
             Type type = entity.GetType();
             type.GetProperty("CreateById").SetValue(entity, Convert.ToInt32(userid));
-            type.GetProperty("CreateByName").SetValue(entity, username);*/
-            return await baseRepository.CreateAsync(dto.MapTo<TEntity>());
+            type.GetProperty("CreateByName").SetValue(entity, username);
+            return await baseRepository.CreateAsync(entity);
         }
 
         public virtual async Task DeleteAsync(Expression<Func<TEntity, bool>> Condition)

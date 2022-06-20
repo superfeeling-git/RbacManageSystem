@@ -686,7 +686,8 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.dll": {}
         },
         "build": {
-          "build/netstandard2.0/_._": {}
+          "build/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.props": {},
+          "build/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.targets": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/5.0.2": {
@@ -1092,6 +1093,13 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.10.14": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props": {},
+          "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets": {}
+        }
+      },
       "Microsoft.Win32.Registry/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -1163,6 +1171,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "RabbitMQ.Client/6.2.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
         }
       },
       "runtime.native.System/4.3.0": {
@@ -1745,6 +1766,15 @@
           "lib/netstandard1.3/System.Linq.Queryable.dll": {}
         }
       },
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
       "System.Net.NameResolution/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2279,6 +2309,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Threading.dll": {}
+        }
+      },
+      "System.Threading.Channels/4.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
         }
       },
       "System.Threading.Tasks/4.3.0": {
@@ -4084,6 +4123,85 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.10.14": {
+      "sha512": "vjweoaSTnMiJY4Ts4/9xHt3vStk36q8FRXxvwqSx7YjdXTbQE0i/JxncHeL6vsdE1+4sn6of2/eLQeGZ43eL2Q==",
+      "type": "package",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.10.14",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "EULA.md",
+        "ThirdPartyNotices.txt",
+        "build/Container.props",
+        "build/Container.targets",
+        "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props",
+        "build/Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets",
+        "build/Rules/GeneralBrowseObject.xaml",
+        "build/Rules/cs-CZ/GeneralBrowseObject.xaml",
+        "build/Rules/de-DE/GeneralBrowseObject.xaml",
+        "build/Rules/es-ES/GeneralBrowseObject.xaml",
+        "build/Rules/fr-FR/GeneralBrowseObject.xaml",
+        "build/Rules/it-IT/GeneralBrowseObject.xaml",
+        "build/Rules/ja-JP/GeneralBrowseObject.xaml",
+        "build/Rules/ko-KR/GeneralBrowseObject.xaml",
+        "build/Rules/pl-PL/GeneralBrowseObject.xaml",
+        "build/Rules/pt-BR/GeneralBrowseObject.xaml",
+        "build/Rules/ru-RU/GeneralBrowseObject.xaml",
+        "build/Rules/tr-TR/GeneralBrowseObject.xaml",
+        "build/Rules/zh-CN/GeneralBrowseObject.xaml",
+        "build/Rules/zh-TW/GeneralBrowseObject.xaml",
+        "build/ToolsTarget.props",
+        "build/ToolsTarget.targets",
+        "icon.png",
+        "microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
+        "microsoft.visualstudio.azure.containers.tools.targets.nuspec",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Common.dll",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Shared.dll",
+        "tools/Microsoft.VisualStudio.Containers.Tools.Tasks.dll",
+        "tools/Newtonsoft.Json.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/cs/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/de/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/es/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/fr/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/it/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ja/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ko/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/pl/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/pt-BR/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/ru/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/tr/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/utils/KillProcess.exe",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/zh-Hans/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Common.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Shared.resources.dll",
+        "tools/zh-Hant/Microsoft.VisualStudio.Containers.Tools.Tasks.resources.dll"
+      ]
+    },
     "Microsoft.Win32.Registry/5.0.0": {
       "sha512": "dDoKi0PnDz31yAyETfRntsLArTlVAVzUzCIvvEDsDsucrl33Dl8pIJG06ePTJTI3tGpeyHS9Cq7Foc/s4EeKcg==",
       "type": "package",
@@ -4336,6 +4454,25 @@
         "lib/netstandard2.0/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.2.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "RabbitMQ.Client/6.2.2": {
+      "sha512": "+tJSgE+rQXgLvOxWvOxdZ0+No1EMa86+puZuNlCb4cNryHw2PY2Xiw/y2dz/WWdeJQp74Y2UnNXPkuLiYpvn+A==",
+      "type": "package",
+      "path": "rabbitmq.client/6.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net461/RabbitMQ.Client.dll",
+        "lib/net461/RabbitMQ.Client.pdb",
+        "lib/net461/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.pdb",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.6.2.2.nupkg.sha512",
+        "rabbitmq.client.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -4655,11 +4792,12 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "LE/oChpRvkSi3U25u0KnJcI44JeDZ1QJCyN4qFDx2uusEypdqR24w7lKYw21eYe5esuCBuc862wRmpF63Yy1KQ==",
+      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6006,6 +6144,29 @@
         "ref/xamarinwatchos10/_._",
         "system.linq.queryable.4.3.0.nupkg.sha512",
         "system.linq.queryable.nuspec"
+      ]
+    },
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "type": "package",
+      "path": "system.memory/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Net.NameResolution/4.3.0": {
@@ -7927,6 +8088,30 @@
         "system.threading.nuspec"
       ]
     },
+    "System.Threading.Channels/4.7.1": {
+      "sha512": "6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "type": "package",
+      "path": "system.threading.channels/4.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Threading.Channels.dll",
+        "lib/net461/System.Threading.Channels.xml",
+        "lib/netcoreapp3.0/System.Threading.Channels.dll",
+        "lib/netcoreapp3.0/System.Threading.Channels.xml",
+        "lib/netstandard1.3/System.Threading.Channels.dll",
+        "lib/netstandard1.3/System.Threading.Channels.xml",
+        "lib/netstandard2.0/System.Threading.Channels.dll",
+        "lib/netstandard2.0/System.Threading.Channels.xml",
+        "system.threading.channels.4.7.1.nupkg.sha512",
+        "system.threading.channels.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Threading.Tasks/4.3.0": {
       "sha512": "LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
       "type": "package",
@@ -8281,11 +8466,12 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
+      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -8481,7 +8667,10 @@
       "Microsoft.DotNet.PlatformAbstractions >= 3.1.6",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Proxies >= 5.0.10",
+      "Microsoft.Extensions.Hosting >= 5.0.0",
       "Microsoft.Extensions.Hosting.WindowsServices >= 5.0.1",
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.14",
+      "RabbitMQ.Client >= 6.2.2",
       "Rbac.Dtos >= 1.0.0",
       "Rbac.Entity >= 1.0.0",
       "Rbac.IRepository >= 1.0.0",
@@ -8493,26 +8682,23 @@
     ]
   },
   "packageFolders": {
-    "D:\\Administrator\\.nuget\\packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "D:\\.nuget\\packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj",
+      "projectUniqueName": "E:\\Tech\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj",
       "projectName": "Rbac.WebAPI",
-      "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj",
-      "packagesPath": "D:\\Administrator\\.nuget\\packages",
-      "outputPath": "E:\\Teaching\\RbacManageSystem\\Rbac.WebAPI\\obj\\",
+      "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.WebAPI\\Rbac.WebAPI.csproj",
+      "packagesPath": "D:\\.nuget\\packages",
+      "outputPath": "E:\\Tech\\RbacManageSystem\\Rbac.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8521,31 +8707,29 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "D:\\Program Files (x86)\\DevExpress 18.2\\Components\\System\\Components\\Packages": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.nuget.org/api/v2/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj"
+            "E:\\Tech\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj": {
+              "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.Dtos\\Rbac.Dtos.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
+            "E:\\Tech\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj": {
+              "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.Entity\\Rbac.Entity.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj"
+            "E:\\Tech\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj": {
+              "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.IRepository\\Rbac.IRepository.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj"
+            "E:\\Tech\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj": {
+              "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.IService\\Rbac.IService.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.Repository\\Rbac.Repository.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Repository\\Rbac.Repository.csproj"
+            "E:\\Tech\\RbacManageSystem\\Rbac.Repository\\Rbac.Repository.csproj": {
+              "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.Repository\\Rbac.Repository.csproj"
             },
-            "E:\\Teaching\\RbacManageSystem\\Rbac.Service\\Rbac.Service.csproj": {
-              "projectPath": "E:\\Teaching\\RbacManageSystem\\Rbac.Service\\Rbac.Service.csproj"
+            "E:\\Tech\\RbacManageSystem\\Rbac.Service\\Rbac.Service.csproj": {
+              "projectPath": "E:\\Tech\\RbacManageSystem\\Rbac.Service\\Rbac.Service.csproj"
             }
           }
         }
@@ -8594,9 +8778,21 @@
             "target": "Package",
             "version": "[5.0.10, )"
           },
+          "Microsoft.Extensions.Hosting": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
           "Microsoft.Extensions.Hosting.WindowsServices": {
             "target": "Package",
             "version": "[5.0.1, )"
+          },
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+            "target": "Package",
+            "version": "[1.10.14, )"
+          },
+          "RabbitMQ.Client": {
+            "target": "Package",
+            "version": "[6.2.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -8625,7 +8821,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

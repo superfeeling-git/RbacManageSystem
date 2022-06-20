@@ -16,7 +16,7 @@
                 width="190"
             >
             </el-table-column>
-            <el-table-column label="操作">
+            <el-table-column label="操作" width="360">
                 <template slot-scope="scope">
                     <el-button
                         size="mini"

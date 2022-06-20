@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rbac.Generator", "Rbac.Gene
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rbac.ConsoleApp", "Rbac.Console\Rbac.ConsoleApp.csproj", "{B8577C17-45CE-4CA2-B4D9-39FB574D09A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rbac.MsgService", "Rbac.MsgService\Rbac.MsgService.csproj", "{9F88CD45-ABA9-49BE-A5C2-4D09D29A7D2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rbac.MsgService", "Rbac.MsgService\Rbac.MsgService.csproj", "{9F88CD45-ABA9-49BE-A5C2-4D09D29A7D2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{56A42012-93B2-4175-8E42-6500D4FC67BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{9F88CD45-ABA9-49BE-A5C2-4D09D29A7D2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F88CD45-ABA9-49BE-A5C2-4D09D29A7D2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F88CD45-ABA9-49BE-A5C2-4D09D29A7D2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A42012-93B2-4175-8E42-6500D4FC67BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A42012-93B2-4175-8E42-6500D4FC67BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A42012-93B2-4175-8E42-6500D4FC67BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A42012-93B2-4175-8E42-6500D4FC67BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

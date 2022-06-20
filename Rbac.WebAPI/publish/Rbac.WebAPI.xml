@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rbac.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Rbac.WebAPI.Configuration.JsonSetting">
+            <summary>
+            //添加JSON序列化编码，防止中文被编码为Unicode字符。
+            </summary>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.AdminController.#ctor(Rbac.IService.IAdminService{Rbac.Dtos.Admin.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.AdminController.CreateAsync(Rbac.Dtos.Admin.AdminDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.AdminController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.AdminController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.AdminController.PageList(System.Int32,System.Int32,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <param name="keywords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.AdminController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.#ctor(Rbac.IService.IContractService{Rbac.Dtos.Contract.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.CreateAsync(Rbac.Dtos.Contract.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.ContractController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.#ctor(Rbac.IService.IDepartmentService{Rbac.Dtos.Department.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.CreateAsync(Rbac.Dtos.Department.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.DepartmentController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.#ctor(Rbac.IService.IGoodsCategoryService{Rbac.Dtos.GoodsCategory.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.CreateAsync(Rbac.Dtos.GoodsCategory.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.FindAsync(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.GetListAsync">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsCategoryController.DeleteAsync(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.CreateAsync(Rbac.Dtos.Goods.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.PageList(System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            分页
+            </summary>
+            <param name="GoodsName"></param>
+            <param name="CategoryId"></param>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.GoodsController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.RoleController.#ctor(Rbac.IService.IRoleService{Rbac.Dtos.Role.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.RoleController.CreateAsync(Rbac.Dtos.Role.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.RoleController.FindAsync(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.RoleController.GetListAsync">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.RoleController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.RoleController.DeleteAsync(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.StudentController.#ctor(Rbac.IService.IStudentService{Rbac.Dtos.Student.ListDto})">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="_service"></param>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.StudentController.CreateAsync(Rbac.Dtos.Student.InsertDto)">
+            <summary>
+            创建
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.StudentController.Find(System.Int32)">
+            <summary>
+            获取实体
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.StudentController.GetList">
+            <summary>
+            获取所有数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.StudentController.PageList(System.Int32,System.Int32)">
+            <summary>
+            分页，未实现
+            </summary>
+            <param name="PageSize"></param>
+            <param name="PageIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.StudentController.Delete(System.Int32)">
+            <summary>
+            删除单条数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.CreateMenuAsync(Rbac.Dtos.SysMenu.InsertDto)">
+            <summary>
+            创建一级菜单
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.QueryMenuAsync(System.Int32)">
+            <summary>
+            根据ID查询菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.QueryMenu(Rbac.Dtos.SysMenu.QueryDto)">
+            <summary>
+            条件查询菜单
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.GetMenuAsync">
+            <summary>
+            获取递归结构的菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.GetNodeAsync">
+            <summary>
+            获取递归结构的菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.UpdateMenu(Rbac.Dtos.SysMenu.MenuDto)">
+            <summary>
+            更新菜单名称
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.DeleteAsync(System.Int32)">
+            <summary>
+            删除菜单
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Rbac.WebAPI.Controllers.SysMenuController.GetPath(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+E:\Teaching\RbacManageSystem\Rbac.Dtos\bin\Release\net5.0\Rbac.Dtos.deps.json
+E:\Teaching\RbacManageSystem\Rbac.Dtos\bin\Release\net5.0\Rbac.Dtos.dll
+E:\Teaching\RbacManageSystem\Rbac.Dtos\bin\Release\net5.0\ref\Rbac.Dtos.dll
+E:\Teaching\RbacManageSystem\Rbac.Dtos\bin\Release\net5.0\Rbac.Dtos.pdb
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Release\net5.0\Rbac.Dtos.csproj.AssemblyReference.cache
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Release\net5.0\Rbac.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Release\net5.0\Rbac.Dtos.AssemblyInfoInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Release\net5.0\Rbac.Dtos.AssemblyInfo.cs
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Release\net5.0\Rbac.Dtos.csproj.CoreCompileInputs.cache
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Release\net5.0\Rbac.Dtos.dll
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Release\net5.0\ref\Rbac.Dtos.dll
+E:\Teaching\RbacManageSystem\Rbac.Dtos\obj\Release\net5.0\Rbac.Dtos.pdb

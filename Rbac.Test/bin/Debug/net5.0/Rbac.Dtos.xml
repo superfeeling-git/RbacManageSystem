@@ -79,7 +79,7 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.InsertDto.ApiRoute">
+        <member name="P:Rbac.Dtos.SysMenu.InsertDto.OrderId">
             <Summary>
              
             </Summary>
@@ -109,7 +109,7 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.ListDto.ApiRoute">
+        <member name="P:Rbac.Dtos.SysMenu.ListDto.OrderId">
             <Summary>
              
             </Summary>
@@ -139,7 +139,7 @@
              
             </Summary>
         </member>
-        <member name="P:Rbac.Dtos.SysMenu.MenuDto.ApiRoute">
+        <member name="P:Rbac.Dtos.SysMenu.MenuDto.OrderId">
             <Summary>
              
             </Summary>

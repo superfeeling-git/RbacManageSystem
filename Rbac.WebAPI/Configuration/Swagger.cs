@@ -71,9 +71,9 @@ namespace Rbac.WebAPI.Configuration
                 //开启权限小锁
                 options.OperationFilter<AddResponseHeadersFilter>();
                 options.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
+                options.OperationFilter<SecurityRequirementsOperationFilter>();
 
                 //在header中添加token，传递到后台
-                options.OperationFilter<SecurityRequirementsOperationFilter>();
                 options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
                 {
                     Description = "JWT授权(数据将在请求头中进行传递)直接在下面框中输入Bearer {token}(注意两者之间是一个空格) \"",
